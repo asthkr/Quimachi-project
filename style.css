@@ -501,7 +501,7 @@ body {
 }
 .sweet-salty .exploreItem .itemBox .itemImage {
   width: 100%;
-  height: 250px;
+  height: 220px;
 }
 .sweet-salty .exploreItem .itemBox .itemImage img {
   width: 100%;
@@ -513,15 +513,15 @@ body {
   width: 100%;
 }
 .sweet-salty .exploreItem .itemDetails h3 {
-  font-size: 26px;
+  font-size: 2vw;
 }
 .sweet-salty .exploreItem .itemDetails h2 {
   color: #A986B0;
-  font-size: 24px;
+  font-size: 2.3vw;
 }
 .sweet-salty .exploreItem .itemDetails .custom-btn {
   border: 2px solid #A986B0;
-  width: 250px;
+  width: 70%;
   background: #fff;
   border-radius: 30px;
   padding: 5px 25px;
@@ -680,4 +680,131 @@ body {
 .benefit .primary-textform .discriptiontxt {
   color: #575757;
   font-weight: 300;
+}
+.benefit .fruit-image {
+  width: 100%;
+  height: 350px;
+}
+.benefit .fruit-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.benefit .services {
+  position: relative;
+}
+.benefit .services .serviceBoxl {
+  width: 25%;
+  position: absolute;
+  left: 0;
+  top: 170px;
+}
+.benefit .services .serviceBoxr {
+  width: 25%;
+  position: absolute;
+  right: 0;
+  top: 170px;
+}
+.benefit .services .icon-wrap {
+  margin: 25px auto;
+  width: 110px;
+  height: 110px;
+}
+.benefit .services .icon-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.likesubBanner {
+  position: relative;
+  padding: 100px 0;
+  display: block;
+}
+.likesubBanner .primary-textform {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.likesubBanner .primary-textform .txt-big-l {
+  color: #EAEAEA;
+  text-transform: capitalize;
+  font-size: 140px;
+  margin-bottom: 0 !important;
+}
+.likesubBanner .primary-textform .left-space {
+  margin-left: 80px;
+}
+.likesubBanner .primary-textform .left-space .txt-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #A986B0;
+  line-height: 3rem;
+  margin-bottom: 0 !important;
+}
+.likesubBanner .primary-textform .left-space .hori-line i {
+  font-size: 2rem;
+  font-weight: 200;
+  color: #A986B0;
+}
+.likesubBanner .primary-textform .left-space .discriptiontxt {
+  color: #575757;
+  font-weight: 300;
+}
+.likesubBanner .primary-textform .left-space .btn-wrap {
+  display: flex;
+  justify-content: start;
+  gap: 0;
+  margin: 15px 0;
+}
+.likesubBanner .primary-textform .left-space .btn-wrap .custom-btn {
+  border: 2px solid #A986B0;
+  width: 225px;
+  background: #A986B0;
+  border-radius: 30px;
+  padding: 5px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.likesubBanner .primary-textform .left-space .btn-wrap .custom-btn:hover {
+  color: #A986B0;
+  background: #fff;
+}
+.likesubBanner .primary-textform .left-space .btn-wrap .custom-btn:focus {
+  color: #A986B0;
+  background: #fff;
+}
+.likesubBanner .primary-textform .left-space .btn-wrap .custom-btn .btnTxt {
+  font-size: 17px;
+  font-weight: 600;
+}
+.likesubBanner .primary-textform .left-space .btn-wrap .custom-btn .btnIcon {
+  font-size: 30px;
+  font-weight: 100;
+}
+.likesubBanner .imageSlider-wrap {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  left: auto;
+  padding: 10px 0;
+  overflow-x: hidden;
+}
+.likesubBanner .slide-content .slide-imgwrap {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.likesubBanner .slide-content .slide-imgwrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
