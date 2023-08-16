@@ -7,6 +7,10 @@
 body {
   font-family: "Rubik", sans-serif;
 }
+body a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .header {
   z-index: 999999;
@@ -138,8 +142,8 @@ body {
   text-transform: uppercase;
 }
 .header .header-navbar .navBar ul.nav .nav-link:hover {
-  color: #B0BB1D;
-  border-bottom: 2px solid #B0BB1D;
+  color: #b0bb1d;
+  border-bottom: 2px solid #b0bb1d;
 }
 
 .heroBanner {
@@ -162,25 +166,17 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.heroBanner .container-fluid .bnrWrap .bnrAbstract {
+.heroBanner .container-fluid .bnrWrap .bnrProduct {
+  height: 600px;
   position: absolute;
-  top: auto;
-  bottom: -20px;
-  left: 0;
-  right: 0;
-  z-index: 90;
+  z-index: 100;
+  bottom: -75px;
+  left: 12%;
+  right: auto;
 }
-.heroBanner .container-fluid .bnrWrap .bnrAbstract img {
+.heroBanner .container-fluid .bnrWrap .bnrProduct img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.heroBanner .container-fluid .bnrWrap .bnrProduct {
-  z-index: 100;
-  bottom: 10px;
-  left: 15%;
-  right: auto;
 }
 .heroBanner .container-fluid .bnrWrap .bnrText {
   position: absolute;
@@ -197,6 +193,7 @@ body {
   color: #f2d9b7;
   text-transform: uppercase;
   font-size: 90px;
+  font-weight: 700;
   margin-bottom: 0 !important;
 }
 .heroBanner .container-fluid .bnrWrap .primary-textform .left-space {
@@ -266,7 +263,8 @@ body {
   flex-wrap: wrap;
 }
 .subBanner .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  font-weight: 700;
+  color: #eaeaea;
   text-transform: capitalize;
   font-size: 140px;
   margin-bottom: 0 !important;
@@ -277,14 +275,14 @@ body {
 .subBanner .primary-textform .left-space .txt-heading {
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .subBanner .primary-textform .left-space .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .subBanner .primary-textform .left-space .discriptiontxt {
   color: #575757;
@@ -297,9 +295,9 @@ body {
   margin: 15px 0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 225px;
-  background: #A986B0;
+  background: #a986b0;
   border-radius: 30px;
   padding: 5px 25px;
   display: flex;
@@ -308,11 +306,11 @@ body {
   color: #fff;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn:hover {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn:focus {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn .btnTxt {
@@ -324,7 +322,7 @@ body {
   font-weight: 100;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 225px;
   background: #fff;
   border-radius: 30px;
@@ -332,15 +330,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #A986B0;
+  color: #a986b0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline:hover {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline:focus {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline .btnTxt {
   font-size: 17px;
@@ -394,7 +392,7 @@ body {
 }
 .subBanner .NextArrow {
   z-index: 5;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border: none;
   font-size: 1.3rem;
   width: 50px;
@@ -404,7 +402,7 @@ body {
 }
 .subBanner .PrevArrow {
   z-index: 5;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border: none;
   font-size: 1.3rem;
   width: 50px;
@@ -423,22 +421,23 @@ body {
   flex-wrap: wrap;
 }
 .sweet-salty .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  color: #eaeaea;
+  font-weight: 700;
   text-transform: capitalize;
-  font-size: 140px;
+  font-size: 150px;
   margin-bottom: 0 !important;
 }
 .sweet-salty .primary-textform .txt-heading {
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .sweet-salty .primary-textform .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .sweet-salty .primary-textform p {
   color: #836f88;
@@ -447,15 +446,15 @@ body {
   color: #575757;
   font-weight: 300;
 }
-.sweet-salty .primary-textform .btn-wrap {
+.sweet-salty .primary-textform .tabs-wrap {
   display: flex;
   justify-content: center;
   gap: 25px;
   margin: 15px 0;
 }
-.sweet-salty .primary-textform .btn-wrap .custom-btn {
+.sweet-salty .primary-textform .tabs-wrap .custom-btn {
   position: relative;
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 175px;
   background: #fff;
   border-radius: 25px;
@@ -463,97 +462,89 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn:hover {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn:focus {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn:active {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn .btnTxt {
+  color: #a986b0;
   font-size: 15px;
-  font-weight: 500;
 }
-.sweet-salty .primary-textform .btn-wrap .custom-btn .btnIcon {
-  position: absolute;
+.sweet-salty .primary-textform .tabs-wrap .active {
   color: #fff;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  font-weight: 100;
+  background-color: #a986b0;
 }
-.sweet-salty .exploreItem {
+.sweet-salty .primary-textform .tab-content .tab-data {
+  display: none;
+}
+.sweet-salty .primary-textform .tab-content .active {
+  display: block;
+}
+.sweet-salty .primary-textform .tabs button.active:before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f00c";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  left: 18px;
+}
+.sweet-salty .primary-textform .exploreItem {
   margin-top: 30px;
 }
-.sweet-salty .exploreItem .itemBox {
+.sweet-salty .primary-textform .exploreItem .itemBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.sweet-salty .exploreItem .itemBox .itemImage {
+.sweet-salty .primary-textform .exploreItem .itemBox .itemImage {
   width: 100%;
-  height: 220px;
+  height: 250px;
 }
-.sweet-salty .exploreItem .itemBox .itemImage img {
+.sweet-salty .primary-textform .exploreItem .itemBox .itemImage img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.sweet-salty .exploreItem .itemDetails {
+.sweet-salty .primary-textform .exploreItem .itemDetails {
   width: 100%;
 }
-.sweet-salty .exploreItem .itemDetails h3 {
-  font-size: 2vw;
+.sweet-salty .primary-textform .exploreItem .itemDetails h3 {
+  font-size: 20px;
+  font-weight: 600;
 }
-.sweet-salty .exploreItem .itemDetails h2 {
-  color: #A986B0;
-  font-size: 2.3vw;
+.sweet-salty .primary-textform .exploreItem .itemDetails h2 {
+  color: #a986b0;
+  font-size: 22px;
+  font-weight: 600;
 }
-.sweet-salty .exploreItem .itemDetails .custom-btn {
-  border: 2px solid #A986B0;
+.sweet-salty .primary-textform .exploreItem .itemDetails .custom-btn {
+  border: 2px solid #a986b0;
   width: 70%;
   background: #fff;
   border-radius: 30px;
-  padding: 5px 25px;
+  padding: 0px 25px;
+  text-align: center;
+  color: #a986b0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  color: #A986B0;
+  justify-content: space-between;
 }
-.sweet-salty .exploreItem .itemDetails .custom-btn:hover {
+.sweet-salty .primary-textform .exploreItem .itemDetails .custom-btn:hover {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
-.sweet-salty .exploreItem .itemDetails .custom-btn:focus {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .exploreItem .itemDetails .custom-btn:active {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .exploreItem .itemDetails .custom-btn .btnTxt {
+.sweet-salty .primary-textform .exploreItem .itemDetails .custom-btn .btnTxt {
   text-transform: capitalize;
   font-size: 17px;
   font-weight: 600;
 }
-.sweet-salty .exploreItem .itemDetails .custom-btn .btnArrow {
+.sweet-salty .primary-textform .exploreItem .itemDetails .custom-btn .btnArrow {
   font-size: 30px;
   font-weight: 100;
 }
-.sweet-salty .exploreItem .itemDetails .btnactive {
+.sweet-salty .primary-textform .exploreItem .itemDetails .btnactive {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 
 .abstract-banner {
@@ -626,15 +617,15 @@ body {
   color: #fff;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:hover {
-  background-color: #A986B0;
+  background-color: #a986b0;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:focus {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:active {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn .btnTxt {
   font-size: 17px;
@@ -655,7 +646,8 @@ body {
   flex-wrap: wrap;
 }
 .benefit .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  font-weight: 700;
+  color: #eaeaea;
   text-transform: capitalize;
   font-size: 180px;
   margin-bottom: 0 !important;
@@ -665,14 +657,14 @@ body {
   text-transform: capitalize;
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .benefit .primary-textform .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .benefit .primary-textform p {
   color: #836f88;
@@ -731,7 +723,8 @@ body {
   flex-wrap: wrap;
 }
 .likesubBanner .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  font-weight: 700;
+  color: #eaeaea;
   text-transform: capitalize;
   font-size: 140px;
   margin-bottom: 0 !important;
@@ -742,14 +735,14 @@ body {
 .likesubBanner .primary-textform .left-space .txt-heading {
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .likesubBanner .primary-textform .left-space .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .likesubBanner .primary-textform .left-space .discriptiontxt {
   color: #575757;
@@ -762,9 +755,9 @@ body {
   margin: 15px 0;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 225px;
-  background: #A986B0;
+  background: #a986b0;
   border-radius: 30px;
   padding: 5px 25px;
   display: flex;
@@ -773,11 +766,11 @@ body {
   color: #fff;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn:hover {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn:focus {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn .btnTxt {
@@ -797,8 +790,8 @@ body {
   overflow-x: hidden;
 }
 .likesubBanner .slide-content .slide-imgwrap {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -807,4 +800,86 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.contactPage {
+  padding: 50px 0;
+}
+.contactPage .primary-textform {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.contactPage .primary-textform .txt-big-c {
+  text-align: center;
+  font-weight: 700;
+  color: #eaeaea;
+  text-transform: capitalize;
+  font-size: 140px;
+  margin-bottom: 0 !important;
+}
+.contactPage .primary-textform .mailBox {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: nowrap;
+}
+.contactPage .primary-textform .mailBox p {
+  color: #333333;
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper {
+  position: relative;
+  width: 600px;
+  border-radius: 30px;
+  border: 2px solid #afafaf;
+  display: flex;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper input {
+  padding-left: 60px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper input:focus-visible {
+  outline: none;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper .btn-wrap {
+  margin: 2px;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper .btn-wrap .custom-btn {
+  width: 175px;
+  background: #674e3f;
+  border-radius: 30px;
+  padding: 2px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper .btn-wrap .custom-btn .btnTxt {
+  font-size: 17px;
+  font-weight: 600;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper .btn-wrap .custom-btn .btnIcon {
+  font-size: 30px;
+  font-weight: 100;
+}
+.contactPage .primary-textform .mailBox .mail-wrapper::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f1fa";
+  vertical-align: middle;
+  font-weight: 500;
+  padding-left: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #575757;
 }/*# sourceMappingURL=style.css.map */
