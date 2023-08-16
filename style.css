@@ -138,8 +138,8 @@ body {
   text-transform: uppercase;
 }
 .header .header-navbar .navBar ul.nav .nav-link:hover {
-  color: #B0BB1D;
-  border-bottom: 2px solid #B0BB1D;
+  color: #b0bb1d;
+  border-bottom: 2px solid #b0bb1d;
 }
 
 .heroBanner {
@@ -162,25 +162,17 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.heroBanner .container-fluid .bnrWrap .bnrAbstract {
+.heroBanner .container-fluid .bnrWrap .bnrProduct {
+  height: 600px;
   position: absolute;
-  top: auto;
-  bottom: -20px;
-  left: 0;
-  right: 0;
-  z-index: 90;
+  z-index: 100;
+  bottom: -75px;
+  left: 12%;
+  right: auto;
 }
-.heroBanner .container-fluid .bnrWrap .bnrAbstract img {
+.heroBanner .container-fluid .bnrWrap .bnrProduct img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.heroBanner .container-fluid .bnrWrap .bnrProduct {
-  z-index: 100;
-  bottom: 10px;
-  left: 15%;
-  right: auto;
 }
 .heroBanner .container-fluid .bnrWrap .bnrText {
   position: absolute;
@@ -197,6 +189,7 @@ body {
   color: #f2d9b7;
   text-transform: uppercase;
   font-size: 90px;
+  font-weight: 700;
   margin-bottom: 0 !important;
 }
 .heroBanner .container-fluid .bnrWrap .primary-textform .left-space {
@@ -266,7 +259,7 @@ body {
   flex-wrap: wrap;
 }
 .subBanner .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  color: #eaeaea;
   text-transform: capitalize;
   font-size: 140px;
   margin-bottom: 0 !important;
@@ -277,14 +270,14 @@ body {
 .subBanner .primary-textform .left-space .txt-heading {
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .subBanner .primary-textform .left-space .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .subBanner .primary-textform .left-space .discriptiontxt {
   color: #575757;
@@ -297,9 +290,9 @@ body {
   margin: 15px 0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 225px;
-  background: #A986B0;
+  background: #a986b0;
   border-radius: 30px;
   padding: 5px 25px;
   display: flex;
@@ -308,11 +301,11 @@ body {
   color: #fff;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn:hover {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn:focus {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn .btnTxt {
@@ -324,7 +317,7 @@ body {
   font-weight: 100;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 225px;
   background: #fff;
   border-radius: 30px;
@@ -332,15 +325,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #A986B0;
+  color: #a986b0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline:hover {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline:focus {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline .btnTxt {
   font-size: 17px;
@@ -394,7 +387,7 @@ body {
 }
 .subBanner .NextArrow {
   z-index: 5;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border: none;
   font-size: 1.3rem;
   width: 50px;
@@ -404,7 +397,7 @@ body {
 }
 .subBanner .PrevArrow {
   z-index: 5;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border: none;
   font-size: 1.3rem;
   width: 50px;
@@ -423,22 +416,23 @@ body {
   flex-wrap: wrap;
 }
 .sweet-salty .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  color: #eaeaea;
+  font-weight: 700;
   text-transform: capitalize;
-  font-size: 140px;
+  font-size: 150px;
   margin-bottom: 0 !important;
 }
 .sweet-salty .primary-textform .txt-heading {
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .sweet-salty .primary-textform .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .sweet-salty .primary-textform p {
   color: #836f88;
@@ -447,15 +441,14 @@ body {
   color: #575757;
   font-weight: 300;
 }
-.sweet-salty .primary-textform .btn-wrap {
+.sweet-salty .primary-textform .tabs-wrap {
   display: flex;
   justify-content: center;
   gap: 25px;
   margin: 15px 0;
 }
-.sweet-salty .primary-textform .btn-wrap .custom-btn {
-  position: relative;
-  border: 2px solid #A986B0;
+.sweet-salty .primary-textform .tabs-wrap .custom-btn {
+  border: 2px solid #a986b0;
   width: 175px;
   background: #fff;
   border-radius: 25px;
@@ -463,32 +456,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn:hover {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn:focus {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn:active {
-  color: #fff;
-  background: #A986B0;
-}
-.sweet-salty .primary-textform .btn-wrap .custom-btn .btnTxt {
+  color: #a986b0;
   font-size: 15px;
-  font-weight: 500;
 }
-.sweet-salty .primary-textform .btn-wrap .custom-btn .btnIcon {
-  position: absolute;
+.sweet-salty .primary-textform .tabs-wrap .custom-btn:hover {
   color: #fff;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  font-weight: 100;
+  background: #a986b0;
+}
+.sweet-salty .primary-textform .tabs-wrap .custom-btn:focus {
+  color: #fff;
+  background: #a986b0;
+}
+.sweet-salty .primary-textform .tabs-wrap .custom-btn:active {
+  color: #fff;
+  background: #a986b0;
 }
 .sweet-salty .exploreItem {
   margin-top: 30px;
@@ -516,11 +497,11 @@ body {
   font-size: 2vw;
 }
 .sweet-salty .exploreItem .itemDetails h2 {
-  color: #A986B0;
+  color: #a986b0;
   font-size: 2.3vw;
 }
 .sweet-salty .exploreItem .itemDetails .custom-btn {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 70%;
   background: #fff;
   border-radius: 30px;
@@ -528,19 +509,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #A986B0;
+  color: #a986b0;
 }
 .sweet-salty .exploreItem .itemDetails .custom-btn:hover {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .sweet-salty .exploreItem .itemDetails .custom-btn:focus {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .sweet-salty .exploreItem .itemDetails .custom-btn:active {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .sweet-salty .exploreItem .itemDetails .custom-btn .btnTxt {
   text-transform: capitalize;
@@ -553,7 +534,7 @@ body {
 }
 .sweet-salty .exploreItem .itemDetails .btnactive {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 
 .abstract-banner {
@@ -626,15 +607,15 @@ body {
   color: #fff;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:hover {
-  background-color: #A986B0;
+  background-color: #a986b0;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:focus {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:active {
   color: #fff;
-  background: #A986B0;
+  background: #a986b0;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn .btnTxt {
   font-size: 17px;
@@ -655,7 +636,7 @@ body {
   flex-wrap: wrap;
 }
 .benefit .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  color: #eaeaea;
   text-transform: capitalize;
   font-size: 180px;
   margin-bottom: 0 !important;
@@ -665,14 +646,14 @@ body {
   text-transform: capitalize;
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .benefit .primary-textform .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .benefit .primary-textform p {
   color: #836f88;
@@ -731,7 +712,7 @@ body {
   flex-wrap: wrap;
 }
 .likesubBanner .primary-textform .txt-big-l {
-  color: #EAEAEA;
+  color: #eaeaea;
   text-transform: capitalize;
   font-size: 140px;
   margin-bottom: 0 !important;
@@ -742,14 +723,14 @@ body {
 .likesubBanner .primary-textform .left-space .txt-heading {
   font-size: 42px;
   font-weight: 700;
-  color: #A986B0;
+  color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
 .likesubBanner .primary-textform .left-space .hori-line i {
   font-size: 2rem;
   font-weight: 200;
-  color: #A986B0;
+  color: #a986b0;
 }
 .likesubBanner .primary-textform .left-space .discriptiontxt {
   color: #575757;
@@ -762,9 +743,9 @@ body {
   margin: 15px 0;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn {
-  border: 2px solid #A986B0;
+  border: 2px solid #a986b0;
   width: 225px;
-  background: #A986B0;
+  background: #a986b0;
   border-radius: 30px;
   padding: 5px 25px;
   display: flex;
@@ -773,11 +754,11 @@ body {
   color: #fff;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn:hover {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn:focus {
-  color: #A986B0;
+  color: #a986b0;
   background: #fff;
 }
 .likesubBanner .primary-textform .left-space .btn-wrap .custom-btn .btnTxt {
