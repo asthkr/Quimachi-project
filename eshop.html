@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quimachi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/solid.min.css" />
+    <link rel="stylesheet" href="css/pro.min.css" />
+    <!-- CSS -->
+    <!-- banner -->
+    <style>
+      .productBanner {
+        display: block;
+      }
+      .productBanner .bnrWrap {
+        position: relative;
+      }
+      .bnrWrap .bgImage {
+        width: 100%;
+        height: 400px;
+      }
+      .bgImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        filter: brightness(110%);
+      }
+      .bnrWrap .bnrText {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .bnrWrap .primary-textform {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 25px;
+        color: white;
+      }
+      .bnrText h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .bnrText .page-path {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .page-path a p {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .page-path span {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    </style>
+    <!-- banner -->
+    <!-- E-shop -->
+    <style>
+      .eshop-data {
+        padding: 50px 0;
+      }
+      .main {
+        max-width: 100%;
+        margin: auto;
+      }
+
+      #myBtnContainer .tabs-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .tabs button.active:before {
+        font-family: "Font Awesome 5 Pro";
+        content: "\f00c";
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 300;
+        color: #fff;
+        position: absolute;
+        left: 18px;
+      }
+      /* Add padding BETWEEN each column */
+      .row,
+      .row > .column {
+        padding: 10px 20px;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide all elements by default */
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Content */
+      .content {
+        text-align: center;
+        padding: 15px;
+        color: #2c2c2c;
+        border-radius: 10px;
+      }
+      .content:hover {
+        background: #fff;
+        box-shadow: 0px 0px 25px 0px #ebebeb;
+      }
+      .content img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .content h5 {
+        margin: 15px 0;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .content h4 {
+        font-weight: 500;
+        font-size: 22px;
+        color: #a780af;
+      }
+
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+
+      /* Style the buttons */
+      .custom-btn {
+        padding: 12px 16px;
+        cursor: pointer;
+        position: relative;
+        border: 2px solid #a986b0;
+        width: 175px;
+        background: #fff;
+        border-radius: 25px;
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #a986b0;
+        font-size: 15px;
+      }
+
+      .custom-btn:hover {
+        border: 2px solid #a986b0;
+        color: #a986b0;
+      }
+
+      .custom-btn.active {
+        border: 2px solid #a986b0;
+        background-color: #a986b0;
+        color: white;
+      }
+    </style>
+    <!-- e-shop -->
+    <!-- CSS -->
+  </head>
+  <body>
+    <section class="header">
+      <div class="container-lg">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="header-logo">
+            <img src="images/logo.png" alt="" />
+          </div>
+          <div class="header-navbar">
+            <div class="topBar">
+              <div class="searchBox">
+                <form class="d-flex align-items-center" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search on the web!"
+                    aria-label="Search"
+                  />
+                  <i class="far fa-search"></i>
+                </form>
+              </div>
+              <div class="selectBox">
+                <form class="d-flex align-items-center">
+                  <label for="currency"
+                    ><i class="fas fa-money-bill"></i
+                  ></label>
+                  <select name="currency" id="currencyLogo">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="INR">INR</option>
+                    <option value="CHF">CHF</option>
+                  </select>
+                </form>
+                <span class="divider-line"
+                  ><i class="far fa-horizontal-rule"></i
+                ></span>
+                <form class="d-flex align-items-center">
+                  <label for="language"><i class="fas fa-globe"></i></label>
+                  <select name="language" id="languageLogo">
+                    <option value="ENG">ENG</option>
+                    <option value="PT">PT</option>
+                    <option value="NL">NL</option>
+                    <option value="BXR">BXR</option>
+                  </select>
+                </form>
+              </div>
+              <div class="shop-cart">
+                <img src="images/shop-bag.svg" alt="" />
+                <span class="top-dot"><p>8</p></span>
+              </div>
+              <div class="signup-btn">
+                <button class="btn">Sign Up</button>
+              </div>
+            </div>
+            <div class="navBar">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Strores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Procedure</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="eshop.html">Our Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="productBanner">
+      <div class="container-fluid p-0">
+        <div class="bnrWrap">
+          <div class="bgImage">
+            <img src="images/jh.png" alt="" />
+          </div>
+          <div class="bnrText primary-textform">
+            <h1>All Our Products</h1>
+            <div class="page-path">
+              <a href="index.html"><p>Home</p></a>
+              <span></span>
+              <a href="eshop.html"><p>Our Products</p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="eshop-data">
+      <div class="container-lg">
+        <!-- MAIN-->
+        <div class="main">
+          <div id="myBtnContainer">
+            <div class="tabs tabs-wrap">
+              <button
+                class="btn custom-btn active"
+                onclick="filterSelection('sweet')"
+              >
+                Sweet
+              </button>
+              <button class="btn custom-btn" onclick="filterSelection('salty')">
+                Salty
+              </button>
+              <button
+                class="btn custom-btn"
+                onclick="filterSelection('promotion')"
+              >
+                Promotion
+              </button>
+            </div>
+          </div>
+          <div class="settingContent">
+            <div class="row">
+              <div class="col-9">
+                <div class="resultBar">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  ></div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="searchBar"></div>
+              </div>
+            </div>
+          </div>
+          <!-- shop Gallery Grid -->
+          <div class="row">
+            <div class="col-9">
+              <div class="row">
+                <div class="column sweet promotion">
+                  <div class="content">
+                    <img src="images/r1.png" alt="banana" />
+                    <h5>Banana Rolls</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column salty promotion">
+                  <div class="content">
+                    <img src="images/r2.png" alt="Lights" />
+                    <h5>Broccoli Rolls</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column sweet">
+                  <div class="content">
+                    <img src="images/r3.png" alt="Nature" />
+                    <h5>Mango Rolls</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column sweet">
+                  <div class="content">
+                    <img src="images/r4.png" alt="Car" />
+                    <h5>Strawberry Rolls</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column sweet">
+                  <div class="content">
+                    <img src="images/r5.png" alt="Car" />
+                    <h5>Apple Rolls</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column salty">
+                  <div class="content">
+                    <img src="images/chicha.png" alt="Car" />
+                    <h5>KALE Chips Cebolla y Ajo</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column salty">
+                  <div class="content">
+                    <img src="images/r2.png" alt="Car" />
+                    <h5>KALE Chips</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <div class="column salty">
+                  <div class="content">
+                    <img src="images/r3.png" alt="Car" />
+                    <h5>CHICHA Chips</h5>
+                    <h4>$24.00</h4>
+                  </div>
+                </div>
+                <!-- END GRID -->
+              </div>
+            </div>
+            <div class="col-3"></div>
+          </div>
+          <!-- END MAIN -->
+        </div>
+      </div>
+    </section>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(window).scroll(function () {
+        var scrolled = $(this).scrollTop() > 10;
+        $(".header").css(
+          "background-color",
+          scrolled ? "rgba(0, 0, 0,.4)" : "rgba(0, 0, 0,0)"
+        );
+      });
+    </script>
+    <script>
+      filterSelection("all");
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
+  </body>
+</html>
