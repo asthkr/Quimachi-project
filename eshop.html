@@ -98,40 +98,27 @@
         position: absolute;
         left: 18px;
       }
-      /* Add padding BETWEEN each column */
-      .row,
-      .row > .column {
-        padding: 10px 20px;
-      }
 
-      /* Create three equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 33.33%;
-        display: none; /* Hide all elements by default */
-      }
-
-      /* Clear floats after rows */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      .columnBox {
+        padding: 10px 25px;
       }
 
       /* Content */
       .content {
         text-align: center;
-        padding: 15px;
+        padding: 25px 0;
         color: #2c2c2c;
-        border-radius: 10px;
+        border-radius: 25px;
+        transition: all 200ms ease-in-out;
       }
       .content:hover {
         background: #fff;
         box-shadow: 0px 0px 25px 0px #ebebeb;
       }
+
       .content img {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
         border-radius: 50%;
         object-fit: cover;
       }
@@ -141,12 +128,21 @@
         font-size: 18px;
       }
       .content h4 {
+        opacity: 1;
         font-weight: 500;
         font-size: 22px;
         color: #a780af;
       }
-
-      /* The "show" class is added to the filtered elements */
+      /* .content:hover h4 {
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      } */
+      .hov-opt {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
       .show {
         display: block;
       }
@@ -177,6 +173,104 @@
         border: 2px solid #a986b0;
         background-color: #a986b0;
         color: white;
+      }
+      .sidebar-filter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
+        padding-top: 15px;
+      }
+      .sidebar-filter .bar-filter {
+        padding: 20px 30px;
+        background: #fff;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+      }
+      .sidebar-filter .bar-filter:hover {
+        background: #fff;
+        box-shadow: 0px 0px 25px 0px #ebebeb;
+      }
+      .sidebar-filter .bar-filter h5 {
+        font-size: 18px;
+      }
+      .sidebar-filter .categories .catagories-list {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      .sidebar-filter .categories .catagories-list li {
+        list-style: none;
+        padding: 5px;
+        padding-left: 0;
+      }
+      .sidebar-filter .categories .catagories-list li:hover {
+        color: #a986b0;
+      }
+      .sidebar-filter .categories .catagories-list li a {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .sidebar-filter .categories .catagories-list li a .listitem-icon img {
+        color: #a986b0;
+      }
+      .sidebar-filter .range-slide .slide-wrap {
+        padding-top: 15px;
+      }
+
+      .slidefilter {
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .slide-wrap p {
+        padding-top: 15px;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: #a986b0;
+      }
+      .slide-wrap p span {
+        font-size: 16px;
+        color: #2c2c2c;
+        font-weight: 300;
+      }
+      .slidefilter input[type="range"] {
+        -webkit-appearance: none !important;
+        width: 100%;
+        height: 2px;
+        background: #a986b0;
+        border: none;
+        outline: none;
+      }
+      .slidefilter input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #a986b0;
+        border-radius: 50%;
+      }
+      .trproduct {
+        padding: 10px 0;
+      }
+      .trproduct .content-box {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .trproduct .content-box .img-tab img {
+        width: 70px !important;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .trproduct .content-box .text-tab h5 {
+        color: #a986b0;
       }
     </style>
     <!-- e-shop -->
@@ -280,8 +374,8 @@
     </section>
     <section class="eshop-data">
       <div class="container-lg">
-        
-        <!-- MAIN--><div class="main">
+        <!-- MAIN-->
+        <div class="main">
           <div id="myBtnContainer">
             <div class="tabs tabs-wrap">
               <button
@@ -316,59 +410,64 @@
             </div>
           </div>
           <!-- shop Gallery Grid -->
-          <div class="row">
+          <div class="row mt-3">
             <div class="col-9">
               <div class="row">
-                <div class="column sweet promotion">
+                <div class="col-4 columnBox sweet promotion">
                   <div class="content">
                     <img src="images/r1.png" alt="banana" />
                     <h5>Banana Rolls</h5>
                     <h4>$24.00</h4>
+                    <div class="hov-opt">
+                      <div class="iconBox"><i class="fas fa-heart"></i></div>
+                      <div class="iconBox"><i class="fas fa-heart"></i></div>
+                      <div class="iconBox"><i class="fas fa-heart"></i></div>
+                    </div>
                   </div>
                 </div>
-                <div class="column salty promotion">
+                <div class="col-4 columnBox salty promotion">
                   <div class="content">
                     <img src="images/r2.png" alt="Lights" />
                     <h5>Broccoli Rolls</h5>
                     <h4>$24.00</h4>
                   </div>
                 </div>
-                <div class="column sweet">
+                <div class="col-4 columnBox sweet">
                   <div class="content">
                     <img src="images/r3.png" alt="Nature" />
                     <h5>Mango Rolls</h5>
                     <h4>$24.00</h4>
                   </div>
                 </div>
-                <div class="column sweet">
+                <div class="col-4 columnBox sweet">
                   <div class="content">
                     <img src="images/r4.png" alt="Car" />
                     <h5>Strawberry Rolls</h5>
                     <h4>$24.00</h4>
                   </div>
                 </div>
-                <div class="column sweet">
+                <div class="col-4 columnBox sweet">
                   <div class="content">
                     <img src="images/r5.png" alt="Car" />
                     <h5>Apple Rolls</h5>
                     <h4>$24.00</h4>
                   </div>
                 </div>
-                <div class="column salty">
+                <div class="col-4 columnBox salty">
                   <div class="content">
                     <img src="images/chicha.png" alt="Car" />
                     <h5>KALE Chips Cebolla y Ajo</h5>
                     <h4>$24.00</h4>
                   </div>
                 </div>
-                <div class="column salty">
+                <div class="col-4 columnBox salty">
                   <div class="content">
                     <img src="images/r2.png" alt="Car" />
                     <h5>KALE Chips</h5>
                     <h4>$24.00</h4>
                   </div>
                 </div>
-                <div class="column salty">
+                <div class="col-4 columnBox salty">
                   <div class="content">
                     <img src="images/r3.png" alt="Car" />
                     <h5>CHICHA Chips</h5>
@@ -379,11 +478,172 @@
               </div>
             </div>
             <div class="col-3">
-              
+              <div class="sidebar-filter">
+                <div class="categories bar-filter">
+                  <h5>Product categories</h5>
+                  <ul class="catagories-list">
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p1.svg" alt="" />
+                        </div>
+                        Sweet</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p2.svg" alt="" />
+                        </div>
+                        Salty</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p3.svg" alt="" />
+                        </div>
+                        100% vegan</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p1.svg" alt="" />
+                        </div>
+                        Banana Rolls</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p2.svg" alt="" />
+                        </div>
+                        Broccoli Rolls</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p3.svg" alt="" />
+                        </div>
+                        Mango Rolls</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p4.svg" alt="" />
+                        </div>
+                        Strawberry Rolls</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p5.svg" alt="" />
+                        </div>
+                        Apple Rolls</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><div class="listitem-icon">
+                          <img src="images/p6.svg" alt="" />
+                        </div>
+                        Kale Chips</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="range-slide bar-filter">
+                  <h5>Filter by Price</h5>
+                  <div class="slide-wrap">
+                    <div class="slidefilter">
+                      <input
+                        type="range"
+                        min="1"
+                        max="100"
+                        value="100$"
+                        step="1"
+                        oninput="rangeValue.innerText = this.value"
+                      />
+                    </div>
+                    <p id="rangeValue"><span>Price:</span> 0$ - 100$</p>
+                  </div>
+                </div>
+                <div class="range-slide bar-filter">
+                  <h5>Filter by Calories</h5>
+                  <div class="slide-wrap">
+                    <div class="slidefilter">
+                      <input
+                        type="range"
+                        min="1"
+                        max="270"
+                        value="100"
+                        step="1"
+                        oninput="rangeValuec.innerText = this.value"
+                      />
+                    </div>
+                    <p id="rangeValuec"><span>Calories:</span> 30 - 270</p>
+                  </div>
+                </div>
+                <div class="top-rated bar-filter">
+                  <h5>Top rated productus</h5>
+                  <div class="products-tab">
+                    <div class="d-flex flex-column">
+                      <div class="trproduct">
+                        <div class="content-box">
+                          <div class="img-tab">
+                            <img src="images/r1.png" alt="banana" />
+                          </div>
+                          <div class="text-tab">
+                            <h6>Banana Rolls</h6>
+                            <h5>$24.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trproduct">
+                        <div class="content-box">
+                          <div class="img-tab">
+                            <img src="images/r2.png" alt="banana" />
+                          </div>
+                          <div class="text-tab">
+                            <h6>Broccoli Rolls</h6>
+                            <h5>$24.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trproduct">
+                        <div class="content-box">
+                          <div class="img-tab">
+                            <img src="images/r3.png" alt="banana" />
+                          </div>
+                          <div class="text-tab">
+                            <h6>Mango Rolls</h6>
+                            <h5>$24.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trproduct">
+                        <div class="content-box">
+                          <div class="img-tab">
+                            <img src="images/chicha.png" alt="banana" />
+                          </div>
+                          <div class="text-tab">
+                            <h6>KALE chips</h6>
+                            <h5>$24.00</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-         
-        </div> <!-- END MAIN -->
+          <!-- END MAIN -->
+        </div>
       </div>
     </section>
     <script
@@ -414,7 +674,7 @@
       filterSelection("all");
       function filterSelection(c) {
         var x, i;
-        x = document.getElementsByClassName("column");
+        x = document.getElementsByClassName("columnBox");
         if (c == "all") c = "";
         for (i = 0; i < x.length; i++) {
           w3RemoveClass(x[i], "show");
