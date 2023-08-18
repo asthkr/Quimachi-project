@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif !important;
 }
 body a {
   text-decoration: none;
@@ -164,7 +164,7 @@ body a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .heroBanner .container-fluid .bnrWrap .bnrProduct {
   height: 600px;
@@ -199,45 +199,23 @@ body a {
 .heroBanner .container-fluid .bnrWrap .primary-textform .left-space {
   margin-left: 140px;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .txt-heading {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .txt-heading {
   font-size: 42px;
   font-weight: 700;
   color: #fff;
   line-height: 3rem;
   margin-bottom: 0 !important;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .hori-line
-  i {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .hori-line i {
   font-size: 2rem;
   font-weight: 200;
   color: #fff;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .discriptiontxt {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .discriptiontxt {
   color: #fff;
   font-weight: 300;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btnwhite {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .btn-wrap .custom-btnwhite {
   width: 250px;
   background: #fff;
   border-radius: 30px;
@@ -247,35 +225,15 @@ body a {
   align-items: center;
   color: #764d6f;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btnwhite:hover {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .btn-wrap .custom-btnwhite:hover {
   color: #fff;
   background: #764d6f;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btnwhite
-  .btnTxt {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .btn-wrap .custom-btnwhite .btnTxt {
   font-size: 17px;
   font-weight: 600;
 }
-.heroBanner
-  .container-fluid
-  .bnrWrap
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btnwhite
-  .btnArrow {
+.heroBanner .container-fluid .bnrWrap .primary-textform .left-space .btn-wrap .custom-btnwhite .btnArrow {
   font-size: 30px;
   font-weight: 100;
 }
@@ -386,22 +344,11 @@ body a {
   font-size: 17px;
   font-weight: 600;
 }
-.subBanner
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btn-outline
-  .btnIcon {
+.subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline .btnIcon {
   width: 30px;
   height: 30px;
 }
-.subBanner
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btn-outline
-  .btnIcon
-  .bagimg {
+.subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline .btnIcon .bagimg {
   background-image: url("../images/shop-bag copy.svg");
   width: 100%;
   height: 100%;
@@ -409,23 +356,13 @@ body a {
   background-position: center;
   background-size: contain;
 }
-.subBanner
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btn-outline:hover
-  .bagimg {
+.subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline:hover .bagimg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-image: url("../images/shop-bag.svg");
 }
-.subBanner
-  .primary-textform
-  .left-space
-  .btn-wrap
-  .custom-btn-outline:focus
-  .bagimg {
+.subBanner .primary-textform .left-space .btn-wrap .custom-btn-outline:focus .bagimg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -566,7 +503,7 @@ body a {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 .sweet-salty .primary-textform .exploreItem .itemDetails {
   width: 100%;
@@ -625,11 +562,11 @@ body a {
   width: 100%;
   height: 100%;
   -webkit-mask-image: url("../images/abstract-center.png");
-  mask-image: url("../images/abstract-center.png");
+          mask-image: url("../images/abstract-center.png");
   -webkit-mask-size: cover;
-  mask-size: cover;
+          mask-size: cover;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 .abstract-banner .container-fluid .primary-textform {
   position: absolute;
@@ -679,44 +616,22 @@ body a {
   align-items: center;
   color: #fff;
 }
-.abstract-banner
-  .container-fluid
-  .primary-textform
-  .btn-wrap
-  .custom-btn:hover {
+.abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:hover {
   background-color: #a986b0;
 }
-.abstract-banner
-  .container-fluid
-  .primary-textform
-  .btn-wrap
-  .custom-btn:focus {
+.abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:focus {
   color: #fff;
   background: #a986b0;
 }
-.abstract-banner
-  .container-fluid
-  .primary-textform
-  .btn-wrap
-  .custom-btn:active {
+.abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn:active {
   color: #fff;
   background: #a986b0;
 }
-.abstract-banner
-  .container-fluid
-  .primary-textform
-  .btn-wrap
-  .custom-btn
-  .btnTxt {
+.abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn .btnTxt {
   font-size: 17px;
   font-weight: 600;
 }
-.abstract-banner
-  .container-fluid
-  .primary-textform
-  .btn-wrap
-  .custom-btn
-  .btnIcon {
+.abstract-banner .container-fluid .primary-textform .btn-wrap .custom-btn .btnIcon {
   font-size: 30px;
   font-weight: 100;
 }
@@ -766,7 +681,7 @@ body a {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 .benefit .services {
   position: relative;
@@ -792,7 +707,7 @@ body a {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .likesubBanner {
@@ -884,7 +799,7 @@ body a {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .contactPage {
@@ -948,23 +863,11 @@ body a {
   align-items: center;
   color: #fff;
 }
-.contactPage
-  .primary-textform
-  .mailBox
-  .mail-wrapper
-  .btn-wrap
-  .custom-btn
-  .btnTxt {
+.contactPage .primary-textform .mailBox .mail-wrapper .btn-wrap .custom-btn .btnTxt {
   font-size: 17px;
   font-weight: 600;
 }
-.contactPage
-  .primary-textform
-  .mailBox
-  .mail-wrapper
-  .btn-wrap
-  .custom-btn
-  .btnIcon {
+.contactPage .primary-textform .mailBox .mail-wrapper .btn-wrap .custom-btn .btnIcon {
   font-size: 30px;
   font-weight: 100;
 }
@@ -979,4 +882,4 @@ body a {
   transform: translateY(-50%);
   font-size: 22px;
   color: #575757;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
