@@ -175,7 +175,6 @@ body {
           object-fit: contain;
         }
       }
-
       h4 {
         margin: 0;
         color: #e3e3e3;
@@ -193,7 +192,7 @@ body {
       align-items: center;
       justify-content: flex-start;
       .iconBox {
-        box-shadow: 0 0 2px #ooo;
+        box-shadow: 0 0 2px #000;
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -293,7 +292,6 @@ body {
     }
   }
 }
-
 // HOMEPAGE
 .heroBanner {
   display: block;
