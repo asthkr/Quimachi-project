@@ -100,7 +100,13 @@
       }
 
       .columnBox {
+        transform: scale();
         padding: 10px 25px;
+        transition: all ease-in-out 200ms;
+      }
+      .columnBox:hover {
+        transform: scale(1.1);
+        transition: all ease-in-out 200ms;
       }
 
       /* Content */
@@ -111,7 +117,8 @@
         border-radius: 25px;
         transition: all 200ms ease-in-out;
       }
-      .content:hover {
+      .columnBox:hover .content {
+        transition: all 200ms ease-in-out;
         background: #fff;
         box-shadow: 0px 0px 25px 0px #ebebeb;
       }
@@ -121,6 +128,12 @@
         height: 220px;
         border-radius: 50%;
         object-fit: cover;
+        transform: scale();
+        transition: all ease-in-out 200ms;
+      }
+      .columnBox:hover .content .proimg {
+        transform: scale(0.8);
+        transition: all ease-in-out 200ms;
       }
       .content h5 {
         margin: 15px 0;
@@ -133,15 +146,93 @@
         font-size: 22px;
         color: #a780af;
       }
-      /* .content:hover h4 {
+      .columnBox:hover h4 {
         opacity: 0;
         transition: all 0.5s ease-in-out;
-      } */
+      }
       .hov-opt {
+        opacity: 0;
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        transition: all 200ms ease-in-out;
+      }
+      .columnBox:hover .hov-opt {
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+      }
+      .hov-opt .iconBox {
+        transition: all 200ms ease-in-out;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        transform: scale();
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid #828282;
+      }
+      .hov-opt .iconBox .img-icn {
+        width: 55%;
+        height: 55%;
+        background-image: url("images/shop-bagdark.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .hov-opt .iconBox:hover .img-icn {
+        background-image: url("images/shop-bag.svg");
+      }
+      .hov-opt .iconBox i {
+        color: #828282;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .iconBox:hover i {
+        color: #fff;
+      }
+
+      .hov-opt .iconBox:hover {
+        border: 1px solid #a780af;
+        background-color: #a780af;
+        transform: scale(1.1);
+        transition: all ease-in-out 200ms;
+      }
+      .iconBox .icon-info {
+        display: none;
+        width: 80px;
+        position: absolute;
+        top: -30px;
+        background: #a780af;
+        border-radius: 5px;
+        left: 50%;
+        transform: translateX(-50%);transition: all ease-in-out 200ms;
+      }
+      .iconBox:hover .icon-info {
+        display: block;
+        transition: all ease-in-out 200ms;
+      }
+      .iconBox .icon-info p {
+        font-size: 12px;
+        color: #fff;
+        padding: 3px;
+      }
+      .icon-info .triangle-down {
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top:5px solid #a780af;
       }
       .show {
         display: block;
@@ -415,63 +506,222 @@
               <div class="row">
                 <div class="col-4 columnBox sweet promotion">
                   <div class="content">
-                    <img src="images/r1.png" alt="banana" />
+                    <img class="proimg" src="images/r1.png" alt="banana" />
                     <h5>Banana Rolls</h5>
                     <h4>$24.00</h4>
                     <div class="hov-opt">
-                      <div class="iconBox"><i class="fas fa-heart"></i></div>
-                      <div class="iconBox"><i class="fas fa-heart"></i></div>
-                      <div class="iconBox"><i class="fas fa-heart"></i></div>
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty promotion">
                   <div class="content">
-                    <img src="images/r2.png" alt="Lights" />
+                    <img class="proimg" src="images/r2.png" alt="Lights" />
                     <h5>Broccoli Rolls</h5>
                     <h4>$24.00</h4>
+                    <div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox sweet">
                   <div class="content">
-                    <img src="images/r3.png" alt="Nature" />
+                    <img class="proimg" src="images/r3.png" alt="Nature" />
                     <h5>Mango Rolls</h5>
                     <h4>$24.00</h4>
+                    <div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox sweet">
                   <div class="content">
-                    <img src="images/r4.png" alt="Car" />
+                    <img class="proimg" src="images/r4.png" alt="Car" />
                     <h5>Strawberry Rolls</h5>
                     <h4>$24.00</h4>
+                    <div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox sweet">
                   <div class="content">
-                    <img src="images/r5.png" alt="Car" />
+                    <img class="proimg" src="images/r5.png" alt="Car" />
                     <h5>Apple Rolls</h5>
-                    <h4>$24.00</h4>
+                    <h4>$24.00</h4><div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty">
                   <div class="content">
-                    <img src="images/chicha.png" alt="Car" />
+                    <img class="proimg" src="images/chicha.png" alt="Car" />
                     <h5>KALE Chips Cebolla y Ajo</h5>
-                    <h4>$24.00</h4>
+                    <h4>$24.00</h4><div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty">
                   <div class="content">
-                    <img src="images/r2.png" alt="Car" />
+                    <img class="proimg" src="images/r2.png" alt="Car" />
                     <h5>KALE Chips</h5>
-                    <h4>$24.00</h4>
+                    <h4>$24.00</h4><div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty">
                   <div class="content">
-                    <img src="images/r3.png" alt="Car" />
+                    <img class="proimg" src="images/r3.png" alt="Car" />
                     <h5>CHICHA Chips</h5>
-                    <h4>$24.00</h4>
+                    <h4>$24.00</h4><div class="hov-opt">
+                      <div class="iconBox">
+                        <i class="fas fa-heart"></i>
+                        <div class="icon-info">
+                          <p class="m-0">Wishlist</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox">
+                        <span class="img-icn"></span>
+                        <div class="icon-info">
+                          <p class="m-0">Add to cart</p>
+                          <div class="triangle-down"></div>
+                        </div>
+                      </div>
+                      <div class="iconBox"><i class="far fa-random"></i>
+                        <div class="icon-info">
+                          <p class="m-0">...</p>
+                          <div class="triangle-down"></div>
+                        </div></div>
+                    </div>
                   </div>
                 </div>
                 <!-- END GRID -->
