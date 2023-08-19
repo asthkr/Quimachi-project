@@ -103,6 +103,7 @@
         transform: scale();
         padding: 10px 25px;
         transition: all ease-in-out 200ms;
+        display: none;
       }
       .columnBox:hover {
         transform: scale(1.1);
@@ -123,18 +124,38 @@
         box-shadow: 0px 0px 25px 0px #ebebeb;
       }
 
-      .content img {
+      .content .imgs-card {
+        position: relative;
+      }
+      .content .imgs-card .proimg {
         width: 220px;
         height: 220px;
         border-radius: 50%;
         object-fit: cover;
         transform: scale();
+        overflow: hidden;
         transition: all ease-in-out 200ms;
       }
-      .columnBox:hover .content .proimg {
+      .columnBox:hover .content .imgs-card .proimg {
         transform: scale(0.8);
         transition: all ease-in-out 200ms;
       }
+      .content .imgs-card .img-off50 {
+        position: absolute;
+        background-image: url("images/off-50.png");
+        top: 10px;
+        right: 15px;
+        width: 45px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .content .imgs-card .img-off50 .offtxt {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: rgb(245, 245, 245);
+      }
+
       .content h5 {
         margin: 15px 0;
         font-weight: 500;
@@ -211,7 +232,8 @@
         background: #a780af;
         border-radius: 5px;
         left: 50%;
-        transform: translateX(-50%);transition: all ease-in-out 200ms;
+        transform: translateX(-50%);
+        transition: all ease-in-out 200ms;
       }
       .iconBox:hover .icon-info {
         display: block;
@@ -232,7 +254,7 @@
         height: 0;
         border-left: 7px solid transparent;
         border-right: 7px solid transparent;
-        border-top:5px solid #a780af;
+        border-top: 5px solid #a780af;
       }
       .show {
         display: block;
@@ -363,6 +385,86 @@
       .trproduct .content-box .text-tab h5 {
         color: #a986b0;
       }
+      .settingContent .searchBox form {
+        position: relative;
+        color: #707070;
+      }
+      .settingContent .searchBox form i {
+        position: absolute;
+        right: 25px;
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+      .settingContent .searchBox form .form-control {
+        padding: 8px 20px;
+        border-radius: 25px;
+        border: none;
+        background: #f7f8f9;
+      }
+      .settingContent .searchBox form .form-control:focus {
+        box-shadow: none;
+      }
+      .settingContent .searchBox form .form-control::placeholder {
+        color: #707070;
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+      .resultBar .l-side p {
+        color: #5f5f5f;
+      }
+      .r-side {
+        display: flex;
+        align-items: center;
+      }
+      .r-side .selectBox form label p {
+        margin-right: 10px;
+        color: #707070;
+        font-size: 0.8rem;
+      }
+      .r-side .selectBox form select {
+        font-size: 14px;
+
+        border-radius: 25px;
+        color: #5f5f5f;
+        background: #f7f8f9;
+        border: none;
+        width: 160px;
+        height: 40px;
+      }
+
+      .r-side .selectBox form select:focus-visible {
+        outline: none;
+      }
+      .r-side .selectBox form select option {
+        color: #707070;
+      }
+      .r-side .viewstyle {
+        margin: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+      }
+      .r-side .viewbox {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: #f7f8f9;
+        border-radius: 5px;
+      }
+      .r-side .viewbox:hover {
+        background: #a986b0;
+      }
+      .r-side .viewbox svg {
+        fill: #bdbdbd;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .r-side .viewbox:hover svg {
+        fill: white;
+      }
     </style>
     <!-- e-shop -->
     <!-- CSS -->
@@ -471,11 +573,18 @@
             <div class="tabs tabs-wrap">
               <button
                 class="btn custom-btn active"
+                onclick="filterSelection('all')"
+              >
+                Show All
+              </button>
+              <button
+                class="btn custom-btn "
                 onclick="filterSelection('sweet')"
               >
                 Sweet
               </button>
-              <button class="btn custom-btn" onclick="filterSelection('salty')">
+              <button class="btn custom-btn" 
+              onclick="filterSelection('salty')">
                 Salty
               </button>
               <button
@@ -487,16 +596,95 @@
             </div>
           </div>
           <div class="settingContent">
-            <div class="row">
+            <div class="row my-4">
               <div class="col-9">
                 <div class="resultBar">
                   <div
                     class="d-flex justify-content-between align-items-center"
-                  ></div>
+                  >
+                    <div class="l-side">
+                      <p class="m-0">Showing all 8 results</p>
+                    </div>
+                    <div class="r-side">
+                      <div class="selectBox">
+                        <form class="d-flex align-items-center">
+                          <label for="sortby"><p>Sort by:</p></label>
+                          <select name="sortby" id="sortfilter">
+                            <option value="default">Default</option>
+                            <option value="toprated">Top Rated</option>
+                            <option value="l2h">Low to High</option>
+                            <option value="h2l">High to Low</option>
+                          </select>
+                        </form>
+                      </div>
+                      <div class="viewstyle">
+                        <div id="gridview " class="viewbox">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.90594 0H2.31281C1.03754 0 0 1.03754 0 2.31281V6.90594C0 8.18121 1.03754 9.21875 2.31281 9.21875H6.90594C8.18121 9.21875 9.21875 8.18121 9.21875 6.90594V2.31281C9.21875 1.03754 8.18121 0 6.90594 0ZM7.65625 6.90594C7.65625 7.31965 7.31965 7.65625 6.90594 7.65625H2.31281C1.8991 7.65625 1.5625 7.31965 1.5625 6.90594V2.31281C1.5625 1.8991 1.8991 1.5625 2.31281 1.5625H6.90594C7.31965 1.5625 7.65625 1.8991 7.65625 2.31281V6.90594Z"
+                            />
+                            <path
+                              d="M17.6563 0H13.125C11.8327 0 10.7812 1.05141 10.7812 2.34375V6.875C10.7812 8.16734 11.8327 9.21875 13.125 9.21875H17.6563C18.9486 9.21875 20 8.16734 20 6.875V2.34375C20 1.05141 18.9486 0 17.6563 0ZM18.4375 6.875C18.4375 7.30578 18.087 7.65625 17.6563 7.65625H13.125C12.6942 7.65625 12.3438 7.30578 12.3438 6.875V2.34375C12.3438 1.91297 12.6942 1.5625 13.125 1.5625H17.6563C18.087 1.5625 18.4375 1.91297 18.4375 2.34375V6.875Z"
+                            />
+                            <path
+                              d="M6.90594 10.7812H2.31281C1.03754 10.7812 0 11.8188 0 13.0941V17.6872C0 18.9625 1.03754 20 2.31281 20H6.90594C8.18121 20 9.21875 18.9625 9.21875 17.6872V13.0941C9.21875 11.8188 8.18121 10.7812 6.90594 10.7812ZM7.65625 17.6872C7.65625 18.1009 7.31965 18.4375 6.90594 18.4375H2.31281C1.8991 18.4375 1.5625 18.1009 1.5625 17.6872V13.0941C1.5625 12.6804 1.8991 12.3438 2.31281 12.3438H6.90594C7.31965 12.3438 7.65625 12.6804 7.65625 13.0941V17.6872Z"
+                            />
+                            <path
+                              d="M17.6563 10.7812H13.125C11.8327 10.7812 10.7812 11.8327 10.7812 13.125V17.6563C10.7812 18.9486 11.8327 20 13.125 20H17.6563C18.9486 20 20 18.9486 20 17.6563V13.125C20 11.8327 18.9486 10.7812 17.6563 10.7812ZM18.4375 17.6563C18.4375 18.087 18.087 18.4375 17.6563 18.4375H13.125C12.6942 18.4375 12.3438 18.087 12.3438 17.6563V13.125C12.3438 12.6942 12.6942 12.3438 13.125 12.3438H17.6563C18.087 12.3438 18.4375 12.6942 18.4375 13.125V17.6563Z"
+                            />
+                          </svg>
+                        </div>
+                        <div id="listview" class="viewbox">
+                          <svg
+                            width="20"
+                            height="16"
+                            viewBox="0 0 20 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M19.0022 14.7894H5.62833C5.07712 14.7894 4.63037 14.3426 4.63037 13.7914C4.63037 13.2402 5.07712 12.7935 5.62833 12.7935H19.0019C19.5531 12.7935 19.9999 13.2402 19.9999 13.7914C19.9999 14.3426 19.5534 14.7894 19.0022 14.7894Z"
+                            />
+                            <path
+                              d="M19.0022 8.52521H5.62833C5.07712 8.52521 4.63037 8.07846 4.63037 7.52725C4.63037 6.97605 5.07712 6.5293 5.62833 6.5293H19.0019C19.5531 6.5293 19.9999 6.97605 19.9999 7.52725C20.0002 8.07846 19.5534 8.52521 19.0022 8.52521Z"
+                            />
+                            <path
+                              d="M19.0022 2.26104H5.62833C5.07712 2.26104 4.63037 1.81429 4.63037 1.26309C4.63037 0.711887 5.07712 0.265137 5.62833 0.265137H19.0019C19.5531 0.265137 19.9999 0.711887 19.9999 1.26309C19.9999 1.81429 19.5534 2.26104 19.0022 2.26104Z"
+                            />
+                            <path
+                              d="M1.34025 2.6805C2.08045 2.6805 2.6805 2.08045 2.6805 1.34025C2.6805 0.600052 2.08045 0 1.34025 0C0.600051 0 0 0.600052 0 1.34025C0 2.08045 0.600051 2.6805 1.34025 2.6805Z"
+                            />
+                            <path
+                              d="M1.34025 8.86752C2.08045 8.86752 2.6805 8.26746 2.6805 7.52726C2.6805 6.78706 2.08045 6.18701 1.34025 6.18701C0.600051 6.18701 0 6.78706 0 7.52726C0 8.26746 0.600051 8.86752 1.34025 8.86752Z"
+                            />
+                            <path
+                              d="M1.34025 15.0545C2.08045 15.0545 2.6805 14.4545 2.6805 13.7143C2.6805 12.9741 2.08045 12.374 1.34025 12.374C0.600051 12.374 0 12.9741 0 13.7143C0 14.4545 0.600051 15.0545 1.34025 15.0545Z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-3">
-                <div class="searchBar"></div>
+                <div class="searchBox">
+                  <form class="d-flex align-items-center" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search for products"
+                      aria-label="Search"
+                    />
+                    <i class="far fa-search"></i>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -506,7 +694,15 @@
               <div class="row">
                 <div class="col-4 columnBox sweet promotion">
                   <div class="content">
-                    <img class="proimg" src="images/r1.png" alt="banana" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r1.png" alt="banana" />
+                      <div class="img-off50">
+                        <div class="offtxt">
+                          <h6 class="m-0">50%</h6>
+                          sale
+                        </div>
+                      </div>
+                    </div>
                     <h5>Banana Rolls</h5>
                     <h4>$24.00</h4>
                     <div class="hov-opt">
@@ -524,17 +720,27 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty promotion">
                   <div class="content">
-                    <img class="proimg" src="images/r2.png" alt="Lights" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r2.png" alt="product" />
+                      <div class="img-off50">
+                        <div class="offtxt">
+                          <h6 class="m-0">50%</h6>
+                          sale
+                        </div>
+                      </div>
+                    </div>
                     <h5>Broccoli Rolls</h5>
                     <h4>$24.00</h4>
                     <div class="hov-opt">
@@ -552,17 +758,27 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-4 columnBox sweet">
+                <div class="col-4 columnBox sweet promotion">
                   <div class="content">
-                    <img class="proimg" src="images/r3.png" alt="Nature" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r3.png" alt="product" />
+                      <div class="img-off50">
+                        <div class="offtxt">
+                          <h6 class="m-0">50%</h6>
+                          sale
+                        </div>
+                      </div>
+                    </div>
                     <h5>Mango Rolls</h5>
                     <h4>$24.00</h4>
                     <div class="hov-opt">
@@ -580,17 +796,21 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox sweet">
                   <div class="content">
-                    <img class="proimg" src="images/r4.png" alt="Car" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r4.png" alt="product" />
+                    </div>
                     <h5>Strawberry Rolls</h5>
                     <h4>$24.00</h4>
                     <div class="hov-opt">
@@ -608,19 +828,24 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox sweet">
                   <div class="content">
-                    <img class="proimg" src="images/r5.png" alt="Car" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r5.png" alt="product" />
+                    </div>
                     <h5>Apple Rolls</h5>
-                    <h4>$24.00</h4><div class="hov-opt">
+                    <h4>$24.00</h4>
+                    <div class="hov-opt">
                       <div class="iconBox">
                         <i class="fas fa-heart"></i>
                         <div class="icon-info">
@@ -635,19 +860,25 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty">
                   <div class="content">
-                    <img class="proimg" src="images/chicha.png" alt="Car" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/chicha.png" alt="product" />
+                    </div>
+
                     <h5>KALE Chips Cebolla y Ajo</h5>
-                    <h4>$24.00</h4><div class="hov-opt">
+                    <h4>$24.00</h4>
+                    <div class="hov-opt">
                       <div class="iconBox">
                         <i class="fas fa-heart"></i>
                         <div class="icon-info">
@@ -662,19 +893,24 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty">
                   <div class="content">
-                    <img class="proimg" src="images/r2.png" alt="Car" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r2.png" alt="product" />
+                    </div>
                     <h5>KALE Chips</h5>
-                    <h4>$24.00</h4><div class="hov-opt">
+                    <h4>$24.00</h4>
+                    <div class="hov-opt">
                       <div class="iconBox">
                         <i class="fas fa-heart"></i>
                         <div class="icon-info">
@@ -689,19 +925,24 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-4 columnBox salty">
                   <div class="content">
-                    <img class="proimg" src="images/r3.png" alt="Car" />
+                    <div class="imgs-card">
+                      <img class="proimg" src="images/r4.png" alt="product" />
+                    </div>
                     <h5>CHICHA Chips</h5>
-                    <h4>$24.00</h4><div class="hov-opt">
+                    <h4>$24.00</h4>
+                    <div class="hov-opt">
                       <div class="iconBox">
                         <i class="fas fa-heart"></i>
                         <div class="icon-info">
@@ -716,11 +957,13 @@
                           <div class="triangle-down"></div>
                         </div>
                       </div>
-                      <div class="iconBox"><i class="far fa-random"></i>
+                      <div class="iconBox">
+                        <i class="far fa-random"></i>
                         <div class="icon-info">
                           <p class="m-0">...</p>
                           <div class="triangle-down"></div>
-                        </div></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -893,6 +1136,139 @@
             </div>
           </div>
           <!-- END MAIN -->
+        </div>
+      </div>
+    </section>
+    <section class="contactPage">
+      <div class="container-lg">
+        <div class="bnrText primary-textform">
+          <h1 class="txt-big-c">Contact</h1>
+          <div class="mailBox">
+            <p>Receive Our Offers And Promotions</p>
+            <form class="mail-wrapper">
+              <input
+                type="email"
+                name="E-mail"
+                id="email"
+                placeholder="E-mail"
+              />
+              <div class="btn-wrap">
+                <button class="btn custom-btn">
+                  <a class="btnTxt">Subscribe</a>
+                  <div class="btnIcon">
+                    <i class="fal fa-long-arrow-right"></i>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="socialmedia">
+            <p>Or join us in social media</p>
+            <div class="btn__container">
+              <a href="#" class="btn custom-btn-f">
+                <i class="fab fa-facebook"></i>
+                <span>Join us on Facebook</span>
+              </a>
+              <a href="#" class="btn custom-btn-i">
+                <i class="fab fa-instagram"></i>
+                <span>Join us on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container-fluid p-0">
+        <div class="bg-img">
+          <img src="images/jh.png" alt="#" />
+        </div>
+        <div class="ftr-content">
+          <div class="row align-items-start justify-content-between">
+            <div class="col-3">
+              <div class="d-flex flex-column">
+                <div class="logoName">
+                  <div class="logoImg">
+                    <img src="images/logo.png" alt="#" />
+                  </div>
+                  <h4>Quimachi</h4>
+                </div>
+                <p class="subtitle">
+                  Purus erat at massa ipsum tempor pellentesque ipsum massa
+                  ligula facilisi eget a vehicula amet. tortor ante nulla
+                </p>
+                <div class="social-icons">
+                  <div class="iconBox box-f">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="iconBox box-g">
+                    <i class="fab fa-google-plus-g"></i>
+                  </div>
+                  <div class="iconBox box-i">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>Information</h5>
+                  <span><i class="fal fa-horizontal-rule"></i></span>
+                  <ul>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms And Conditions</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>My account</h5>
+                  <span><i class="fal fa-horizontal-rule"></i></span>
+                  <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">WE ACCEPT ALL CARDS</a></li>
+                    <li>
+                      <div class="card-logo">
+                        <a href="#">
+                          <div class="card-img">
+                            <img src="images/visa.png" alt="visa" />
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="card-img">
+                            <img src="images/ic.svg" alt="mcard" />
+                            <p>MasterCard</p>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="card-img">
+                            <img src="images/paypal.svg" alt="paypal" />
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>Locate Us</h5>
+                  <span><i class="fal fa-horizontal-rule"></i></span>
+                  <ul>
+                    <li><a href="#">Malecon Bernales 283</a></li>
+                    <li><a href="#">+511 264 0089</a></li>
+                    <li><a href="#">sales@quimachi.com</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            <span class="div-line">
+              <h6>
+                <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
+                Reserved.
+              </h6>
+            </span>
+          </div>
         </div>
       </div>
     </section>
