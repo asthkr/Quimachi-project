@@ -72,19 +72,19 @@
   /* banner */
    
 .productInfo{
-  padding:100px 0
+  padding:50px 0
 }
 .productInfo .product-images{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap:10px;
 
 }
 .productInfo .product-images .slider-product{
-width: 100%;
+width: 365px;margin-left: auto;
 }
 .productInfo .product-images .slider-product .s-image{
-  width: 350px;
+  width: 100;
   height: 350px;
   border-radius: 15px;
   overflow: hidden;
@@ -93,7 +93,28 @@ width: 100%;
   width: 100%;
   height: 100%;
   object-fit: contain;
-
+  object-position: center;
+}
+.productInfo .product-images .slider-nav{
+  width: 365px;
+  margin-left:  auto ;
+}
+.productInfo .product-images .slider-nav .slick-track{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.productInfo .product-images .slider-nav .s-image-m{
+ width: 110px !important;
+  height: 110px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.productInfo .product-images .slider-nav .s-image-m img{  
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
       </style><!-- CSS -->
   </head>
@@ -199,7 +220,7 @@ width: 100%;
     <!-- topsection END -->
     <section class="productInfo">
       <div class="container-lg">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-5">
           <div class="product-images">
             <div class="slider-product">
@@ -407,10 +428,10 @@ width: 100%;
          centerMode: true,
       });
       $(".slider-nav").slick({
-        slidesToShow: 3,
+        slidesToShow: 3, arrows: false,
         slidesToScroll: 1,
         asNavFor: ".slider-product",
-        centerMode: true,
+        centerMode:false,
         focusOnSelect: true,
       });
     </script>
