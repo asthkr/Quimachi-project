@@ -69,10 +69,33 @@
         border-radius: 50%;
         background: #fff;
       }
-    </style>
-    <!-- banner -->
-    
-    <!-- CSS -->
+  /* banner */
+   
+.productInfo{
+  padding:100px 0
+}
+.productInfo .product-images{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+.productInfo .product-images .slider-product{
+width: 100%;
+}
+.productInfo .product-images .slider-product .s-image{
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.productInfo .product-images .slider-product .s-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+      </style><!-- CSS -->
   </head>
   <body>
     <!-- topsection START -->
@@ -173,9 +196,49 @@
         </div>
       </div>
     </section>
-     <!-- topsection END -->
-     
-     <!-- bottomsection START -->
+    <!-- topsection END -->
+    <section class="productInfo">
+      <div class="container-lg">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="product-images">
+            <div class="slider-product">
+              <div class="s-image">
+                <img src="images/r1.png" alt="" />
+              </div>
+              <div class="s-image">
+                <img src="images/r2.png" alt="" />
+              </div>
+              <div class="s-image">
+                <img src="images/r3.png" alt="" />
+              </div>
+              <div class="s-image">
+                <img src="images/r4.png" alt="" />
+              </div>
+            </div>
+            <div class="slider-nav">
+              <div class="s-image-m">
+                <img src="images/r1.png" alt="" />
+              </div>
+              <div class="s-image-m">
+                <img src="images/r2.png" alt="" />
+              </div>
+              <div class="s-image-m">
+                <img src="images/r3.png" alt="" />
+              </div>
+              <div class="s-image-m">
+                <img src="images/r4.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="product-detail"></div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- bottomsection START -->
     <section class="contactPage">
       <div class="container-lg">
         <div class="bnrText primary-textform">
@@ -309,15 +372,12 @@
         </div>
       </div>
     </section>
-      <!-- bottomsection END -->
+    <!-- bottomsection END -->
     <script
       type="text/javascript"
       src="//code.jquery.com/jquery-1.11.0.min.js"
     ></script>
-    <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
@@ -335,6 +395,23 @@
           "background-color",
           scrolled ? "rgba(0, 0, 0,.4)" : "rgba(0, 0, 0,0)"
         );
+      });
+    </script>
+    <script>
+      $(".slider-product").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: ".slider-nav",
+         centerMode: true,
+      });
+      $(".slider-nav").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: ".slider-product",
+        centerMode: true,
+        focusOnSelect: true,
       });
     </script>
   </body>
