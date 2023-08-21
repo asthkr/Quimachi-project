@@ -69,54 +69,85 @@
         border-radius: 50%;
         background: #fff;
       }
-  /* banner */
-   
-.productInfo{
-  padding:50px 0
-}
-.productInfo .product-images{
-  display: flex;
-  flex-direction: column;
-  gap:10px;
-}
-.productInfo .product-images .slider-product{
-width: 365px;margin-left: auto;
-}
+      /* banner */
 
-.productInfo .product-images .slider-product .s-image{
-  width: 100;
-  height: 350px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.productInfo .product-images .slider-product .s-image img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-.productInfo .product-images .slider-nav{
-  width: 365px;
-  margin-left:  auto ;
-}
-.productInfo .product-images .slider-nav .slick-track{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-.productInfo .product-images .slider-nav .s-image-m{
- width: 110px !important;
-  height: 110px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.productInfo .product-images .slider-nav .s-image-m img{  
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-      </style><!-- CSS -->
+      .productInfo {
+        padding: 50px 0;
+      }
+      .productInfo .product-images {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .productInfo .product-images .slider-product {
+        width: 365px;
+        margin-left: auto;
+      }
+
+      .productInfo .product-images .slider-product .s-image {
+        width: 100;
+        height: 350px;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .productInfo .product-images .slider-product .s-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      .productInfo .product-images .slider-nav {
+        width: 365px;
+        margin-left: auto;
+      }
+      .productInfo .product-images .slider-nav .slick-track {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+      .productInfo .product-images .slider-nav .s-image-m {
+        width: 110px !important;
+        height: 110px;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .productInfo .product-images .slider-nav .s-image-m img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      
+      .categorieBox span{
+        font-weight: 500;
+      }
+     .social-icon {
+        box-shadow: 0 0 2px #000;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        text-align: center;
+      
+      }
+      .social-icon i {
+        margin-top: 5px;
+        color: white;
+        vertical-align: middle;
+      }
+      .box-f {
+        background-color: #3b5998;
+      }
+      .box-g {
+        background: #dc4e41;
+      }
+      .detailBox{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    </style>
+    <!-- CSS -->
   </head>
   <body>
     <!-- topsection START -->
@@ -220,44 +251,62 @@ width: 365px;margin-left: auto;
     <!-- topsection END -->
     <section class="productInfo">
       <div class="container-lg">
-      <div class="row justify-content-center">
-        <div class="col-md-5">
-          <div class="product-images">
-            <div class="slider-product">
-              <div class="s-image">
-                <img src="images/r1.png" alt="" />
+        <div class="row justify-content-center align-items-start">
+          <div class="col-md-5">
+            <div class="product-images">
+              <div class="slider-product">
+                <div class="s-image">
+                  <img src="images/r1.png" alt="" />
+                </div>
+                <div class="s-image">
+                  <img src="images/r2.png" alt="" />
+                </div>
+                <div class="s-image">
+                  <img src="images/r3.png" alt="" />
+                </div>
+                <div class="s-image">
+                  <img src="images/r4.png" alt="" />
+                </div>
               </div>
-              <div class="s-image">
-                <img src="images/r2.png" alt="" />
-              </div>
-              <div class="s-image">
-                <img src="images/r3.png" alt="" />
-              </div>
-              <div class="s-image">
-                <img src="images/r4.png" alt="" />
+              <div class="slider-nav">
+                <div class="s-image-m">
+                  <img src="images/r1.png" alt="" />
+                </div>
+                <div class="s-image-m">
+                  <img src="images/r2.png" alt="" />
+                </div>
+                <div class="s-image-m">
+                  <img src="images/r3.png" alt="" />
+                </div>
+                <div class="s-image-m">
+                  <img src="images/r4.png" alt="" />
+                </div>
               </div>
             </div>
-            <div class="slider-nav">
-              <div class="s-image-m">
-                <img src="images/r1.png" alt="" />
+          </div>
+          <div class="col-md-7">
+            <div class="d-flex align-items-center">
+              <div class="detailBox detail-sec">
+<h4 class="m-0">Banana Rolls</h4>
+<h2>$24.00</h2>
               </div>
-              <div class="s-image-m">
-                <img src="images/r2.png" alt="" />
-              </div>
-              <div class="s-image-m">
-                <img src="images/r3.png" alt="" />
-              </div>
-              <div class="s-image-m">
-                <img src="images/r4.png" alt="" />
+              <div class="detailBox buy-sec"></div>
+              <div class="categorieBox">
+                <p><span>Categories: </span> Banana Rolls, Kale Chips</p>
+                <div class="d-flex gap-3 mt-3">
+                  <span>Share: </span>
+                  <div class="social-icon box-f">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="social-icon box-g">
+                    <i class="fab fa-google-plus-g"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-7">
-          <div class="product-detail"></div>
-        </div>
       </div>
-    </div>
     </section>
     <!-- bottomsection START -->
     <section class="contactPage">
@@ -425,13 +474,14 @@ width: 365px;margin-left: auto;
         arrows: false,
         fade: true,
         asNavFor: ".slider-nav",
-         centerMode: true,
+        centerMode: true,
       });
       $(".slider-nav").slick({
-        slidesToShow: 3, arrows: false,
+        slidesToShow: 3,
+        arrows: false,
         slidesToScroll: 1,
         asNavFor: ".slider-product",
-        centerMode:false,
+        centerMode: false,
         focusOnSelect: true,
       });
     </script>

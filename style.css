@@ -213,6 +213,7 @@ body p {
   text-align: center;
 }
 .footer .ftr-content .social-icons .iconBox i {
+  margin-top: 5px;
   color: white;
   vertical-align: middle;
 }
