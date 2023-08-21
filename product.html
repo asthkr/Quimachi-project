@@ -69,54 +69,168 @@
         border-radius: 50%;
         background: #fff;
       }
-  /* banner */
-   
-.productInfo{
-  padding:50px 0
-}
-.productInfo .product-images{
-  display: flex;
-  flex-direction: column;
-  gap:10px;
-}
-.productInfo .product-images .slider-product{
-width: 365px;margin-left: auto;
-}
+      /* banner */
 
-.productInfo .product-images .slider-product .s-image{
-  width: 100;
-  height: 350px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.productInfo .product-images .slider-product .s-image img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-.productInfo .product-images .slider-nav{
-  width: 365px;
-  margin-left:  auto ;
-}
-.productInfo .product-images .slider-nav .slick-track{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-.productInfo .product-images .slider-nav .s-image-m{
- width: 110px !important;
-  height: 110px;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.productInfo .product-images .slider-nav .s-image-m img{  
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-      </style><!-- CSS -->
+      .productInfo {
+        padding: 50px 0;
+      }
+      .productInfo .product-images {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .productInfo .product-images .slider-product {
+        width: 365px;
+        margin-left: auto;
+      }
+
+      .productInfo .product-images .slider-product .s-image {
+        width: 100;
+        height: 350px;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .productInfo .product-images .slider-product .s-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+      .productInfo .product-images .slider-nav {
+        width: 365px;
+        margin-left: auto;
+      }
+      .productInfo .product-images .slider-nav .slick-track {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+      .productInfo .product-images .slider-nav .s-image-m {
+        width: 110px !important;
+        height: 110px;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .productInfo .product-images .slider-nav .s-image-m img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      /* ABSTRACTBANNER */
+      .abstractDescription {
+        position: relative;
+        margin: 50px 0;
+      }
+      .abstractDescription .abst-Img {
+        width: 100%;
+        height: 700px;
+        position: relative;
+      }
+      .abstractDescription .abst-Img .abst-top {
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+      }
+      .abstractDescription .abst-Img .abst-top {
+        width: 100%;
+        height: 150px;
+      }
+      .abstractDescription .abst-Img .back-theme-img {
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        position: absolute;
+      }
+      .abstractDescription .primary-textform {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      .abstractDescription .primary-textform .tabcontent {
+        position: relative;
+        height: 100%;
+        color: #fff;
+        display: none;
+        padding: 25px 0;
+        border: none;
+      }
+      .abstractDescription .primary-textform .tabcontent .txt-big-l {
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 700;
+        color: #000;
+        opacity: 0.2;
+        text-transform: capitalize;
+        font-size: 150px;
+        margin-bottom: 0 !important;
+      }
+      .abstractDescription .primary-textform .tabcontent .texthead {
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .abstractDescription .primary-textform .tabcontent p {
+        color: #e9e9e9;
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      /* Style the tab */
+      .tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        overflow: hidden;
+      }
+
+      /* Style the buttons that are used to open the tab content */
+      .tab button {
+        z-index: 200;
+        background-color: transparent;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 7px;
+        transition: 0.3s;
+        border-bottom: 2px solid transparent;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        border-bottom: 2px solid #fff;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        border-bottom: 2px solid #fff;
+        background-color: transparent;
+      }
+
+      .primary-textform #description {
+        display: block;
+      }
+      .relatedProduct {
+        border: 1px solid red;
+        margin: 25px 0;
+      }
+    </style>
+    <!-- CSS -->
   </head>
   <body>
     <!-- topsection START -->
@@ -220,44 +334,120 @@ width: 365px;margin-left: auto;
     <!-- topsection END -->
     <section class="productInfo">
       <div class="container-lg">
-      <div class="row justify-content-center">
-        <div class="col-md-5">
-          <div class="product-images">
-            <div class="slider-product">
-              <div class="s-image">
-                <img src="images/r1.png" alt="" />
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="product-images">
+              <div class="slider-product">
+                <div class="s-image">
+                  <img src="images/r1.png" alt="" />
+                </div>
+                <div class="s-image">
+                  <img src="images/r2.png" alt="" />
+                </div>
+                <div class="s-image">
+                  <img src="images/r3.png" alt="" />
+                </div>
+                <div class="s-image">
+                  <img src="images/r4.png" alt="" />
+                </div>
               </div>
-              <div class="s-image">
-                <img src="images/r2.png" alt="" />
-              </div>
-              <div class="s-image">
-                <img src="images/r3.png" alt="" />
-              </div>
-              <div class="s-image">
-                <img src="images/r4.png" alt="" />
-              </div>
-            </div>
-            <div class="slider-nav">
-              <div class="s-image-m">
-                <img src="images/r1.png" alt="" />
-              </div>
-              <div class="s-image-m">
-                <img src="images/r2.png" alt="" />
-              </div>
-              <div class="s-image-m">
-                <img src="images/r3.png" alt="" />
-              </div>
-              <div class="s-image-m">
-                <img src="images/r4.png" alt="" />
+              <div class="slider-nav">
+                <div class="s-image-m">
+                  <img src="images/r1.png" alt="" />
+                </div>
+                <div class="s-image-m">
+                  <img src="images/r2.png" alt="" />
+                </div>
+                <div class="s-image-m">
+                  <img src="images/r3.png" alt="" />
+                </div>
+                <div class="s-image-m">
+                  <img src="images/r4.png" alt="" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-7">
-          <div class="product-detail"></div>
+          <div class="col-md-7">
+            <div class="product-detail"></div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="abstractDescription">
+      <div class="container-fluid p-0">
+        <div class="abst-Img">
+          <img
+            src="images/jh.png"
+            alt="abstract images"
+            class="back-theme-img"
+          />
+          <img
+            src="images/Screenshot 2023-08-21 133825.png"
+            alt=""
+            class="abst-top"
+          />
+        </div>
+        <div class="bnrText primary-textform">
+          <div class="tab">
+            <button
+              class="tablinks active"
+              onclick="openCity(event, 'description')"
+            >
+              DESCRIPTION
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'reviews')">
+              REVIEWS
+            </button>
+          </div>
+          <div id="description" class="tabcontent">
+            <h1 class="txt-big-l">Description</h1>
+            <h6 class="texthead">Description</h6>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, enim ipsam voluptatem quia
+              voluptas sit aspernatur.
+            </p>
+            <p>
+              Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+              ipsam voluptätem quia voluptas sit aspernatur.
+            </p>
+            <h6 class="texthead">Quis autem vel eum iure reprehenderit qui</h6>
+            <p>
+              Neque porro quisquam est. qui dolorem ipsum quia dolor sit amet,
+              consectetur. adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem. Ut enim ad minima veniam. quis nostrum exercitationem
+              ullam corporis suscipit laboriosam.
+            </p>
+          </div>
+          <div id="reviews" class="tabcontent">
+            <h1 class="txt-big-l">Reviews</h1>
+            <h6 class="texthead">Reviews</h6>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, enim ipsam voluptatem quia
+              voluptas sit aspernatur.
+            </p>
+            <p>
+              Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+              quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+              ipsam voluptätem quia voluptas sit aspernatur.
+            </p>
+            <h6 class="texthead">Quis autem vel eum iure reprehenderit qui</h6>
+            <p>
+              Neque porro quisquam est. qui dolorem ipsum quia dolor sit amet,
+              consectetur. adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem. Ut enim ad minima veniam. quis nostrum exercitationem
+              ullam corporis suscipit laboriosam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relatedProduct">
+      <div class="container-lg"></div>
     </section>
     <!-- bottomsection START -->
     <section class="contactPage">
@@ -425,15 +615,38 @@ width: 365px;margin-left: auto;
         arrows: false,
         fade: true,
         asNavFor: ".slider-nav",
-         centerMode: true,
+        centerMode: true,
       });
       $(".slider-nav").slick({
-        slidesToShow: 3, arrows: false,
+        slidesToShow: 3,
+        arrows: false,
         slidesToScroll: 1,
         asNavFor: ".slider-product",
-        centerMode:false,
+        centerMode: false,
         focusOnSelect: true,
       });
+    </script>
+    <script>
+      function openCity(evt, cityName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
     </script>
   </body>
 </html>

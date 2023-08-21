@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/solid.min.css" />
     <link rel="stylesheet" href="css/pro.min.css" />
+    <link rel="stylesheet" href="css/light.min.css" />
     <!-- CSS -->
     <!-- banner -->
     <style>
@@ -421,21 +422,22 @@
         color: #707070;
         font-size: 0.8rem;
       }
+
       .r-side .selectBox form select {
         font-size: 14px;
-padding:10px 0;
+        padding: 0 15px;
         border-radius: 25px;
         color: #5f5f5f;
-        background: #f7f8f9;
+        background-color: #f7f8f9;
         border: none;
         width: 160px;
         height: 40px;
       }
 
-      .r-side .selectBox form select:focus-visible {
+      .r-side .selectBox form #sortfilter:focus-visible {
         outline: none;
       }
-      .r-side .selectBox form select option {
+      .r-side .selectBox form #sortfilter option {
         color: #707070;
       }
       .r-side .viewstyle {
@@ -577,14 +579,10 @@ padding:10px 0;
               >
                 Show All
               </button>
-              <button
-                class="btn custom-btn "
-                onclick="filterSelection('sweet')"
-              >
+              <button class="btn custom-btn" onclick="filterSelection('sweet')">
                 Sweet
               </button>
-              <button class="btn custom-btn" 
-              onclick="filterSelection('salty')">
+              <button class="btn custom-btn" onclick="filterSelection('salty')">
                 Salty
               </button>
               <button
@@ -873,7 +871,11 @@ padding:10px 0;
                 <div class="col-4 columnBox salty">
                   <div class="content">
                     <div class="imgs-card">
-                      <img class="proimg" src="images/chicha.png" alt="product" />
+                      <img
+                        class="proimg"
+                        src="images/chicha.png"
+                        alt="product"
+                      />
                     </div>
 
                     <h5>KALE Chips Cebolla y Ajo</h5>
