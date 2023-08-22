@@ -102,7 +102,7 @@
       .columnBox {
         transform: scale();
         padding: 10px 25px;
-        transition: all ease-in-out 200ms;
+        transition: all ease-in-out 800ms;
         display: none;
       }
       .columnBox:hover {
@@ -577,14 +577,10 @@
               >
                 Show All
               </button>
-              <button
-                class="btn custom-btn "
-                onclick="filterSelection('sweet')"
-              >
+              <button class="btn custom-btn" onclick="filterSelection('sweet')">
                 Sweet
               </button>
-              <button class="btn custom-btn" 
-              onclick="filterSelection('salty')">
+              <button class="btn custom-btn" onclick="filterSelection('salty')">
                 Salty
               </button>
               <button
@@ -873,7 +869,11 @@
                 <div class="col-4 columnBox salty">
                   <div class="content">
                     <div class="imgs-card">
-                      <img class="proimg" src="images/chicha.png" alt="product" />
+                      <img
+                        class="proimg"
+                        src="images/chicha.png"
+                        alt="product"
+                      />
                     </div>
 
                     <h5>KALE Chips Cebolla y Ajo</h5>
