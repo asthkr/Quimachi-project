@@ -75,19 +75,19 @@
         }
     </style>
     <style>
-        .signupPage {
+        .loginPage {
 
             padding: 50px 0
         }
 
-        .signupPage .primary-textform {
+        .loginPage .primary-textform {
             display: flex;
             flex-direction: column;
             text-align: center;
             flex-wrap: wrap;
         }
 
-        .signupPage .primary-textform .txt-big-c {
+        .loginPage .primary-textform .txt-big-c {
             color: #eaeaea;
             text-transform: capitalize;
             font-size: 11vw;
@@ -95,7 +95,7 @@
             margin-bottom: -30px !important;
         }
 
-        .signupPage .primary-textform .txt-heading {
+        .loginPage .primary-textform .txt-heading {
             font-size: 42px;
             font-weight: 600;
             color: #a986b0;
@@ -103,35 +103,35 @@
             margin-bottom: 0 !important;
         }
 
-        .signupPage .form-signup {
+        .loginPage .form-login {
             width: 50%;
             margin: 0 auto;
             padding: 25px 0;
         }
 
-        .signupPage .form-signup .form-box {
+        .loginPage .form-login .form-box {
             margin: 20px;
         }
 
-        .signupPage .form-signup .form-box form .form-group label {
+        .loginPage .form-login .form-box form .form-group label {
             margin-left: 20px;
             font-size: 14px;
             font-weight: 500;
             color: #575757;
         }
 
-        .signupPage .form-signup .form-box form .form-group input {
+        .loginPage .form-login .form-box form .form-group input {
             border-radius: 25px;
             padding: 10px 20px;
             text-transform: capitalize;
         }
 
-        .signupPage .form-signup .form-box form .form-group input:focus {
+        .loginPage .form-login .form-box form .form-group input:focus {
             box-shadow: none;
             border-color: #a0a0a0;
         }
 
-        .signupPage .form-signup .form-box form .form-group .form-btn {
+        .loginPage .form-login .form-box form .form-group .form-btn {
             width: 100%;
             border-radius: 25px;
             background: #a986b0;
@@ -140,12 +140,28 @@
             font-size: 18px;
             padding: 12px 0;
         }
-        .loginbtn{
+
+        .loginbtn {
             display: flex;
             gap: 5px;
             justify-content: center;
         }
-        .loginbtn a{color: #a986b0;}
+
+        .loginbtn a {
+            color: #a986b0;
+        }
+        .loginPage .form-login .form-box form .form-group input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  border-radius:10px;
+}.loginPage .form-login .form-box form .form-group input[type="checkbox"] +label{
+    margin-left: 5px;
+}
+
     </style>
 
 <body>
@@ -229,14 +245,14 @@
                     <img src="images/jh.png" alt="" />
                 </div>
                 <div class="bnrText primary-textform">
-                    <h1>Create Your Account</h1>
+                    <h1>Welcome back to Quimachi</h1>
                     <div class="page-path">
                         <a href="index.html">
                             <p>Home</p>
                         </a>
                         <span></span>
-                        <a href="signup.html">
-                            <p>Sign up</p>
+                        <a href="login.html">
+                            <p>Log in</p>
                         </a>
                     </div>
                 </div>
@@ -246,15 +262,15 @@
     <!-- topsection END -->
 
 
-    <section class="signupPage">
+    <section class="loginPage">
         <div class="container-lg">
             <div class="bnrText primary-textform">
-                <h1 class="txt-big-c">Sign up</h1>
+                <h1 class="txt-big-c">Log In</h1>
                 <div class="txt-heading">
-                    <p>Create Your Account</p>
+                    <p>Log In to Your Account</p>
                 </div>
             </div>
-            <div class="form-signup mx-auto ">
+            <div class="form-login mx-auto ">
 
                 <div class="form-box">
                     <form target="_blank" action="https://formsubmit.co/youremail@gmail.com" method="POST">
@@ -269,20 +285,22 @@
                                     <label for="passwordsignup" class="form-label">PASSWORD</label>
                                     <input type="password" class="form-control" name="passowrdsignup" placeholder="">
                                 </div>
-
                                 <div class="col-12">
-                                    <label for="cpasswordsignup" class="form-label">CONFIRM PASSWORD</label>
-                                    <input type="password" class="form-control" name="cpassowrdsignup" placeholder="">
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center"> 
+                                     <div class="d-flex">  <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label></div> 
+<a href="">Lost Your Password?</a>
+                               </div>
+                                    </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn form-btn mt-3">
-                                        Create Account
+                                        Log In
                                     </button>
                                 </div>
                                 <div class="col-12">
-<div class="loginbtn"><p>Already have an account?</p>
-<a href="login.html">Log In</a>
-</div>
+                                    <div class="loginbtn">
+                                        <p>New to Quimachi?</p>
+                                        <a href="signup.html">Sign Up</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
