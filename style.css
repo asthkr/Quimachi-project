@@ -5,7 +5,6 @@
 }
 
 body {
-  
   font-family: "Rubik", sans-serif !important;
 }
 body a {
@@ -282,7 +281,7 @@ body p {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-weight: 700;
+  font-weight: 600;
   transform: translate(-50%, -50%);
   font-size: 0.6rem;
 }
@@ -348,16 +347,16 @@ body p {
 .heroBanner .container-fluid .bnrWrap .primary-textform .txt-big-l {
   color: #f2d9b7;
   text-transform: uppercase;
-  font-size: 90px;
-  font-weight: 700;
-  margin-bottom: 0 !important;
+  font-size: 8vw;
+  font-weight: 600;
+  margin-bottom: -30px !important;
 }
 .heroBanner .container-fluid .bnrWrap .primary-textform .left-space {
   margin-left: 140px;
 }
 .heroBanner .container-fluid .bnrWrap .primary-textform .left-space .txt-heading {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   line-height: 3rem;
   margin-bottom: 0 !important;
@@ -419,18 +418,18 @@ body p {
   flex-wrap: wrap;
 }
 .subBanner .primary-textform .txt-big-l {
-  font-weight: 700;
+  font-weight: 600;
   color: #eaeaea;
   text-transform: capitalize;
-  font-size: 140px;
-  margin-bottom: 0 !important;
+  font-size: 11vw;
+  margin-bottom: -30px !important;
 }
 .subBanner .primary-textform .left-space {
   margin-left: 80px;
 }
 .subBanner .primary-textform .left-space .txt-heading {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
@@ -578,14 +577,14 @@ body p {
 }
 .sweet-salty .primary-textform .txt-big-l {
   color: #eaeaea;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: capitalize;
-  font-size: 150px;
-  margin-bottom: 0 !important;
+  font-size: 11vw;
+  margin-bottom: -30px !important;
 }
 .sweet-salty .primary-textform .txt-heading {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
@@ -734,18 +733,18 @@ body p {
   flex-wrap: wrap;
 }
 .abstract-banner .container-fluid .primary-textform .txt-big-l {
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
   opacity: 0.3;
   text-transform: capitalize;
-  font-size: 150px;
-  margin-bottom: 0 !important;
+  font-size: 11vw;
+  margin-bottom: -30px !important;
 }
 .abstract-banner .container-fluid .primary-textform .txt-heading {
   text-transform: capitalize;
   margin-top: -25px;
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 0 !important;
 }
@@ -753,11 +752,9 @@ body p {
   font-size: 2rem;
   font-weight: 200;
   color: #fff;
-  margin-top: -5px;
 }
 .abstract-banner .container-fluid .primary-textform p {
   color: #fff;
-  margin-top: -10px;
 }
 .abstract-banner .container-fluid .primary-textform .btn-wrap {
   margin: 0 auto;
@@ -803,17 +800,17 @@ body p {
   flex-wrap: wrap;
 }
 .benefit .primary-textform .txt-big-l {
-  font-weight: 700;
+  font-weight: 600;
   color: #eaeaea;
   text-transform: capitalize;
-  font-size: 180px;
-  margin-bottom: 0 !important;
+  font-size: 11vw;
+  margin-bottom: -30px !important;
 }
 .benefit .primary-textform .txt-heading {
   margin-top: -25px;
   text-transform: capitalize;
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
@@ -833,6 +830,7 @@ body p {
 .benefit .fruit-image {
   width: 100%;
   height: 350px;
+  margin-top: 50px;
 }
 .benefit .fruit-image img {
   width: 100%;
@@ -854,6 +852,11 @@ body p {
   position: absolute;
   right: 0;
   top: 170px;
+}
+.benefit .services .serviceMidbox,
+.benefit .services .serviceBoxl,
+.benefit .services .serviceBoxr {
+  font-weight: 300;
 }
 .benefit .services .icon-wrap {
   margin: 25px auto;
@@ -880,18 +883,18 @@ body p {
   flex-wrap: wrap;
 }
 .likesubBanner .primary-textform .txt-big-l {
-  font-weight: 700;
+  font-weight: 600;
   color: #eaeaea;
   text-transform: capitalize;
-  font-size: 140px;
-  margin-bottom: 0 !important;
+  font-size: 11vw;
+  margin-bottom: -30px !important;
 }
 .likesubBanner .primary-textform .left-space {
   margin-left: 80px;
 }
 .likesubBanner .primary-textform .left-space .txt-heading {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   color: #a986b0;
   line-height: 3rem;
   margin-bottom: 0 !important;
@@ -969,11 +972,11 @@ body p {
 }
 .contactPage .primary-textform .txt-big-c {
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   color: #eaeaea;
   text-transform: capitalize;
-  font-size: 160px;
-  margin-bottom: 0 !important;
+  font-size: 11vw;
+  margin-bottom: -30px !important;
 }
 .contactPage .primary-textform .mailBox {
   width: 80%;
@@ -989,7 +992,7 @@ body p {
   margin: 0;
   font-size: 40px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 600;
 }
 .contactPage .primary-textform .mailBox .mail-wrapper {
   position: relative;
@@ -1070,7 +1073,7 @@ body p {
 .contactPage .primary-textform .socialmedia .custom-btn-i {
   border-radius: 25px;
   min-width: 280px;
-  background-color: #c71e7e;
+  background: linear-gradient(to right, #ff3019 0%, #c90477 100%);
   padding: 8px 20px;
   text-decoration: none;
   color: #fff;
@@ -1094,7 +1097,6 @@ body p {
 }
 .contactPage .primary-textform .socialmedia .custom-btn-i:hover {
   position: relative;
-  background: linear-gradient(to right, #ff3019 0%, #c90477 100%);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 .contactPage .primary-textform .socialmedia .custom-btn-i:hover i {
@@ -1116,7 +1118,7 @@ body p {
 .contactPage .primary-textform .socialmedia .custom-btn-f {
   border-radius: 25px;
   min-width: 280px;
-  background-color: #286ed6;
+  background-color: #4267b2;
   padding: 8px 20px;
   text-decoration: none;
   color: #fff;
@@ -1138,7 +1140,7 @@ body p {
 }
 .contactPage .primary-textform .socialmedia .custom-btn-f:hover {
   position: relative;
-  background-color: #286ed6;
+  background-color: #4267b2;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 .contactPage .primary-textform .socialmedia .custom-btn-f:hover i {
