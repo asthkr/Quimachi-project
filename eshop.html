@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quimachi</title>
+    <title>Quimachi/products</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link
@@ -100,7 +100,7 @@
       }
 
       .columnBox {
-        transform: scale();
+        transform: scale(1);
         padding: 10px 25px;
         transition: all ease-in-out 800ms;
         display: none;
@@ -132,7 +132,7 @@
         height: 220px;
         border-radius: 50%;
         object-fit: cover;
-        transform: scale();
+        transform: scale(1);
         overflow: hidden;
         transition: all ease-in-out 200ms;
       }
@@ -188,7 +188,7 @@
         position: relative;
         width: 36px;
         height: 36px;
-        transform: scale();
+        transform: scale(1);
         background-color: #fff;
         border-radius: 50%;
         border: 1px solid #828282;
@@ -515,10 +515,12 @@
                   </select>
                 </form>
               </div>
-              <div class="shop-cart">
+              <a class="shop-cart" href="cart.html">
                 <img src="images/shop-bag.svg" alt="" />
-                <span class="top-dot"><p>8</p></span>
-              </div>
+                <span class="top-dot">
+                  <p>8</p>
+                </span>
+              </a>
               <div class="signup-btn">
                 <a href="signup.html"><button class="btn">Sign Up</button></a>
               </div>
