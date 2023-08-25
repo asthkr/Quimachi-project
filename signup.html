@@ -1,154 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quimachi</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/solid.min.css" />
     <link rel="stylesheet" href="css/pro.min.css" />
     <style>
-        .productBanner {
-            display: block;
-        }
+      .productBanner {
+        display: block;
+      }
 
-        .productBanner .bnrWrap {
-            position: relative;
-        }
+      .productBanner .bnrWrap {
+        position: relative;
+      }
 
-        .bnrWrap .bgImage {
-            width: 100%;
-            height: 400px;
-        }
+      .bnrWrap .bgImage {
+        width: 100%;
+        height: 400px;
+      }
 
-        .bgImage img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: bottom;
-            filter: brightness(110%);
-        }
+      .bgImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        filter: brightness(110%);
+      }
 
-        .bnrWrap .bnrText {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+      .bnrWrap .bnrText {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-        .bnrWrap .primary-textform {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            gap: 25px;
-            color: white;
-        }
+      .bnrWrap .primary-textform {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 25px;
+        color: white;
+      }
 
-        .bnrText h1 {
-            text-transform: none;
-            font-weight: 700;
-        }
+      .bnrText h1 {
+        text-transform: none;
+        font-weight: 700;
+      }
 
-        .bnrText .page-path {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
+      .bnrText .page-path {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
 
-        .page-path a p {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
+      .page-path a p {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
 
-        .page-path span {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #fff;
-        }
+      .page-path span {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+      }
     </style>
     <style>
-        .signupPage {
+      .signupPage {
+        padding: 50px 0;
+      }
 
-            padding: 50px 0
-        }
+      .signupPage .primary-textform {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+      }
 
-        .signupPage .primary-textform {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            flex-wrap: wrap;
-        }
+      .signupPage .primary-textform .txt-big-c {
+        color: #eaeaea;
+        text-transform: capitalize;
+        font-size: 11vw;
+        font-weight: 600;
+        margin-bottom: -30px !important;
+      }
 
-        .signupPage .primary-textform .txt-big-c {
-            color: #eaeaea;
-            text-transform: capitalize;
-            font-size: 11vw;
-            font-weight: 600;
-            margin-bottom: -30px !important;
-        }
+      .signupPage .primary-textform .txt-heading {
+        font-size: 42px;
+        font-weight: 600;
+        color: #a986b0;
+        line-height: 3rem;
+        margin-bottom: 0 !important;
+      }
 
-        .signupPage .primary-textform .txt-heading {
-            font-size: 42px;
-            font-weight: 600;
-            color: #a986b0;
-            line-height: 3rem;
-            margin-bottom: 0 !important;
-        }
+      .signupPage .form-signup {
+        width: 50%;
+        margin: 0 auto;
+        padding: 25px 0;
+      }
 
-        .signupPage .form-signup {
-            width: 50%;
-            margin: 0 auto;
-            padding: 25px 0;
-        }
+      .signupPage .form-signup .form-box {
+        margin: 20px;
+      }
 
-        .signupPage .form-signup .form-box {
-            margin: 20px;
-        }
+      .signupPage .form-signup .form-box form .form-group label {
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #575757;
+      }
 
-        .signupPage .form-signup .form-box form .form-group label {
-            margin-left: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #575757;
-        }
+      .signupPage .form-signup .form-box form .form-group input {
+        border-radius: 25px;
+        padding: 10px 20px;
+        text-transform: capitalize;
+      }
 
-        .signupPage .form-signup .form-box form .form-group input {
-            border-radius: 25px;
-            padding: 10px 20px;
-            text-transform: capitalize;
-        }
+      .signupPage .form-signup .form-box form .form-group input:focus {
+        box-shadow: none;
+        border-color: #a0a0a0;
+      }
 
-        .signupPage .form-signup .form-box form .form-group input:focus {
-            box-shadow: none;
-            border-color: #a0a0a0;
-        }
-
-        .signupPage .form-signup .form-box form .form-group .form-btn {
-            width: 100%;
-            border-radius: 25px;
-            background: #a986b0;
-            color: #fff;
-            font-weight: 600;
-            font-size: 18px;
-            padding: 12px 0;
-        }
-        .loginbtn{
-            display: flex;
-            gap: 5px;
-            justify-content: center;
-        }
-        .loginbtn a{color: #a986b0;}
+      .signupPage .form-signup .form-box form .form-group .form-btn {
+        width: 100%;
+        border-radius: 25px;
+        background: #a986b0;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 12px 0;
+      }
+      .loginbtn {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+      }
+      .loginbtn a {
+        color: #a986b0;
+      }
     </style>
-
-<body>
+  </head>
+  <body>
     <!-- topsection START -->
     <section class="header">
         <div class="container-lg">
@@ -205,7 +209,7 @@
                                 <a class="nav-link" href="about.html">About us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="stores.html">Strores</a>
+                                <a class="nav-link" href="#">Strores</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Procedure</a>
@@ -223,187 +227,217 @@
         </div>
     </section>
     <section class="productBanner">
-        <div class="container-fluid p-0">
-            <div class="bnrWrap">
-                <div class="bgImage">
-                    <img src="images/jh.png" alt="" />
-                </div>
-                <div class="bnrText primary-textform">
-                    <h1>Create Your Account</h1>
-                    <div class="page-path">
-                        <a href="index.html">
-                            <p>Home</p>
-                        </a>
-                        <span></span>
-                        <a href="signup.html">
-                            <p>Sign up</p>
-                        </a>
-                    </div>
-                </div>
+      <div class="container-fluid p-0">
+        <div class="bnrWrap">
+          <div class="bgImage">
+            <img src="images/jh.png" alt="" />
+          </div>
+          <div class="bnrText primary-textform">
+            <h1>Create Your Account</h1>
+            <div class="page-path">
+              <a href="index.html">
+                <p>Home</p>
+              </a>
+              <span></span>
+              <a href="signup.html">
+                <p>Sign up</p>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- topsection END -->
 
-
     <section class="signupPage">
-        <div class="container-lg">
-            <div class="bnrText primary-textform">
-                <h1 class="txt-big-c">Sign up</h1>
-                <div class="txt-heading">
-                    <p>Create Your Account</p>
-                </div>
-            </div>
-            <div class="form-signup mx-auto ">
-
-                <div class="form-box">
-                    <form target="_blank" action="https://formsubmit.co/youremail@gmail.com" method="POST">
-                        <div class="form-group">
-                            <div class="row gy-3">
-                                <div class="col-12">
-                                    <label for="email">E-MAIL ADDRESS</label>
-                                    <input type="email" name="email" class="form-control" placeholder="" required />
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="passwordsignup" class="form-label">PASSWORD</label>
-                                    <input type="password" class="form-control" name="passowrdsignup" placeholder="">
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="cpasswordsignup" class="form-label">CONFIRM PASSWORD</label>
-                                    <input type="password" class="form-control" name="cpassowrdsignup" placeholder="">
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn form-btn mt-3">
-                                        Create Account
-                                    </button>
-                                </div>
-                                <div class="col-12">
-<div class="loginbtn"><p>Already have an account?</p>
-<a href="login.html">Log In</a>
-</div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
+      <div class="container-lg">
+        <div class="bnrText primary-textform">
+          <h1 class="txt-big-c">Sign up</h1>
+          <div class="txt-heading">
+            <p>Create Your Account</p>
+          </div>
         </div>
+        <div class="form-signup mx-auto">
+          <div class="form-box">
+            <form
+              target="_blank"
+              action="https://formsubmit.co/youremail@gmail.com"
+              method="POST"
+            >
+              <div class="form-group">
+                <div class="row gy-3">
+                  <div class="col-12">
+                    <label for="email">E-MAIL ADDRESS</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      placeholder=""
+                      required
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="passwordsignup" class="form-label"
+                      >PASSWORD</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="passowrdsignup"
+                      placeholder=""
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="cpasswordsignup" class="form-label"
+                      >CONFIRM PASSWORD</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="cpassowrdsignup"
+                      placeholder=""
+                    />
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn form-btn mt-3">
+                      Create Account
+                    </button>
+                  </div>
+                  <div class="col-12">
+                    <div class="loginbtn">
+                      <p>Already have an account?</p>
+                      <a href="login.html">Log In</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- bottomsection START -->
     <section class="footer">
-        <div class="container-fluid p-0">
-            <div class="bg-img">
-                <img src="images/jh.png" alt="#" />
-            </div>
-            <div class="ftr-content">
-                <div class="row align-items-start justify-content-between">
-                    <div class="col-3">
-                        <div class="d-flex flex-column">
-                            <div class="logoName">
-                                <div class="logoImg">
-                                    <img src="images/logo.png" alt="#" />
-                                </div>
-                                <h4>Quimachi</h4>
-                            </div>
-                            <p class="subtitle">
-                                Purus erat at massa ipsum tempor pellentesque ipsum massa
-                                ligula facilisi eget a vehicula amet. tortor ante nulla
-                            </p>
-                            <div class="social-icons">
-                                <div class="iconBox box-f">
-                                    <i class="fab fa-facebook-f"></i>
-                                </div>
-                                <div class="iconBox box-g">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </div>
-                                <div class="iconBox box-i">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-9">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h5>Information</h5>
-                                <span><i class="fal fa-horizontal-rule"></i></span>
-                                <ul>
-                                    <li><a href="#">Delivery Information</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms And Conditions</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h5>My account</h5>
-                                <span><i class="fal fa-horizontal-rule"></i></span>
-                                <ul>
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">WE ACCEPT ALL CARDS</a></li>
-                                    <li>
-                                        <div class="card-logo">
-                                            <a href="#">
-                                                <div class="card-img">
-                                                    <img src="images/visa.png" alt="visa" />
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="card-img">
-                                                    <img src="images/ic.svg" alt="mcard" />
-                                                    <p>MasterCard</p>
-                                                </div>
-                                            </a>
-                                            <a href="#">
-                                                <div class="card-img">
-                                                    <img src="images/paypal.svg" alt="paypal" />
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h5>Locate Us</h5>
-                                <span><i class="fal fa-horizontal-rule"></i></span>
-                                <ul>
-                                    <li><a href="#">Malecon Bernales 283</a></li>
-                                    <li><a href="#">+511 264 0089</a></li>
-                                    <li><a href="#">sales@quimachi.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <span class="div-line">
-                        <h6>
-                            <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
-                            Reserved.
-                        </h6>
-                    </span>
-                </div>
-            </div>
+      <div class="container-fluid p-0">
+        <div class="bg-img">
+          <img src="images/jh.png" alt="#" />
         </div>
+        <div class="ftr-content">
+          <div class="row align-items-start justify-content-between">
+            <div class="col-3">
+              <div class="d-flex flex-column">
+                <div class="logoName">
+                  <div class="logoImg">
+                    <img src="images/logo.png" alt="#" />
+                  </div>
+                  <h4>Quimachi</h4>
+                </div>
+                <p class="subtitle">
+                  Purus erat at massa ipsum tempor pellentesque ipsum massa
+                  ligula facilisi eget a vehicula amet. tortor ante nulla
+                </p>
+                <div class="social-icons">
+                  <div class="iconBox box-f">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="iconBox box-g">
+                    <i class="fab fa-google-plus-g"></i>
+                  </div>
+                  <div class="iconBox box-i">
+                    <i class="fab fa-instagram"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>Information</h5>
+                  <span><i class="fal fa-horizontal-rule"></i></span>
+                  <ul>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms And Conditions</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>My account</h5>
+                  <span><i class="fal fa-horizontal-rule"></i></span>
+                  <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">WE ACCEPT ALL CARDS</a></li>
+                    <li>
+                      <div class="card-logo">
+                        <a href="#">
+                          <div class="card-img">
+                            <img src="images/visa.png" alt="visa" />
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="card-img">
+                            <img src="images/ic.svg" alt="mcard" />
+                            <p>MasterCard</p>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div class="card-img">
+                            <img src="images/paypal.svg" alt="paypal" />
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>Locate Us</h5>
+                  <span><i class="fal fa-horizontal-rule"></i></span>
+                  <ul>
+                    <li><a href="#">Malecon Bernales 283</a></li>
+                    <li><a href="#">+511 264 0089</a></li>
+                    <li><a href="#">sales@quimachi.com</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            <span class="div-line">
+              <h6>
+                <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
+                Reserved.
+              </h6>
+            </span>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- bottomsection END -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://cdnjs.loudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.loudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
-        $(window).scroll(function () {
-            var scrolled = $(this).scrollTop() > 10;
-            $(".header").css(
-                "background-color",
-                scrolled ? "rgba(0, 0, 0,.4)" : "rgba(0, 0, 0,0)"
-            );
-        });
+      $(window).scroll(function () {
+        var scrolled = $(this).scrollTop() > 10;
+        $(".header").css(
+          "background-color",
+          scrolled ? "rgba(0, 0, 0,.4)" : "rgba(0, 0, 0,0)"
+        );
+      });
     </script>
-</body>
-
+  </body>
 </html>

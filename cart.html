@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quimachi</title>
+    <title>Quimachi/Shopping_cart</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link
@@ -66,6 +66,7 @@
       }
 
       .page-path a p {
+        text-transform: capitalize;
         font-size: 16px;
         margin-bottom: 5px;
       }
@@ -78,101 +79,11 @@
       }
     </style>
     <style>
-      .loginPage {
-        padding: 50px 0;
-      }
-
-      .loginPage .primary-textform {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        flex-wrap: wrap;
-      }
-
-      .loginPage .primary-textform .txt-big-c {
-        color: #eaeaea;
-        text-transform: capitalize;
-        font-size: 11vw;
-        font-weight: 600;
-        margin-bottom: -30px !important;
-      }
-
-      .loginPage .primary-textform .txt-heading {
-        font-size: 42px;
-        font-weight: 600;
-        color: #a986b0;
-        line-height: 3rem;
-        margin-bottom: 0 !important;
-      }
-
-      .loginPage .form-login {
-        width: 50%;
-        margin: 0 auto;
-        padding: 25px 0;
-      }
-
-      .loginPage .form-login .form-box {
-        margin: 20px;
-      }
-
-      .loginPage .form-login .form-box form .form-group label {
-        margin-left: 20px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #575757;
-      }
-
-      .loginPage .form-login .form-box form .form-group input {
-        border-radius: 25px;
-        padding: 10px 20px;
-        text-transform: capitalize;
-      }
-
-      .loginPage .form-login .form-box form .form-group input:focus {
-        box-shadow: none;
-        border-color: #a0a0a0;
-      }
-
-      .loginPage .form-login .form-box form .form-group .form-btn {
-        width: 100%;
-        border-radius: 25px;
-        background: #a986b0;
-        color: #fff;
-        font-weight: 600;
-        font-size: 18px;
-        padding: 12px 0;
-      }
-
-      .loginbtn {
-        display: flex;
-        gap: 5px;
-        justify-content: center;
-      }
-
-      .loginbtn a {
-        color: #a986b0;
-      }
-      .loginPage .form-login .form-box form .form-group input[type="checkbox"] {
-        -webkit-appearance: checkbox;
-        -moz-appearance: checkbox;
-        appearance: checkbox;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
-      }
-      .loginPage
-        .form-login
-        .form-box
-        form
-        .form-group
-        input[type="checkbox"]
-        + label {
-        margin-left: 5px;
+      .cart-product {
+        margin: 70px 0;
       }
     </style>
   </head>
-
   <body>
     <!-- topsection START -->
     <section class="header">
@@ -262,14 +173,14 @@
             <img src="images/jh.png" alt="" />
           </div>
           <div class="bnrText primary-textform">
-            <h1>Welcome back to Quimachi</h1>
+            <h1>SHOPPING CART</h1>
             <div class="page-path">
               <a href="index.html">
                 <p>Home</p>
               </a>
               <span></span>
-              <a href="login.html">
-                <p>Log in</p>
+              <a href="stores.html">
+                <p>shopping cart</p>
               </a>
             </div>
           </div>
@@ -277,80 +188,9 @@
       </div>
     </section>
     <!-- topsection END -->
-
-    <section class="loginPage">
-      <div class="container-lg">
-        <div class="bnrText primary-textform">
-          <h1 class="txt-big-c">Log In</h1>
-          <div class="txt-heading">
-            <p>Log In to Your Account</p>
-          </div>
-        </div>
-        <div class="form-login mx-auto">
-          <div class="form-box">
-            <form
-              target="_blank"
-              action="https://formsubmit.co/youremail@gmail.com"
-              method="POST"
-            >
-              <div class="form-group">
-                <div class="row gy-3">
-                  <div class="col-12">
-                    <label for="email">E-MAIL ADDRESS</label>
-                    <input
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      placeholder=""
-                      required
-                    />
-                  </div>
-
-                  <div class="col-12">
-                    <label for="passwordsignup" class="form-label"
-                      >PASSWORD</label
-                    >
-                    <input
-                      type="password"
-                      class="form-control"
-                      name="passowrdsignup"
-                      placeholder=""
-                    />
-                  </div>
-                  <div class="col-12">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="d-flex">
-                        <input
-                          type="checkbox"
-                          value="lsRememberMe"
-                          id="rememberMe"
-                        />
-                        <label for="rememberMe">Remember me</label>
-                      </div>
-                      <a href="">Lost Your Password?</a>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <button type="submit" class="btn form-btn mt-3">
-                      Log In
-                    </button>
-                  </div>
-                  <div class="col-12">
-                    <div class="loginbtn">
-                      <p>New to Quimachi?</p>
-                      <a href="signup.html">Sign Up</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <div class="cart-product">
+      <div class="container-lg"></div>
+    </div>
     <!-- bottomsection START -->
     <section class="footer">
       <div class="container-fluid p-0">
