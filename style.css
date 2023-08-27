@@ -133,18 +133,18 @@ body p {
   background: #fff;
   border-radius: 25px;
 }
-.header .header-navbar .navBar {
-  margin-top: 5px;
+.header .header-navbar .navbar {
+  margin-top: 1px;
 }
-.header .header-navbar .navBar ul.nav {
+.header .header-navbar .navbar ul.navbar-nav {
   justify-content: space-between;
 }
-.header .header-navbar .navBar ul.nav .nav-link {
+.header .header-navbar .navbar ul.navbar-nav .nav-link {
   color: #fff;
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
 }
-.header .header-navbar .navBar ul.nav .nav-link:hover {
+.header .header-navbar .navbar ul.navbar-nav .nav-link:hover {
   color: #b0bb1d;
   border-bottom: 2px solid #b0bb1d;
 }
@@ -327,11 +327,13 @@ body p {
   z-index: 100;
   bottom: -75px;
   left: 12%;
-  right: auto;
+  transform: translateX(0);
 }
 .heroBanner .container-fluid .bnrWrap .bnrProduct img {
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .heroBanner .container-fluid .bnrWrap .bnrText {
   position: absolute;
@@ -1157,4 +1159,55 @@ body p {
 .contactPage .primary-textform .socialmedia .custom-btn-f:active {
   transform: scale(1);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  .heroBanner .container-fluid .bnrWrap .bgImage {
+    height: 1200px;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .bnrProduct {
+    width: inherit;
+    height: 550px;
+    bottom: auto;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .bnrProduct img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .bnrText {
+    position: absolute;
+    left: 20px;
+    top: auto;
+    bottom: 30px;
+    transform: translate(0%, -50%);
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .txt-big-l {
+    font-size: 11vw;
+    margin-bottom: 0 !important;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .left-space {
+    margin-left: 0;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .left-space .txt-heading {
+    font-size: 32px;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .left-space .discriptiontxt {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .left-space .btn-wrap .custom-btnwhite {
+    width: 200px;
+    border-radius: 28px;
+    padding: 5px 22px;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .left-space .btn-wrap .custom-btnwhite .btnTxt {
+    font-weight: 500;
+  }
+  .heroBanner .container-fluid .bnrWrap .bgImage .primary-textform .left-space .btn-wrap .custom-btnwhite .btnArrow {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=style.css.map */

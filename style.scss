@@ -128,9 +128,9 @@ body {
         }
       }
     }
-    .navBar {
-      margin-top: 5px;
-      ul.nav {
+    .navbar {
+      margin-top: 1px;
+      ul.navbar-nav {
         justify-content: space-between;
         .nav-link {
           color: #fff;
@@ -326,10 +326,11 @@ body {
         z-index: 100;
         bottom: -75px;
         left: 12%;
-        right: auto;
+      transform: translateX(0);
         img {
           width: 100%;
           height: 100%;
+          object-fit: contain;
         }
       }
       .bnrText {
@@ -1171,3 +1172,84 @@ body {
   }
 }
 // HOMEPAGE
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+.heroBanner {
+
+  .container-fluid {
+   
+    .bnrWrap {
+     
+      .bgImage {
+       
+        height: 1200px;
+       
+  
+      .bnrProduct {width: inherit;
+        height:550px;
+     bottom: auto;
+        top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+       img{
+        object-fit: contain;
+       }
+      }
+      .bnrText {
+        position: absolute;
+        left: 20px;
+        top: auto;
+        bottom: 30px;
+        transform: translate(0%, -50%);
+      }
+      .primary-textform {
+       
+
+        .txt-big-l {
+         
+          font-size:11vw;
+        
+          margin-bottom:0 !important;
+        }
+        .left-space {
+          margin-left:0;
+
+          .txt-heading {
+            font-size: 32px;
+          
+          }
+          
+          .discriptiontxt {
+          
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+          .btn-wrap .custom-btnwhite {
+            width: 200px;
+           
+            border-radius: 28px;
+            padding: 5px 22px;
+           
+            
+            .btnTxt {
+            
+              font-weight: 500;
+            }
+            .btnArrow {
+              font-size: 28px;
+            
+            }
+          }
+        }
+      }
+    }    }
+  }
+} 
+}
+
+@media only screen and (max-width: 767px){}
+
+@media only screen and (max-width: 991px){ }
+
+@media only screen and (min-width: 992px){}

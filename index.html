@@ -1,80 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quimachi/home</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/solid.min.css" />
-    <link rel="stylesheet" href="css/pro.min.css" />
-  </head>
-  <body>
-    <section class="header">
-      <div class="container-lg">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="header-logo">
-            <img src="images/logo.png" alt="" />
-          </div>
-          <div class="header-navbar">
-            <div class="topBar">
-              <div class="searchBox">
-                <form class="d-flex align-items-center" role="search">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search on the web!"
-                    aria-label="Search"
-                  />
-                  <i class="far fa-search"></i>
-                </form>
-              </div>
-              <div class="selectBox">
-                <form class="d-flex align-items-center">
-                  <label for="currency"
-                    ><i class="fas fa-money-bill"></i
-                  ></label>
-                  <select name="currency" id="currencyLogo">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="INR">INR</option>
-                    <option value="CHF">CHF</option>
-                  </select>
-                </form>
-                <span class="divider-line"
-                  ><i class="far fa-horizontal-rule"></i
-                ></span>
-                <form class="d-flex align-items-center">
-                  <label for="language"><i class="fas fa-globe"></i></label>
-                  <select name="language" id="languageLogo">
-                    <option value="ENG">ENG</option>
-                    <option value="PT">PT</option>
-                    <option value="NL">NL</option>
-                    <option value="BXR">BXR</option>
-                  </select>
-                </form>
-              </div>
-              <a class="shop-cart" href="cart.html">
-                <img src="images/shop-bag.svg" alt="" />
-                <span class="top-dot">
-                  <p>8</p>
-                </span>
-              </a>
-              <div class="signup-btn">
-                <a href="signup.html"><button class="btn">Sign Up</button></a>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quimachi/home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/solid.min.css" />
+  <link rel="stylesheet" href="css/pro.min.css" />
+</head>
+
+<body>
+  <section class="header">
+    <div class="container-lg">
+      <div class="d-flex  justify-content-between align-items-md-center">
+        <div class="header-logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="header-navbar">
+          <div class="topBar">
+            <div class="searchBox">
+              <form class="d-flex align-items-center" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search on the web!" aria-label="Search" />
+                <i class="far fa-search"></i>
+              </form>
             </div>
-            <div class="navBar">
-              <ul class="nav">
+            <div class="selectBox">
+              <form class="d-flex align-items-center">
+                <label for="currency"><i class="fas fa-money-bill"></i></label>
+                <select name="currency" id="currencyLogo">
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="INR">INR</option>
+                  <option value="CHF">CHF</option>
+                </select>
+              </form>
+              <span class="divider-line"><i class="far fa-horizontal-rule"></i></span>
+              <form class="d-flex align-items-center">
+                <label for="language"><i class="fas fa-globe"></i></label>
+                <select name="language" id="languageLogo">
+                  <option value="ENG">ENG</option>
+                  <option value="PT">PT</option>
+                  <option value="NL">NL</option>
+                  <option value="BXR">BXR</option>
+                </select>
+              </form>
+            </div>
+            <a class="shop-cart" href="cart.html">
+              <img src="images/shop-bag.svg" alt="" />
+              <span class="top-dot">
+                <p>8</p>
+              </span>
+            </a>
+            <div class="signup-btn">
+              <a href="signup.html"><button class="btn">Sign Up</button></a>
+            </div>
+          </div>
+          <nav class="navbar navbar-expand-md justify-content-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav w-100 justify-content-md-between">
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">Home</a>
                 </li>
@@ -95,26 +88,55 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
-    </section>
-    <section class="heroBanner">
-      <div class="container-fluid">
-        <div class="bnrWrap">
-          <div class="bgImage">
-            <img src="images/jh.png" alt="" />
+    </div>
+  </section>
+  <section class="heroBanner">
+    <div class="container-fluid">
+      <div class="bnrWrap">
+        <div class="bgImage">
+          <img src="images/jh.png" alt="" />
+       
+        <div class="bnrAbstract bnrProduct">
+          <img src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png" alt="" />
+        </div>
+        <div class="bnrText primary-textform">
+          <h1 class="txt-big-l">Quimachi</h1>
+          <div class="left-space">
+            <h2 class="txt-heading">Healthy snacks for the world</h2>
+            <span class="hori-line">
+              <i class="fas fa-horizontal-rule"></i>
+            </span>
+            <p class="discriptiontxt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium vero dolor ad culpa similique dicta officiis illo.
+            </p>
+            <div class="btn-wrap">
+              <button class="btn custom-btnwhite">
+                <div class="btnTxt">Learn more</div>
+                <div class="btnArrow">
+                  <i class="fal fa-long-arrow-right"></i>
+                </div>
+              </button>
+            </div>
           </div>
-          <div class="bnrAbstract bnrProduct">
-            <img
-              src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
-              alt=""
-            />
-          </div>
-          <div class="bnrText primary-textform">
-            <h1 class="txt-big-l">Quimachi</h1>
+        </div>
+      </div> </div>
+    </div>
+  </section>
+  <section class="subBanner">
+    <div class="img-plant">
+      <img src="images/close-up-mint-leaves.png" alt="" />
+    </div>
+    <div class="container-lg">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-6">
+          <div class="primary-textform">
+            <h1 class="txt-big-l">Green</h1>
             <div class="left-space">
-              <h2 class="txt-heading">Healthy snacks for the world</h2>
+              <h2 class="txt-heading">Diam et lacus feugiat</h2>
               <span class="hori-line">
                 <i class="fas fa-horizontal-rule"></i>
               </span>
@@ -123,78 +145,194 @@
                 Praesentium vero dolor ad culpa similique dicta officiis illo.
               </p>
               <div class="btn-wrap">
-                <button class="btn custom-btnwhite">
+                <button class="btn custom-btn">
                   <div class="btnTxt">Learn more</div>
-                  <div class="btnArrow">
+                  <div class="btnIcon">
                     <i class="fal fa-long-arrow-right"></i>
+                  </div>
+                </button>
+                <button class="btn custom-btn-outline">
+                  <div class="btnTxt">Add to cart</div>
+                  <div class="btnIcon">
+                    <div class="bagimg"></div>
                   </div>
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="subBanner">
-      <div class="img-plant">
-        <img src="images/close-up-mint-leaves.png" alt="" />
-      </div>
-      <div class="container-lg">
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-6">
-            <div class="primary-textform">
-              <h1 class="txt-big-l">Green</h1>
-              <div class="left-space">
-                <h2 class="txt-heading">Diam et lacus feugiat</h2>
-                <span class="hori-line">
-                  <i class="fas fa-horizontal-rule"></i>
-                </span>
-                <p class="discriptiontxt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium vero dolor ad culpa similique dicta officiis illo.
-                </p>
-                <div class="btn-wrap">
-                  <button class="btn custom-btn">
-                    <div class="btnTxt">Learn more</div>
-                    <div class="btnIcon">
-                      <i class="fal fa-long-arrow-right"></i>
-                    </div>
-                  </button>
-                  <button class="btn custom-btn-outline">
-                    <div class="btnTxt">Add to cart</div>
-                    <div class="btnIcon">
-                      <div class="bagimg"></div>
-                    </div>
-                  </button>
+        <div class="col-lg-6">
+          <div class="imageSlider-wrap">
+            <div id="slickcarousel">
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/Web capture_12-8-2023_181227_.png" alt="" />
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/Web capture_12-8-2023_181227_.png" alt="" />
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/Web capture_12-8-2023_181227_.png" alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="imageSlider-wrap">
-              <div id="slickcarousel">
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img
-                      src="images/Web capture_12-8-2023_181227_.png"
-                      alt=""
-                    />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sweet-salty">
+    <div class="container-lg">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12">
+          <div class="bnrText primary-textform text-center">
+            <h1 class="txt-big-l">delicious</h1>
+            <h2 class="txt-heading">Mauris faucibus morbi vitae</h2>
+            <span class="hori-line">
+              <i class="fas fa-horizontal-rule"></i>
+            </span>
+            <p>
+              Vitae phasellus dolor volutpat tortor euismod varius in volutpat
+              libero eu <br />
+              varius tincidunt tortor sed at nisl eleifend fames rhoncus
+            </p>
+            <div class="tabs tabs-wrap">
+              <button class="btn custom-btn active">Sweet</button>
+              <button class="btn custom-btn">Salty</button>
+            </div>
+            <div class="tab-content">
+              <div class="tab-data active">
+                <div class="exploreItem">
+                  <div class="row align-items-center">
+                    <div class="col-4">
+                      <div class="itemBox">
+                        <div class="itemImage">
+                          <img src="images\Web capture_12-8-2023_181227_.png" alt="product image" />
+                        </div>
+                        <div class="itemDetails">
+                          <div class="text-center d-flex flex-column align-items-center justify-content-between">
+                            <h3>KALE Chips</h3>
+                            <h2>$24.00</h2>
+                            <button class="btn custom-btn">
+                              <div class="btnTxt">explore</div>
+                              <div class="btnArrow">
+                                <i class="fal fa-long-arrow-right"></i>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="itemBox">
+                        <div class="itemImage">
+                          <img src="images\Web capture_12-8-2023_181227_.png" alt="product image" />
+                        </div>
+                        <div class="itemDetails">
+                          <div class="text-center d-flex flex-column align-items-center justify-content-between">
+                            <h3>Strawberry Rolls</h3>
+                            <h2>$24.00</h2>
+                            <button class="btn custom-btn btnactive">
+                              <div class="btnTxt">explore</div>
+                              <div class="btnArrow">
+                                <i class="fal fa-long-arrow-right"></i>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-4">
+                      <div class="itemBox">
+                        <div class="itemImage">
+                          <img src="images\Web capture_12-8-2023_181227_.png" alt="product image" />
+                        </div>
+                        <div class="itemDetails">
+                          <div class="text-center d-flex flex-column align-items-center justify-content-between">
+                            <h3>KALE chips</h3>
+                            <h2>$24.00</h2>
+                            <button class="btn custom-btn">
+                              <div class="btnTxt">explore</div>
+                              <div class="btnArrow">
+                                <i class="fal fa-long-arrow-right"></i>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img
-                      src="images/Web capture_12-8-2023_181227_.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img
-                      src="images/Web capture_12-8-2023_181227_.png"
-                      alt=""
-                    />
+              </div>
+              <div class="tab-data">
+                <div class="exploreItem">
+                  <div class="row align-items-center">
+                    <div class="col-4">
+                      <div class="itemBox">
+                        <div class="itemImage">
+                          <img src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
+                            alt="product image" />
+                        </div>
+                        <div class="itemDetails">
+                          <div class="text-center d-flex flex-column align-items-center justify-content-between">
+                            <h3>Strawberry rolls</h3>
+                            <h2>$24.00</h2>
+                            <button class="btn custom-btn">
+                              <div class="btnTxt">explore</div>
+                              <div class="btnArrow">
+                                <i class="fal fa-long-arrow-right"></i>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="itemBox">
+                        <div class="itemImage">
+                          <img src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
+                            alt="product image" />
+                        </div>
+                        <div class="itemDetails">
+                          <div class="text-center d-flex flex-column align-items-center justify-content-between">
+                            <h3>KALE Chips</h3>
+                            <h2>$24.00</h2>
+                            <button class="btn custom-btn btnactive">
+                              <div class="btnTxt">explore</div>
+                              <div class="btnArrow">
+                                <i class="fal fa-long-arrow-right"></i>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-4">
+                      <div class="itemBox">
+                        <div class="itemImage">
+                          <img src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
+                            alt="product image" />
+                        </div>
+                        <div class="itemDetails">
+                          <div class="text-center d-flex flex-column align-items-center justify-content-between">
+                            <h3>Strawberry Rolls</h3>
+                            <h2>$24.00</h2>
+                            <button class="btn custom-btn">
+                              <div class="btnTxt">explore</div>
+                              <div class="btnArrow">
+                                <i class="fal fa-long-arrow-right"></i>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -202,593 +340,392 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="sweet-salty">
-      <div class="container-lg">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-12">
-            <div class="bnrText primary-textform text-center">
-              <h1 class="txt-big-l">delicious</h1>
-              <h2 class="txt-heading">Mauris faucibus morbi vitae</h2>
+    </div>
+  </section>
+  <section class="abstract-banner">
+    <div class="container-fluid">
+      <div class="abst-Img">
+        <img src="images/jh.png" alt="abstract images" class="back-theme-img" />
+      </div>
+      <div class="bnrText primary-textform text-center">
+        <h1 class="txt-big-l">Celebrate</h1>
+
+        <h2 class="txt-heading">learn more about our products</h2>
+        <span class="hori-line">
+          <i class="fas fa-horizontal-rule"></i>
+        </span>
+        <p>
+          Vitae phasellus dolor volutpat tortor euismod varius in volutpat
+          libero eu <br />
+          varius tincidunt tortor sed at nisl eleifend fames rhoncus
+        </p>
+        <div class="btn-wrap">
+          <button class="btn custom-btn">
+            <div class="btnTxt">Learn More</div>
+            <div class="btnIcon"><i class="fal fa-long-arrow-right"></i></div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="benefit">
+    <div class="container-lg">
+      <div class="bnrText primary-textform text-center">
+        <h1 class="txt-big-l">Benefits</h1>
+
+        <h2 class="txt-heading">why choose us</h2>
+        <span class="hori-line">
+          <i class="fas fa-horizontal-rule"></i>
+        </span>
+        <p>
+          Vitae phasellus dolor volutpat tortor euismod varius in volutpat
+          libero eu <br />
+          varius tincidunt tortor sed at nisl eleifend fames rhoncus
+        </p>
+      </div>
+      <div class="row flex-column-reverse mt-md-4">
+        <div class="col-12">
+          <div class="fruit-image">
+            <img src="images/strawberries.png" alt="" />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="services">
+            <div class="row flex-column flex-md-row justify-content-between">
+              <div class="col-md-3">
+                <div class="serviceBoxl">
+                  <div class="row flex-column align-items-center text-center">
+                    <div class="col-12">
+                      <div class="icon-wrap">
+                        <img src="images/icon1.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <h6 class="text-uppercase">direct bank transfer</h6>
+                      <p>
+                        All our food is natural. organic and free from any
+                        chemicals
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="serviceMidbox">
+                  <div class="row flex-column align-items-center text-center">
+                    <div class="col-12">
+                      <div class="icon-wrap">
+                        <img src="images/icon2.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <h6 class="text-uppercase">FREE 48-HOUR SHIPPING</h6>
+                      <p>Free shipping when you spend over $40 in our shop</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="serviceMidbox">
+                  <div class="row flex-column align-items-center text-center">
+                    <div class="col-12">
+                      <div class="icon-wrap">
+                        <img src="images/icon3.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <h6 class="text-uppercase">EASY RETURNS& EXCHANGES</h6>
+                      <p>
+                        Send us back within 48 hours for full refund or
+                        exchange
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="serviceBoxr">
+                  <div class="row flex-column align-items-center text-center">
+                    <div class="col-12">
+                      <div class="icon-wrap">
+                        <img src="images/icon4.svg" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <h6 class="text-uppercase">24/7 FREE SUPPORT</h6>
+                      <p>
+                        We are always here to answer all your questions 24/7
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="likesubBanner">
+    <div class="container-lg">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-6">
+          <div class="primary-textform">
+            <h1 class="txt-big-l">Step</h1>
+            <div class="left-space">
+              <h2 class="txt-heading">How the product done</h2>
               <span class="hori-line">
                 <i class="fas fa-horizontal-rule"></i>
               </span>
-              <p>
-                Vitae phasellus dolor volutpat tortor euismod varius in volutpat
-                libero eu <br />
-                varius tincidunt tortor sed at nisl eleifend fames rhoncus
+              <p class="discriptiontxt">
+                Quimachi does all their healthy snacks hand made and every
+                step on the production is carefully double checked. we put not
+                just hard work on the snacks but a lot of love
               </p>
-              <div class="tabs tabs-wrap">
-                <button class="btn custom-btn active">Sweet</button>
-                <button class="btn custom-btn">Salty</button>
-              </div>
-              <div class="tab-content">
-                <div class="tab-data active">
-                  <div class="exploreItem">
-                    <div class="row align-items-center">
-                      <div class="col-4">
-                        <div class="itemBox">
-                          <div class="itemImage">
-                            <img
-                              src="images\Web capture_12-8-2023_181227_.png"
-                              alt="product image"
-                            />
-                          </div>
-                          <div class="itemDetails">
-                            <div
-                              class="text-center d-flex flex-column align-items-center justify-content-between"
-                            >
-                              <h3>KALE Chips</h3>
-                              <h2>$24.00</h2>
-                              <button class="btn custom-btn">
-                                <div class="btnTxt">explore</div>
-                                <div class="btnArrow">
-                                  <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="itemBox">
-                          <div class="itemImage">
-                            <img
-                              src="images\Web capture_12-8-2023_181227_.png"
-                              alt="product image"
-                            />
-                          </div>
-                          <div class="itemDetails">
-                            <div
-                              class="text-center d-flex flex-column align-items-center justify-content-between"
-                            >
-                              <h3>Strawberry Rolls</h3>
-                              <h2>$24.00</h2>
-                              <button class="btn custom-btn btnactive">
-                                <div class="btnTxt">explore</div>
-                                <div class="btnArrow">
-                                  <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-4">
-                        <div class="itemBox">
-                          <div class="itemImage">
-                            <img
-                              src="images\Web capture_12-8-2023_181227_.png"
-                              alt="product image"
-                            />
-                          </div>
-                          <div class="itemDetails">
-                            <div
-                              class="text-center d-flex flex-column align-items-center justify-content-between"
-                            >
-                              <h3>KALE chips</h3>
-                              <h2>$24.00</h2>
-                              <button class="btn custom-btn">
-                                <div class="btnTxt">explore</div>
-                                <div class="btnArrow">
-                                  <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-data">
-                  <div class="exploreItem">
-                    <div class="row align-items-center">
-                      <div class="col-4">
-                        <div class="itemBox">
-                          <div class="itemImage">
-                            <img
-                              src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
-                              alt="product image"
-                            />
-                          </div>
-                          <div class="itemDetails">
-                            <div
-                              class="text-center d-flex flex-column align-items-center justify-content-between"
-                            >
-                              <h3>Strawberry rolls</h3>
-                              <h2>$24.00</h2>
-                              <button class="btn custom-btn">
-                                <div class="btnTxt">explore</div>
-                                <div class="btnArrow">
-                                  <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="itemBox">
-                          <div class="itemImage">
-                            <img
-                              src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
-                              alt="product image"
-                            />
-                          </div>
-                          <div class="itemDetails">
-                            <div
-                              class="text-center d-flex flex-column align-items-center justify-content-between"
-                            >
-                              <h3>KALE Chips</h3>
-                              <h2>$24.00</h2>
-                              <button class="btn custom-btn btnactive">
-                                <div class="btnTxt">explore</div>
-                                <div class="btnArrow">
-                                  <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-4">
-                        <div class="itemBox">
-                          <div class="itemImage">
-                            <img
-                              src="images/119388169_2740283172906706_4813762678314299854_n-removebg-preview 1 1.png"
-                              alt="product image"
-                            />
-                          </div>
-                          <div class="itemDetails">
-                            <div
-                              class="text-center d-flex flex-column align-items-center justify-content-between"
-                            >
-                              <h3>Strawberry Rolls</h3>
-                              <h2>$24.00</h2>
-                              <button class="btn custom-btn">
-                                <div class="btnTxt">explore</div>
-                                <div class="btnArrow">
-                                  <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="abstract-banner">
-      <div class="container-fluid">
-        <div class="abst-Img">
-          <img
-            src="images/jh.png"
-            alt="abstract images"
-            class="back-theme-img"
-          />
-        </div>
-        <div class="bnrText primary-textform text-center">
-          <h1 class="txt-big-l">Celebrate</h1>
-
-          <h2 class="txt-heading">learn more about our products</h2>
-          <span class="hori-line">
-            <i class="fas fa-horizontal-rule"></i>
-          </span>
-          <p>
-            Vitae phasellus dolor volutpat tortor euismod varius in volutpat
-            libero eu <br />
-            varius tincidunt tortor sed at nisl eleifend fames rhoncus
-          </p>
-          <div class="btn-wrap">
-            <button class="btn custom-btn">
-              <div class="btnTxt">Learn More</div>
-              <div class="btnIcon"><i class="fal fa-long-arrow-right"></i></div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="benefit">
-      <div class="container-lg">
-        <div class="bnrText primary-textform text-center">
-          <h1 class="txt-big-l">Benefits</h1>
-
-          <h2 class="txt-heading">why choose us</h2>
-          <span class="hori-line">
-            <i class="fas fa-horizontal-rule"></i>
-          </span>
-          <p>
-            Vitae phasellus dolor volutpat tortor euismod varius in volutpat
-            libero eu <br />
-            varius tincidunt tortor sed at nisl eleifend fames rhoncus
-          </p>
-        </div>
-        <div class="row flex-column-reverse mt-md-4">
-          <div class="col-12">
-            <div class="fruit-image">
-              <img src="images/strawberries.png" alt="" />
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="services">
-              <div class="row flex-column flex-md-row justify-content-between">
-                <div class="col-md-3">
-                  <div class="serviceBoxl">
-                    <div class="row flex-column align-items-center text-center">
-                      <div class="col-12">
-                        <div class="icon-wrap">
-                          <img src="images/icon1.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <h6 class="text-uppercase">direct bank transfer</h6>
-                        <p>
-                          All our food is natural. organic and free from any
-                          chemicals
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="serviceMidbox">
-                    <div class="row flex-column align-items-center text-center">
-                      <div class="col-12">
-                        <div class="icon-wrap">
-                          <img src="images/icon2.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <h6 class="text-uppercase">FREE 48-HOUR SHIPPING</h6>
-                        <p>Free shipping when you spend over $40 in our shop</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="serviceMidbox">
-                    <div class="row flex-column align-items-center text-center">
-                      <div class="col-12">
-                        <div class="icon-wrap">
-                          <img src="images/icon3.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <h6 class="text-uppercase">EASY RETURNS& EXCHANGES</h6>
-                        <p>
-                          Send us back within 48 hours for full refund or
-                          exchange
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <div class="serviceBoxr">
-                    <div class="row flex-column align-items-center text-center">
-                      <div class="col-12">
-                        <div class="icon-wrap">
-                          <img src="images/icon4.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <h6 class="text-uppercase">24/7 FREE SUPPORT</h6>
-                        <p>
-                          We are always here to answer all your questions 24/7
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="likesubBanner">
-      <div class="container-lg">
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-6">
-            <div class="primary-textform">
-              <h1 class="txt-big-l">Step</h1>
-              <div class="left-space">
-                <h2 class="txt-heading">How the product done</h2>
-                <span class="hori-line">
-                  <i class="fas fa-horizontal-rule"></i>
-                </span>
-                <p class="discriptiontxt">
-                  Quimachi does all their healthy snacks hand made and every
-                  step on the production is carefully double checked. we put not
-                  just hard work on the snacks but a lot of love
-                </p>
-                <div class="btn-wrap">
-                  <button class="btn custom-btn">
-                    <div class="btnTxt">How we do</div>
-                    <div class="btnIcon">
-                      <i class="fal fa-long-arrow-right"></i>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="imageSlider-wrap">
-              <div id="slickcarouselnobtn">
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img
-                      src="images/top-view-oatmeal-porridge-with-sliced-strawberries-blueberry-ceramic-bowl-ripe-bananas-table.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img src="images/rodrigo.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img src="images/Industria-980x529.png" alt="" />
-                  </div>
-                </div>
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img src="images/banana.svg" alt="" />
-                  </div>
-                </div>
-                <div class="slide-content">
-                  <div class="slide-imgwrap">
-                    <img src="images/slider.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contactPage">
-      <div class="container-lg">
-        <div class="bnrText primary-textform">
-          <h1 class="txt-big-c">Contact</h1>
-          <div class="mailBox">
-            <p>Receive Our Offers And Promotions</p>
-            <form class="mail-wrapper">
-              <input
-                type="email"
-                name="E-mail"
-                id="email"
-                placeholder="E-mail"
-              />
               <div class="btn-wrap">
                 <button class="btn custom-btn">
-                  <a class="btnTxt">Subscribe</a>
+                  <div class="btnTxt">How we do</div>
                   <div class="btnIcon">
                     <i class="fal fa-long-arrow-right"></i>
                   </div>
                 </button>
               </div>
-            </form>
-          </div>
-          <div class="socialmedia">
-            <p>Or join us in social media</p>
-            <div class="btn__container">
-              <a href="#" class="btn custom-btn-f">
-                <i class="fab fa-facebook"></i>
-                <span>Join us on Facebook</span>
-              </a>
-              <a href="#" class="btn custom-btn-i">
-                <i class="fab fa-instagram"></i>
-                <span>Join us on Instagram</span>
-              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="footer">
-      <div class="container-fluid p-0">
-        <div class="bg-img">
-          <img src="images/jh.png" alt="#" />
-        </div>
-        <div class="ftr-content">
-          <div class="row align-items-start justify-content-between">
-            <div class="col-3">
-              <div class="d-flex flex-column">
-                <div class="logoName">
-                  <div class="logoImg">
-                    <img src="images/logo.png" alt="#" />
-                  </div>
-                  <h4>Quimachi</h4>
-                </div>
-                <p class="subtitle">
-                  Purus erat at massa ipsum tempor pellentesque ipsum massa
-                  ligula facilisi eget a vehicula amet. tortor ante nulla
-                </p>
-                <div class="social-icons">
-                  <div class="iconBox box-f">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="iconBox box-g">
-                    <i class="fab fa-google-plus-g"></i>
-                  </div>
-                  <div class="iconBox box-i">
-                    <i class="fab fa-instagram"></i>
-                  </div>
+        <div class="col-lg-6">
+          <div class="imageSlider-wrap">
+            <div id="slickcarouselnobtn">
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img
+                    src="images/top-view-oatmeal-porridge-with-sliced-strawberries-blueberry-ceramic-bowl-ripe-bananas-table.jpg"
+                    alt="" />
                 </div>
               </div>
-            </div>
-            <div class="col-9">
-              <div class="row">
-                <div class="col-md-4">
-                  <h5>Information</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">Delivery Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms And Conditions</a></li>
-                  </ul>
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/rodrigo.jpg" alt="" />
                 </div>
-                <div class="col-md-4">
-                  <h5>My account</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">WE ACCEPT ALL CARDS</a></li>
-                    <li>
-                      <div class="card-logo">
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/visa.png" alt="visa" />
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/ic.svg" alt="mcard" />
-                            <p>MasterCard</p>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/paypal.svg" alt="paypal" />
-                          </div>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+              </div>
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/Industria-980x529.png" alt="" />
                 </div>
-                <div class="col-md-4">
-                  <h5>Locate Us</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">Malecon Bernales 283</a></li>
-                    <li><a href="#">+511 264 0089</a></li>
-                    <li><a href="#">sales@quimachi.com</a></li>
-                  </ul>
+              </div>
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/banana.svg" alt="" />
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-imgwrap">
+                  <img src="images/slider.jpg" alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <div class="row text-center">
-            <span class="div-line">
-              <h6>
-                <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
-                Reserved.
-              </h6>
-            </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contactPage">
+    <div class="container-lg">
+      <div class="bnrText primary-textform">
+        <h1 class="txt-big-c">Contact</h1>
+        <div class="mailBox">
+          <p>Receive Our Offers And Promotions</p>
+          <form class="mail-wrapper">
+            <input type="email" name="E-mail" id="email" placeholder="E-mail" />
+            <div class="btn-wrap">
+              <button class="btn custom-btn">
+                <a class="btnTxt">Subscribe</a>
+                <div class="btnIcon">
+                  <i class="fal fa-long-arrow-right"></i>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="socialmedia">
+          <p>Or join us in social media</p>
+          <div class="btn__container">
+            <a href="#" class="btn custom-btn-f">
+              <i class="fab fa-facebook"></i>
+              <span>Join us on Facebook</span>
+            </a>
+            <a href="#" class="btn custom-btn-i">
+              <i class="fab fa-instagram"></i>
+              <span>Join us on Instagram</span>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script>
-      $(window).scroll(function () {
-        var scrolled = $(this).scrollTop() > 10;
-        $(".header").css(
-          "background-color",
-          scrolled ? "rgba(0, 0, 0,.4)" : "rgba(0, 0, 0,0)"
-        );
+    </div>
+  </section>
+  <section class="footer">
+    <div class="container-fluid p-0">
+      <div class="bg-img">
+        <img src="images/jh.png" alt="#" />
+      </div>
+      <div class="ftr-content">
+        <div class="row align-items-start justify-content-between">
+          <div class="col-3">
+            <div class="d-flex flex-column">
+              <div class="logoName">
+                <div class="logoImg">
+                  <img src="images/logo.png" alt="#" />
+                </div>
+                <h4>Quimachi</h4>
+              </div>
+              <p class="subtitle">
+                Purus erat at massa ipsum tempor pellentesque ipsum massa
+                ligula facilisi eget a vehicula amet. tortor ante nulla
+              </p>
+              <div class="social-icons">
+                <div class="iconBox box-f">
+                  <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="iconBox box-g">
+                  <i class="fab fa-google-plus-g"></i>
+                </div>
+                <div class="iconBox box-i">
+                  <i class="fab fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Information</h5>
+                <span><i class="fal fa-horizontal-rule"></i></span>
+                <ul>
+                  <li><a href="#">Delivery Information</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms And Conditions</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>My account</h5>
+                <span><i class="fal fa-horizontal-rule"></i></span>
+                <ul>
+                  <li><a href="#">My Account</a></li>
+                  <li><a href="#">WE ACCEPT ALL CARDS</a></li>
+                  <li>
+                    <div class="card-logo">
+                      <a href="#">
+                        <div class="card-img">
+                          <img src="images/visa.png" alt="visa" />
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="card-img">
+                          <img src="images/ic.svg" alt="mcard" />
+                          <p>MasterCard</p>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="card-img">
+                          <img src="images/paypal.svg" alt="paypal" />
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>Locate Us</h5>
+                <span><i class="fal fa-horizontal-rule"></i></span>
+                <ul>
+                  <li><a href="#">Malecon Bernales 283</a></li>
+                  <li><a href="#">+511 264 0089</a></li>
+                  <li><a href="#">sales@quimachi.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <span class="div-line">
+            <h6>
+              <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
+              Reserved.
+            </h6>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(window).scroll(function () {
+      var scrolled = $(this).scrollTop() > 10;
+      $(".header").css(
+        "background-color",
+        scrolled ? "rgba(0, 0, 0,.4)" : "rgba(0, 0, 0,0)"
+      );
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#slickcarousel").slick({
+        autoplay: true,
+        autoplaySpeed: 6000,
+        speed: 800,
+        slidesToShow: 1,
+        arrows: true,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+        dots: false,
+        pauseOnDotsHover: true,
+        cssEase: "ease-in-out",
+        draggable: true,
+        prevArrow:
+          '<button class="PrevArrow"><i class="fal fa-long-arrow-left"></i></button>',
+        nextArrow:
+          '<button class="NextArrow"><i class="fal fa-long-arrow-right"></i></button>',
       });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#slickcarousel").slick({
-          autoplay: true,
-          autoplaySpeed: 6000,
-          speed: 800,
-          slidesToShow: 1,
-          arrows: true,
-          slidesToScroll: 1,
-          pauseOnHover: true,
-          dots: false,
-          pauseOnDotsHover: true,
-          cssEase: "ease-in-out",
-          draggable: true,
-          prevArrow:
-            '<button class="PrevArrow"><i class="fal fa-long-arrow-left"></i></button>',
-          nextArrow:
-            '<button class="NextArrow"><i class="fal fa-long-arrow-right"></i></button>',
-        });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#slickcarouselnobtn").slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        slidesToShow: 3,
+        arrows: false,
+        slidesToScroll: 2,
+        pauseOnHover: true,
+        dots: false,
+        cssEase: "ease-in-out",
+        draggable: true,
       });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#slickcarouselnobtn").slick({
-          autoplay: true,
-          autoplaySpeed: 3000,
-          speed: 1000,
-          slidesToShow: 3,
-          arrows: false,
-          slidesToScroll: 2,
-          pauseOnHover: true,
-          dots: false,
-          cssEase: "ease-in-out",
-          draggable: true,
-        });
-      });
-    </script>
-    <script>
-      let tabs = document.querySelectorAll(".tabs button");
-      let tabContents = document.querySelectorAll(".tab-content .tab-data");
+    });
+  </script>
+  <script>
+    let tabs = document.querySelectorAll(".tabs button");
+    let tabContents = document.querySelectorAll(".tab-content .tab-data");
 
-      tabs.forEach((tab, index) => {
-        tab.addEventListener("click", () => {
-          tabContents.forEach((content) => {
-            content.classList.remove("active");
-          });
-          tabs.forEach((tab) => {
-            tab.classList.remove("active");
-          });
-          tabContents[index].classList.add("active");
-          tabs[index].classList.add("active");
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
         });
+        tabs.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        tabContents[index].classList.add("active");
+        tabs[index].classList.add("active");
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
