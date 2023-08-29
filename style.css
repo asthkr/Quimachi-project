@@ -1628,6 +1628,7 @@ body p {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    text-align: center;
   }
   .contactPage .primary-textform .txt-big-c {
     font-size: 18vw;
