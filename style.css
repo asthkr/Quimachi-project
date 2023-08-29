@@ -1737,24 +1737,19 @@ body p {
   }
   .footer .bg-img {
     width: 100%;
-    height: 110vh;
-  }
-  .footer .bg-img img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: rotate(180deg);
-    -o-object-position: bottom;
-       object-position: bottom;
-    filter: brightness(60%);
+    height: 100vh;
+    background: url(../images/jh.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    rotate: 180deg;
   }
   .footer .ftr-content {
     position: absolute;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    width: 80%;
+    top: 10%;
+    transform: none;
+    left: 20px;
+    bottom: 0;
+    width: 100%;
   }
   .footer .ftr-content .logoName {
     display: flex;
@@ -1782,6 +1777,7 @@ body p {
     color: #b6b6b6;
   }
   .footer .ftr-content .social-icons {
+    margin-bottom: 30px;
     display: flex;
     gap: 15px;
     align-items: center;
