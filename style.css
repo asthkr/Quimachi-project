@@ -124,6 +124,7 @@ body p {
   font-size: 0.6rem;
 }
 .header .header-navbar .topBar .signup-btn {
+  display: block;
   margin: 0 10px;
 }
 .header .header-navbar .topBar .signup-btn button {
@@ -135,6 +136,34 @@ body p {
 }
 .header .header-navbar .navbar {
   margin-top: 1px;
+}
+.header .header-navbar .navbar .selectBox {
+  display: none;
+  align-items: center;
+  color: #fff;
+  margin: 0 20px;
+}
+.header .header-navbar .navbar .selectBox form label i {
+  margin: 0 3px;
+}
+.header .header-navbar .navbar .selectBox form .fa-money-bill {
+  rotate: -40deg;
+}
+.header .header-navbar .navbar .selectBox form select {
+  font-size: 0.8rem;
+  color: #fff;
+  background: none;
+  border: none;
+}
+.header .header-navbar .navbar .selectBox form select:focus-visible {
+  outline: none;
+}
+.header .header-navbar .navbar .selectBox form select option {
+  color: black;
+}
+.header .header-navbar .navbar .selectBox .divider-line i {
+  rotate: 90deg;
+  font-weight: 300;
 }
 .header .header-navbar .navbar ul.navbar-nav {
   justify-content: space-between;
@@ -148,23 +177,30 @@ body p {
   color: #b0bb1d;
   border-bottom: 2px solid #b0bb1d;
 }
+.header .header-navbar .navbar .signup-btn, .header .header-navbar .navbar .login-btn {
+  display: none;
+  margin: 0 10px;
+}
+.header .header-navbar .navbar .signup-btn button, .header .header-navbar .navbar .login-btn button {
+  width: 100%;
+  color: #764d6f;
+  padding: 5px 25px;
+  font-size: 0.8rem;
+  background: #fff;
+  border-radius: 25px;
+}
 
 .footer {
   position: relative;
 }
 .footer .bg-img {
   width: 100%;
-  height: 400px;
-}
-.footer .bg-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 50vh;
+  background: url(../images/jh.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   transform: rotate(180deg);
-  -o-object-position: bottom;
-     object-position: bottom;
-  filter: brightness(60%);
+  background-position: bottom;
 }
 .footer .ftr-content {
   position: absolute;
@@ -1161,6 +1197,185 @@ body p {
 }
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
+  .header {
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: transparent;
+  }
+  .header .header-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .header .header-logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .header .header-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .header .header-navbar .topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .header-navbar .topBar .searchBox {
+    width: 40px;
+    height: 40px;
+  }
+  .header .header-navbar .topBar .searchBox form {
+    position: relative;
+    color: #fff;
+  }
+  .header .header-navbar .topBar .searchBox form i {
+    position: absolute;
+    right: 20px;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .header .header-navbar .topBar .searchBox form .form-control {
+    padding: 5px 15px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .header .header-navbar .topBar .searchBox form .form-control:focus {
+    box-shadow: none;
+  }
+  .header .header-navbar .topBar .searchBox form .form-control::-moz-placeholder {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .header .header-navbar .topBar .searchBox form .form-control::placeholder {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .header .header-navbar .topBar .selectBox {
+    display: none;
+    align-items: center;
+    color: #fff;
+    margin: 0 20px;
+  }
+  .header .header-navbar .topBar .selectBox form label i {
+    margin: 0 3px;
+  }
+  .header .header-navbar .topBar .selectBox form .fa-money-bill {
+    rotate: -40deg;
+  }
+  .header .header-navbar .topBar .selectBox form select {
+    font-size: 0.8rem;
+    color: #fff;
+    background: none;
+    border: none;
+  }
+  .header .header-navbar .topBar .selectBox form select:focus-visible {
+    outline: none;
+  }
+  .header .header-navbar .topBar .selectBox form select option {
+    color: black;
+  }
+  .header .header-navbar .topBar .selectBox .divider-line i {
+    rotate: 90deg;
+    font-weight: 300;
+  }
+  .header .header-navbar .topBar .shop-cart {
+    margin-right: 15px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .header .header-navbar .topBar .shop-cart img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header .header-navbar .topBar .shop-cart .top-dot p {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: #fff;
+    color: #764d6f;
+    font-size: 0.6rem;
+  }
+  .header .header-navbar .topBar .signup-btn {
+    display: none;
+    margin: 0 10px;
+  }
+  .header .header-navbar .topBar .signup-btn button {
+    color: #764d6f;
+    padding: 5px 25px;
+    font-size: 0.8rem;
+    background: #fff;
+    border-radius: 25px;
+  }
+  .header .header-navbar .navbar {
+    margin-top: 1px;
+  }
+  .header .header-navbar .navbar .selectBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    margin: 10px 20px;
+  }
+  .header .header-navbar .navbar .selectBox form label i {
+    margin: 0 3px;
+  }
+  .header .header-navbar .navbar .selectBox form .fa-money-bill {
+    rotate: -40deg;
+  }
+  .header .header-navbar .navbar .selectBox form select {
+    font-size: 0.8rem;
+    color: #fff;
+    background: none;
+    border: none;
+  }
+  .header .header-navbar .navbar .selectBox form select:focus-visible {
+    outline: none;
+  }
+  .header .header-navbar .navbar .selectBox form select option {
+    color: black;
+  }
+  .header .header-navbar .navbar .selectBox .divider-line i {
+    rotate: 90deg;
+    font-weight: 300;
+  }
+  .header .header-navbar .navbar ul.navbar-nav {
+    justify-content: space-between;
+  }
+  .header .header-navbar .navbar ul.navbar-nav .nav-link {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+  }
+  .header .header-navbar .navbar ul.navbar-nav .nav-link:hover {
+    color: #b0bb1d;
+    border-bottom: 2px solid #b0bb1d;
+  }
+  .header .header-navbar .navbar .signup-btn, .header .header-navbar .navbar .login-btn {
+    display: block;
+    margin: 0 10px;
+  }
+  .header .header-navbar .navbar .signup-btn button, .header .header-navbar .navbar .login-btn button {
+    width: 100%;
+    color: #764d6f;
+    padding: 5px 25px;
+    font-size: 0.8rem;
+    background: #fff;
+    border-radius: 25px;
+  }
   .heroBanner .container-fluid .bnrWrap .bgImage {
     height: 1200px;
   }
@@ -1737,15 +1952,11 @@ body p {
   }
   .footer .bg-img {
     width: 100%;
-    height: 100vh;
-    background: url(../images/jh.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    rotate: 180deg;
+    height: 110vh;
   }
   .footer .ftr-content {
     position: absolute;
-    top: 10%;
+    top: 15%;
     transform: none;
     left: 20px;
     bottom: 0;
@@ -1785,8 +1996,8 @@ body p {
   }
   .footer .ftr-content .social-icons .iconBox {
     box-shadow: 0 0 2px #000;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: white;
     text-align: center;
