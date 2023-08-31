@@ -212,7 +212,9 @@ body p {
 }
 .footer .bg-img {
   width: 100%;
-  height: 50vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 100px;
   background: url(../images/jh.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -220,11 +222,9 @@ body p {
   background-position: bottom;
 }
 .footer .ftr-content {
-  position: absolute;
-  top: 60%;
-  transform: translate(-50%, -50%);
-  left: 50%;
+  transform: rotate(180deg);
   width: 80%;
+  margin: 0 auto;
 }
 .footer .ftr-content .logoName {
   display: flex;
@@ -259,8 +259,8 @@ body p {
 }
 .footer .ftr-content .social-icons .iconBox {
   box-shadow: 0 0 2px #000;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: white;
   text-align: center;
@@ -1977,14 +1977,9 @@ body p {
   }
   .footer .bg-img {
     width: 100%;
-    height: 110vh;
   }
   .footer .ftr-content {
-    position: absolute;
-    top: 15%;
-    transform: none;
-    left: 20px;
-    bottom: 0;
+    padding: 0 20px;
     width: 100%;
   }
   .footer .ftr-content .logoName {

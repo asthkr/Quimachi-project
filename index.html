@@ -86,7 +86,7 @@
                 <a href="signup.html"><button class="btn">Sign Up</button></a>
               </div>
             </div>
-            <nav class="navbar navbar-expand-md justify-content-end">
+            <nav class="navbar navbar-expand-sm justify-content-end">
               <button
                 id="colorbgtoggle"
                 class="navbar-toggler"
@@ -683,7 +683,7 @@
     </section>
     <section class="footer">
       <div class="container-fluid p-0">
-        <div class="bg-img"></div>
+        <div class="bg-img">
 
         <div class="ftr-content">
           <div class="row align-items-start justify-content-between">
@@ -762,7 +762,7 @@
                 </div>
               </div>
             </div>
-            <div class="row text-center">
+            <div class="col-12 text-center">
               <span class="div-line">
                 <h6>
                   <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
@@ -773,6 +773,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <script
       type="text/javascript"
@@ -796,7 +797,9 @@
           "background",
           scrolled ? "rgba(255, 255, 255,1)" : "rgba(255, 255, 255,0)"
         );
-        $(".header").css("position", scrolled ? "sticky" : "absolute");
+        $(".header").css("position",scrolled ? "sticky" : "absolute");
+        $(".cartclr").css("fill", scrolled ? "#2b2b2b" : "#fff");
+        $(".searchBox form").css("color",scrolled ? "#2b2b2b" : "#fff");
       });
     </script>
     <script>
