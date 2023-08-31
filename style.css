@@ -15,14 +15,17 @@ body p {
   margin: 0;
 }
 
+.h-white {
+  background: white !important;
+}
+
 .header {
+  background: transparent;
+  width: 100vw;
   z-index: 999999;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   padding: 10px 0;
-  background-color: transparent;
 }
 .header .header-logo {
   width: 80px;
@@ -36,6 +39,7 @@ body p {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin: auto 0;
 }
 .header .header-navbar .topBar {
   display: flex;
@@ -107,11 +111,14 @@ body p {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
 }
-.header .header-navbar .topBar .shop-cart img {
+.header .header-navbar .topBar .shop-cart svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.header .header-navbar .topBar .shop-cart svg path.cartclr {
+  fill: white;
 }
 .header .header-navbar .topBar .shop-cart .top-dot p {
   position: absolute;
@@ -135,7 +142,8 @@ body p {
   border-radius: 25px;
 }
 .header .header-navbar .navbar {
-  margin-top: 1px;
+  padding: 0;
+  margin-top: 0px;
 }
 .header .header-navbar .navbar .selectBox {
   display: none;
@@ -165,6 +173,13 @@ body p {
   rotate: 90deg;
   font-weight: 300;
 }
+.header .header-navbar .navbar .navbar-toggler {
+  padding: 0 !important;
+  border: none;
+}
+.header .header-navbar .navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
 .header .header-navbar .navbar ul.navbar-nav {
   justify-content: space-between;
 }
@@ -177,11 +192,13 @@ body p {
   color: #b0bb1d;
   border-bottom: 2px solid #b0bb1d;
 }
-.header .header-navbar .navbar .signup-btn, .header .header-navbar .navbar .login-btn {
+.header .header-navbar .navbar .signup-btn,
+.header .header-navbar .navbar .login-btn {
   display: none;
   margin: 0 10px;
 }
-.header .header-navbar .navbar .signup-btn button, .header .header-navbar .navbar .login-btn button {
+.header .header-navbar .navbar .signup-btn button,
+.header .header-navbar .navbar .login-btn button {
   width: 100%;
   color: #764d6f;
   padding: 5px 25px;
@@ -341,8 +358,7 @@ body p {
   display: block;
 }
 .heroBanner .container-fluid {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 .heroBanner .container-fluid .bnrWrap {
   position: relative;
@@ -362,7 +378,7 @@ body p {
   position: absolute;
   z-index: 100;
   bottom: -75px;
-  left: 12%;
+  left: 50px;
   transform: translateX(0);
 }
 .heroBanner .container-fluid .bnrWrap .bnrProduct img {
@@ -1198,17 +1214,14 @@ body p {
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .header {
+    width: 100vw;
     z-index: 999999;
-    position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
     padding: 10px 0;
-    background-color: transparent;
   }
   .header .header-logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   .header .header-logo img {
     width: 100%;
@@ -1218,15 +1231,18 @@ body p {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
   }
   .header .header-navbar .topBar {
+    color: #2b2b2b !important;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    position: absolute;
+    right: 40px;
   }
   .header .header-navbar .topBar .searchBox {
-    width: 40px;
-    height: 40px;
+    margin-left: 10px;
   }
   .header .header-navbar .topBar .searchBox form {
     position: relative;
@@ -1239,6 +1255,8 @@ body p {
     font-weight: 300;
   }
   .header .header-navbar .topBar .searchBox form .form-control {
+    width: 35px;
+    height: 35px;
     padding: 5px 15px;
     border-radius: 25px;
     border: none;
@@ -1249,18 +1267,18 @@ body p {
   }
   .header .header-navbar .topBar .searchBox form .form-control::-moz-placeholder {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0rem;
     font-weight: 300;
   }
   .header .header-navbar .topBar .searchBox form .form-control::placeholder {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0rem;
     font-weight: 300;
   }
   .header .header-navbar .topBar .selectBox {
     display: none;
     align-items: center;
-    color: #fff;
+    color: #2b2b2b !important;
     margin: 0 20px;
   }
   .header .header-navbar .topBar .selectBox form label i {
@@ -1271,7 +1289,7 @@ body p {
   }
   .header .header-navbar .topBar .selectBox form select {
     font-size: 0.8rem;
-    color: #fff;
+    color: #2b2b2b !important;
     background: none;
     border: none;
   }
@@ -1279,7 +1297,7 @@ body p {
     outline: none;
   }
   .header .header-navbar .topBar .selectBox form select option {
-    color: black;
+    color: #2b2b2b;
   }
   .header .header-navbar .topBar .selectBox .divider-line i {
     rotate: 90deg;
@@ -1293,11 +1311,14 @@ body p {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
   }
-  .header .header-navbar .topBar .shop-cart img {
+  .header .header-navbar .topBar .shop-cart svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .header .header-navbar .topBar .shop-cart svg path.cartclr {
+    fill: #fff;
   }
   .header .header-navbar .topBar .shop-cart .top-dot p {
     position: absolute;
@@ -1305,8 +1326,8 @@ body p {
     right: -3px;
     padding: 0 4px;
     border-radius: 50%;
-    background: #fff;
-    color: #764d6f;
+    background: #303030;
+    color: #fff;
     font-size: 0.6rem;
   }
   .header .header-navbar .topBar .signup-btn {
@@ -1321,13 +1342,13 @@ body p {
     border-radius: 25px;
   }
   .header .header-navbar .navbar {
-    margin-top: 1px;
+    margin-top: 0;
   }
   .header .header-navbar .navbar .selectBox {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: #fff;
+    color: #764d6f;
     margin: 10px 20px;
   }
   .header .header-navbar .navbar .selectBox form label i {
@@ -1338,7 +1359,7 @@ body p {
   }
   .header .header-navbar .navbar .selectBox form select {
     font-size: 0.8rem;
-    color: #fff;
+    color: #2b2b2b;
     background: none;
     border: none;
   }
@@ -1356,7 +1377,8 @@ body p {
     justify-content: space-between;
   }
   .header .header-navbar .navbar ul.navbar-nav .nav-link {
-    color: #fff;
+    display: inline-block;
+    color: #2b2b2b;
     border-bottom: 2px solid transparent;
     text-transform: uppercase;
   }
@@ -1364,16 +1386,19 @@ body p {
     color: #b0bb1d;
     border-bottom: 2px solid #b0bb1d;
   }
-  .header .header-navbar .navbar .signup-btn, .header .header-navbar .navbar .login-btn {
+  .header .header-navbar .navbar .signup-btn,
+  .header .header-navbar .navbar .login-btn {
     display: block;
-    margin: 0 10px;
+    margin: 15px 10px;
   }
-  .header .header-navbar .navbar .signup-btn button, .header .header-navbar .navbar .login-btn button {
+  .header .header-navbar .navbar .signup-btn button,
+  .header .header-navbar .navbar .login-btn button {
+    border: 1px solid #764d6f;
     width: 100%;
     color: #764d6f;
     padding: 5px 25px;
     font-size: 0.8rem;
-    background: #fff;
+    background: transparent;
     border-radius: 25px;
   }
   .heroBanner .container-fluid .bnrWrap .bgImage {
