@@ -795,11 +795,24 @@
         var scrolled = $(this).scrollTop() > 10;
         $(".header").css(
           "background",
-          scrolled ? "rgba(255, 255, 255,1)" : "rgba(255, 255, 255,0)"
+          scrolled ? "rgba(255, 255, 255,1)" : "rgba(255, 255, 255,0)",
+          
+        );
+        $(".header").css(
+          "transition",
+          scrolled ? "500ms all" : ""
         );
         $(".header").css("position",scrolled ? "sticky" : "absolute");
         $(".cartclr").css("fill", scrolled ? "#2b2b2b" : "");
         $(".searchBox form").css("color",scrolled ? "#2b2b2b" : "");
+        $(".nav-link").css("color" ,scrolled ? "#333" : ""); 
+        $(".nav-link").css("transition" ,scrolled ? "800ms all 500ms" : ""); 
+        $(".signup-btn button").css("border" ,scrolled ? "2px solid #a986b0" : ""); 
+      
+        $(".selectBox").css("color" ,scrolled ? "#a986b9" : ""); 
+        $("#currencyLogo").css("color" ,scrolled ? "#2b2b2b" : ""); 
+        $("#languageLogo").css("color" ,scrolled ? "#2b2b2b" : ""); 
+        $(".divider-line i").css("color" ,scrolled ? "#2b2b2b" : ""); 
       });
     </script>
     <script>
@@ -807,6 +820,7 @@
         $(".header").toggleClass("h-white");
         $(".cartclr").css("fill", "#2b2b2b");
         $(".searchBox form").css("color", "#2b2b2b");
+    
       });
     </script>
     <script>
