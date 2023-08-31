@@ -5,6 +5,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Rubik", sans-serif !important;
 }
 body a {
@@ -212,9 +213,7 @@ body p {
 }
 .footer .bg-img {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-bottom: 100px;
+  padding-bottom: 110px;
   background: url(../images/jh.png);
   background-repeat: no-repeat;
   background-size: cover;
