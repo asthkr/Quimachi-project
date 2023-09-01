@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body {overflow-x: hidden;
+body {
+  overflow-x: hidden;
   font-family: "Rubik", sans-serif !important;
 
   a {
@@ -17,10 +18,9 @@ body {overflow-x: hidden;
   }
 }
 .h-white {
-  background: white !important;
+  background: #fff;
 }
 .header {
-  background: transparent;
   width: 100vw;
   z-index: 999999;
   position: absolute;
@@ -36,133 +36,137 @@ body {overflow-x: hidden;
       height: 100%;
     }
   }
+  .topBar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
 
+    .searchBox {
+      form {
+        position: relative;
+        color: #fff;
+
+        i {
+          position: absolute;
+          right: 20px;
+          font-size: 0.8rem;
+          font-weight: 300;
+        }
+
+        .form-control {
+          padding: 5px 15px;
+          border-radius: 25px;
+
+          border: none;
+          background: rgba($color: #fff, $alpha: 0.3);
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          &::placeholder {
+            color: #c9d1db;
+            font-size: 0.8rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .selectBox {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin: 0 20px;
+
+      form {
+        label i {
+          margin: 0 3px;
+        }
+
+        .fa-money-bill {
+          rotate: -40deg;
+        }
+
+        select {
+          font-size: 0.8rem;
+          color: #fff;
+          background: none;
+          border: none;
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          option {
+            color: black;
+          }
+        }
+      }
+
+      .divider-line i {
+        rotate: 90deg;
+        font-weight: 300;
+      }
+    }
+
+    .shop-cart {
+      margin-right: 15px;
+      position: relative;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: rgba($color: #fff, $alpha: 0.3);
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        path.cartclr {
+          fill: white;
+        }
+      }
+
+      .top-dot p {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        padding: 0 4px;
+        border-radius: 50%;
+        background: #fff;
+        color: #764d6f;
+        font-size: 0.6rem;
+      }
+    }
+    .signup-btn {
+      display: block;
+      margin: 0 10px;
+
+      button {
+        border: 2px solid transparent;
+        color: #764d6f;
+        padding: 5px 25px;
+        font-size: 0.8rem;
+        background: #fff;
+        border-radius: 25px;
+      }
+    }
+  }
+  .navbar-collapse {
+    justify-content: end;
+    margin-bottom: -35px;
+  }
   .header-navbar {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
     margin: auto 0;
-    .topBar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .searchBox {
-        form {
-          position: relative;
-          color: #fff;
-
-          i {
-            position: absolute;
-            right: 20px;
-            font-size: 0.8rem;
-            font-weight: 300;
-          }
-
-          .form-control {
-            padding: 5px 15px;
-            border-radius: 25px;
-           
-            border: none;
-            background: rgba($color: #fff, $alpha: 0.3);
-
-            &:focus {
-              box-shadow: none;
-            }
-
-            &::placeholder {
-              color: #c9d1db;
-              font-size: 0.8rem;
-              font-weight: 300;
-            }
-          }
-        }
-      }
-
-      .selectBox {
-        display: flex;
-        align-items: center;
-        color: #fff;
-        margin: 0 20px;
-
-        form {
-          label i {
-            margin: 0 3px;
-          }
-
-          .fa-money-bill {
-            rotate: -40deg;
-          }
-
-          select {
-            font-size: 0.8rem;
-            color: #fff;
-            background: none;
-            border: none;
-
-            &:focus-visible {
-              outline: none;
-            }
-
-            option {
-              color: black;
-            }
-          }
-        }
-
-        .divider-line i {
-          rotate: 90deg;
-          font-weight: 300;
-        }
-      }
-
-      .shop-cart {
-        margin-right: 15px;
-        position: relative;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        background-color: rgba($color: #fff, $alpha: 0.3);
-
-        svg {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-
-          path.cartclr {
-            fill: white;
-          }
-        }
-
-        .top-dot p {
-          position: absolute;
-          top: -3px;
-          right: -3px;
-          padding: 0 4px;
-          border-radius: 50%;
-          background: #fff;
-          color: #764d6f;
-          font-size: 0.6rem;
-        }
-      }
-     .signup-btn {
-        display: block;
-        margin: 0 10px;
-
-        button {border: 2px solid transparent;
-          color: #764d6f;
-          padding: 5px 25px;
-          font-size: 0.8rem;
-          background: #fff;
-          border-radius: 25px;
-        }
-      }
-    }
     .navbar {
       padding: 0;
-      margin-top: 0px;
+      margin-top: -40px;
       .selectBox {
         display: none;
         align-items: center;
@@ -244,7 +248,7 @@ body {overflow-x: hidden;
   .bg-img {
     width: 100%;
 
-   padding-bottom: 110px;
+    padding-bottom: 110px;
     background: url(../images/jh.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -253,9 +257,9 @@ body {overflow-x: hidden;
   }
 
   .ftr-content {
-transform: rotate(180deg);
+    transform: rotate(180deg);
     width: 80%;
-margin: 0  auto;
+    margin: 0 auto;
     .logoName {
       display: flex;
       align-items: center;
@@ -1404,74 +1408,155 @@ margin: 0  auto;
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .header {
-    width: 100vw;
     z-index: 999999;
-
+    position: absolute;
     top: 0;
     padding: 10px 0;
 
     .header-logo {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
 
       img {
         width: 100%;
         height: 100%;
       }
     }
+    .topBar {
+      display: none;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-end;
 
-    .header-navbar {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      position: relative;
+      .searchBox {
+        form {
+          position: relative;
+          color: #fff;
 
-      .topBar {
-        color: #2b2b2b !important;
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        position: absolute;
-        right: 40px;
+          i {
+            position: absolute;
+            right: 20px;
+            font-size: 0.8rem;
+            font-weight: 300;
+          }
 
-        .searchBox {
-          margin-left: 10px;
-          form {
-            position: relative;
-            color: #fff;
+          .form-control {
+            padding: 5px 15px;
+            border-radius: 25px;
 
-            i {
-              position: absolute;
-              right: 20px;
+            border: none;
+            background: rgba($color: #fff, $alpha: 0.3);
+
+            &:focus {
+              box-shadow: none;
+            }
+
+            &::placeholder {
+              color: #c9d1db;
               font-size: 0.8rem;
               font-weight: 300;
             }
+          }
+        }
+      }
 
-            .form-control {
-              width: 35px;
-              height: 35px;
-              padding: 5px 15px;
-              border-radius: 25px;
-              border: none;
-              background: rgba($color: #fff, $alpha: 0.3);
+      .selectBox {
+        display: none;
+        align-items: center;
+        color: #fff;
+        margin: 0 20px;
 
-              &:focus {
-                box-shadow: none;
-              }
+        form {
+          label i {
+            margin: 0 3px;
+          }
 
-              &::placeholder {
-                color: #fff;
-                font-size: 0rem;
-                font-weight: 300;
-              }
+          .fa-money-bill {
+            rotate: -40deg;
+          }
+
+          select {
+            font-size: 0.8rem;
+            color: #fff;
+            background: none;
+            border: none;
+
+            &:focus-visible {
+              outline: none;
+            }
+
+            option {
+              color: black;
             }
           }
         }
 
+        .divider-line i {
+          rotate: 90deg;
+          font-weight: 300;
+        }
+      }
+
+      .shop-cart {
+        margin-right: 15px;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: rgba($color: #fff, $alpha: 0.3);
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          path.cartclr {
+            fill: white;
+          }
+        }
+
+        .top-dot p {
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          padding: 0 4px;
+          border-radius: 50%;
+          background: #fff;
+          color: #764d6f;
+          font-size: 0.6rem;
+        }
+      }
+      .signup-btn {
+        display: block;
+        margin: 0 10px;
+
+        button {
+          border: 2px solid transparent;
+          color: #764d6f;
+          padding: 5px 25px;
+          font-size: 0.8rem;
+          background: #fff;
+          border-radius: 25px;
+        }
+      }
+    }
+    .navbar-collapse {
+      justify-content: end;
+      margin-bottom: 0px;
+    }
+    .header-navbar {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: auto 0;
+      .navbar {
+        padding: 0;
+        margin-top: 0px;
         .selectBox {
-          display: none;
+          display: flex;
           align-items: center;
-          color: #2b2b2b !important;
+          color: #fff;
           margin: 0 20px;
 
           form {
@@ -1485,88 +1570,7 @@ margin: 0  auto;
 
             select {
               font-size: 0.8rem;
-              color: #2b2b2b !important;
-              background: none;
-              border: none;
-
-              &:focus-visible {
-                outline: none;
-              }
-
-              option {
-                color: #2b2b2b;
-              }
-            }
-          }
-
-          .divider-line i {
-            rotate: 90deg;
-            font-weight: 300;
-          }
-        }
-
-        .shop-cart {
-          margin-right: 15px;
-          position: relative;
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          background-color: rgba($color: #fff, $alpha: 0.3);
-
-          svg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            path.cartclr {
-              fill: #fff;
-            }
-          }
-          .top-dot p {
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            padding: 0 4px;
-            border-radius: 50%;
-            background: #303030;
-            color: #fff;
-            font-size: 0.6rem;
-          }
-        }
-
-        .signup-btn {
-          display: none;
-          margin: 0 10px;
-
-          button {
-            color: #764d6f;
-            padding: 5px 25px;
-            font-size: 0.8rem;
-            background: #fff;
-            border-radius: 25px;
-          }
-        }
-      }
-      .navbar {
-        margin-top: 0;
-        .selectBox {
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          color: #764d6f;
-          margin: 10px 20px;
-
-          form {
-            label i {
-              margin: 0 3px;
-            }
-
-            .fa-money-bill {
-              rotate: -40deg;
-            }
-            select {
-              font-size: 0.8rem;
-              color: #2b2b2b;
+              color: #fff;
               background: none;
               border: none;
 
@@ -1585,34 +1589,38 @@ margin: 0  auto;
             font-weight: 300;
           }
         }
-
+        .navbar-toggler {
+          padding: 0 !important;
+          border: none;
+          &:focus {
+            box-shadow: none;
+          }
+        }
         ul.navbar-nav {
           justify-content: space-between;
 
           .nav-link {
-            display: inline-block;
-            color: #2b2b2b;
+            color: #fff;
             border-bottom: 2px solid transparent;
             text-transform: uppercase;
 
             &:hover {
-              color: #b0bb1d;
+              color: #b0bb1d !important;
               border-bottom: 2px solid #b0bb1d;
             }
           }
         }
         .signup-btn,
         .login-btn {
-          display: block;
-          margin: 15px 10px;
+          display: flex;
+          margin: 0 10px;
 
           button {
-            border: 1px solid #764d6f;
             width: 100%;
             color: #764d6f;
             padding: 5px 25px;
             font-size: 0.8rem;
-            background: transparent;
+            background: #fff;
             border-radius: 25px;
           }
         }
@@ -1682,7 +1690,6 @@ margin: 0  auto;
       }
     }
   }
-
   .subBanner {
     padding: 50px 0;
     position: relative;
@@ -2298,7 +2305,7 @@ margin: 0  auto;
     }
 
     .ftr-content {
-     padding: 0 20px;
+      padding: 0 20px;
       width: 100%;
 
       .logoName {

@@ -17,11 +17,10 @@ body p {
 }
 
 .h-white {
-  background: white !important;
+  background: #fff;
 }
 
 .header {
-  background: transparent;
   width: 100vw;
   z-index: 999999;
   position: absolute;
@@ -36,75 +35,70 @@ body p {
   width: 100%;
   height: 100%;
 }
-.header .header-navbar {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  margin: auto 0;
-}
-.header .header-navbar .topBar {
+.header .topBar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: flex-end;
 }
-.header .header-navbar .topBar .searchBox form {
+.header .topBar .searchBox form {
   position: relative;
   color: #fff;
 }
-.header .header-navbar .topBar .searchBox form i {
+.header .topBar .searchBox form i {
   position: absolute;
   right: 20px;
   font-size: 0.8rem;
   font-weight: 300;
 }
-.header .header-navbar .topBar .searchBox form .form-control {
+.header .topBar .searchBox form .form-control {
   padding: 5px 15px;
   border-radius: 25px;
   border: none;
   background: rgba(255, 255, 255, 0.3);
 }
-.header .header-navbar .topBar .searchBox form .form-control:focus {
+.header .topBar .searchBox form .form-control:focus {
   box-shadow: none;
 }
-.header .header-navbar .topBar .searchBox form .form-control::-moz-placeholder {
+.header .topBar .searchBox form .form-control::-moz-placeholder {
   color: #c9d1db;
   font-size: 0.8rem;
   font-weight: 300;
 }
-.header .header-navbar .topBar .searchBox form .form-control::placeholder {
+.header .topBar .searchBox form .form-control::placeholder {
   color: #c9d1db;
   font-size: 0.8rem;
   font-weight: 300;
 }
-.header .header-navbar .topBar .selectBox {
+.header .topBar .selectBox {
   display: flex;
   align-items: center;
   color: #fff;
   margin: 0 20px;
 }
-.header .header-navbar .topBar .selectBox form label i {
+.header .topBar .selectBox form label i {
   margin: 0 3px;
 }
-.header .header-navbar .topBar .selectBox form .fa-money-bill {
+.header .topBar .selectBox form .fa-money-bill {
   rotate: -40deg;
 }
-.header .header-navbar .topBar .selectBox form select {
+.header .topBar .selectBox form select {
   font-size: 0.8rem;
   color: #fff;
   background: none;
   border: none;
 }
-.header .header-navbar .topBar .selectBox form select:focus-visible {
+.header .topBar .selectBox form select:focus-visible {
   outline: none;
 }
-.header .header-navbar .topBar .selectBox form select option {
+.header .topBar .selectBox form select option {
   color: black;
 }
-.header .header-navbar .topBar .selectBox .divider-line i {
+.header .topBar .selectBox .divider-line i {
   rotate: 90deg;
   font-weight: 300;
 }
-.header .header-navbar .topBar .shop-cart {
+.header .topBar .shop-cart {
   margin-right: 15px;
   position: relative;
   width: 35px;
@@ -112,16 +106,16 @@ body p {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
 }
-.header .header-navbar .topBar .shop-cart svg {
+.header .topBar .shop-cart svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.header .header-navbar .topBar .shop-cart svg path.cartclr {
+.header .topBar .shop-cart svg path.cartclr {
   fill: white;
 }
-.header .header-navbar .topBar .shop-cart .top-dot p {
+.header .topBar .shop-cart .top-dot p {
   position: absolute;
   top: -3px;
   right: -3px;
@@ -131,11 +125,11 @@ body p {
   color: #764d6f;
   font-size: 0.6rem;
 }
-.header .header-navbar .topBar .signup-btn {
+.header .topBar .signup-btn {
   display: block;
   margin: 0 10px;
 }
-.header .header-navbar .topBar .signup-btn button {
+.header .topBar .signup-btn button {
   border: 2px solid transparent;
   color: #764d6f;
   padding: 5px 25px;
@@ -143,9 +137,19 @@ body p {
   background: #fff;
   border-radius: 25px;
 }
+.header .navbar-collapse {
+  justify-content: end;
+  margin-bottom: -35px;
+}
+.header .header-navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: auto 0;
+}
 .header .header-navbar .navbar {
   padding: 0;
-  margin-top: 0px;
+  margin-top: -40px;
 }
 .header .header-navbar .navbar .selectBox {
   display: none;
@@ -1214,96 +1218,83 @@ body p {
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .header {
-    width: 100vw;
     z-index: 999999;
+    position: absolute;
     top: 0;
     padding: 10px 0;
   }
   .header .header-logo {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
   .header .header-logo img {
     width: 100%;
     height: 100%;
   }
-  .header .header-navbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: relative;
+  .header .topBar {
+    display: none;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
   }
-  .header .header-navbar .topBar {
-    color: #2b2b2b !important;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    position: absolute;
-    right: 40px;
-  }
-  .header .header-navbar .topBar .searchBox {
-    margin-left: 10px;
-  }
-  .header .header-navbar .topBar .searchBox form {
+  .header .topBar .searchBox form {
     position: relative;
     color: #fff;
   }
-  .header .header-navbar .topBar .searchBox form i {
+  .header .topBar .searchBox form i {
     position: absolute;
     right: 20px;
     font-size: 0.8rem;
     font-weight: 300;
   }
-  .header .header-navbar .topBar .searchBox form .form-control {
-    width: 35px;
-    height: 35px;
+  .header .topBar .searchBox form .form-control {
     padding: 5px 15px;
     border-radius: 25px;
     border: none;
     background: rgba(255, 255, 255, 0.3);
   }
-  .header .header-navbar .topBar .searchBox form .form-control:focus {
+  .header .topBar .searchBox form .form-control:focus {
     box-shadow: none;
   }
-  .header .header-navbar .topBar .searchBox form .form-control::-moz-placeholder {
-    color: #fff;
-    font-size: 0rem;
+  .header .topBar .searchBox form .form-control::-moz-placeholder {
+    color: #c9d1db;
+    font-size: 0.8rem;
     font-weight: 300;
   }
-  .header .header-navbar .topBar .searchBox form .form-control::placeholder {
-    color: #fff;
-    font-size: 0rem;
+  .header .topBar .searchBox form .form-control::placeholder {
+    color: #c9d1db;
+    font-size: 0.8rem;
     font-weight: 300;
   }
-  .header .header-navbar .topBar .selectBox {
+  .header .topBar .selectBox {
     display: none;
     align-items: center;
-    color: #2b2b2b !important;
+    color: #fff;
     margin: 0 20px;
   }
-  .header .header-navbar .topBar .selectBox form label i {
+  .header .topBar .selectBox form label i {
     margin: 0 3px;
   }
-  .header .header-navbar .topBar .selectBox form .fa-money-bill {
+  .header .topBar .selectBox form .fa-money-bill {
     rotate: -40deg;
   }
-  .header .header-navbar .topBar .selectBox form select {
+  .header .topBar .selectBox form select {
     font-size: 0.8rem;
-    color: #2b2b2b !important;
+    color: #fff;
     background: none;
     border: none;
   }
-  .header .header-navbar .topBar .selectBox form select:focus-visible {
+  .header .topBar .selectBox form select:focus-visible {
     outline: none;
   }
-  .header .header-navbar .topBar .selectBox form select option {
-    color: #2b2b2b;
+  .header .topBar .selectBox form select option {
+    color: black;
   }
-  .header .header-navbar .topBar .selectBox .divider-line i {
+  .header .topBar .selectBox .divider-line i {
     rotate: 90deg;
     font-weight: 300;
   }
-  .header .header-navbar .topBar .shop-cart {
+  .header .topBar .shop-cart {
     margin-right: 15px;
     position: relative;
     width: 35px;
@@ -1311,45 +1302,56 @@ body p {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
   }
-  .header .header-navbar .topBar .shop-cart svg {
+  .header .topBar .shop-cart svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .header .header-navbar .topBar .shop-cart svg path.cartclr {
-    fill: #fff;
+  .header .topBar .shop-cart svg path.cartclr {
+    fill: white;
   }
-  .header .header-navbar .topBar .shop-cart .top-dot p {
+  .header .topBar .shop-cart .top-dot p {
     position: absolute;
     top: -3px;
     right: -3px;
     padding: 0 4px;
     border-radius: 50%;
-    background: #303030;
-    color: #fff;
+    background: #fff;
+    color: #764d6f;
     font-size: 0.6rem;
   }
-  .header .header-navbar .topBar .signup-btn {
-    display: none;
+  .header .topBar .signup-btn {
+    display: block;
     margin: 0 10px;
   }
-  .header .header-navbar .topBar .signup-btn button {
+  .header .topBar .signup-btn button {
+    border: 2px solid transparent;
     color: #764d6f;
     padding: 5px 25px;
     font-size: 0.8rem;
     background: #fff;
     border-radius: 25px;
   }
+  .header .navbar-collapse {
+    justify-content: end;
+    margin-bottom: 0px;
+  }
+  .header .header-navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto 0;
+  }
   .header .header-navbar .navbar {
-    margin-top: 0;
+    padding: 0;
+    margin-top: 0px;
   }
   .header .header-navbar .navbar .selectBox {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    color: #764d6f;
-    margin: 10px 20px;
+    color: #fff;
+    margin: 0 20px;
   }
   .header .header-navbar .navbar .selectBox form label i {
     margin: 0 3px;
@@ -1359,7 +1361,7 @@ body p {
   }
   .header .header-navbar .navbar .selectBox form select {
     font-size: 0.8rem;
-    color: #2b2b2b;
+    color: #fff;
     background: none;
     border: none;
   }
@@ -1373,32 +1375,37 @@ body p {
     rotate: 90deg;
     font-weight: 300;
   }
+  .header .header-navbar .navbar .navbar-toggler {
+    padding: 0 !important;
+    border: none;
+  }
+  .header .header-navbar .navbar .navbar-toggler:focus {
+    box-shadow: none;
+  }
   .header .header-navbar .navbar ul.navbar-nav {
     justify-content: space-between;
   }
   .header .header-navbar .navbar ul.navbar-nav .nav-link {
-    display: inline-block;
-    color: #2b2b2b;
+    color: #fff;
     border-bottom: 2px solid transparent;
     text-transform: uppercase;
   }
   .header .header-navbar .navbar ul.navbar-nav .nav-link:hover {
-    color: #b0bb1d;
+    color: #b0bb1d !important;
     border-bottom: 2px solid #b0bb1d;
   }
   .header .header-navbar .navbar .signup-btn,
   .header .header-navbar .navbar .login-btn {
-    display: block;
-    margin: 15px 10px;
+    display: flex;
+    margin: 0 10px;
   }
   .header .header-navbar .navbar .signup-btn button,
   .header .header-navbar .navbar .login-btn button {
-    border: 1px solid #764d6f;
     width: 100%;
     color: #764d6f;
     padding: 5px 25px;
     font-size: 0.8rem;
-    background: transparent;
+    background: #fff;
     border-radius: 25px;
   }
   .heroBanner .container-fluid .bnrWrap .bgImage {
