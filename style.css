@@ -17,13 +17,15 @@ body p {
 }
 
 .h-white {
-  background: #fff;
+  background-color: #fff;
+  transition: background-color 800ms linear;
 }
 
 .header {
   width: 100vw;
-  z-index: 999999;
+  z-index: 999;
   position: absolute;
+  transition: all 800ms ease-in-out;
   top: 0;
   padding: 10px 0;
 }
@@ -36,6 +38,8 @@ body p {
   height: 100%;
 }
 .header .topBar {
+  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
   width: 100%;
@@ -142,6 +146,8 @@ body p {
   margin-bottom: -35px;
 }
 .header .header-navbar {
+  position: relative;
+  z-index: 50;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -188,13 +194,17 @@ body p {
 }
 .header .header-navbar .navbar ul.navbar-nav {
   justify-content: space-between;
+  margin-left: 15px;
 }
 .header .header-navbar .navbar ul.navbar-nav .nav-link {
+  display: inline-block;
+  transition: all 200ms linear;
   color: #fff;
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
 }
 .header .header-navbar .navbar ul.navbar-nav .nav-link:hover {
+  transition: all 200ms linear;
   color: #b0bb1d !important;
   border-bottom: 2px solid #b0bb1d;
 }
@@ -1334,8 +1344,7 @@ body p {
     border-radius: 25px;
   }
   .header .navbar-collapse {
-    justify-content: end;
-    margin-bottom: 0px;
+    height: 100vh;
   }
   .header .header-navbar {
     display: flex;
@@ -1349,6 +1358,7 @@ body p {
   }
   .header .header-navbar .navbar .selectBox {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
     margin: 0 20px;
@@ -1401,7 +1411,7 @@ body p {
   }
   .header .header-navbar .navbar .signup-btn button,
   .header .header-navbar .navbar .login-btn button {
-    width: 100%;
+    width: 150px;
     color: #764d6f;
     padding: 5px 25px;
     font-size: 0.8rem;

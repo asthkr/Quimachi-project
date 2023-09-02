@@ -36,7 +36,7 @@
           <div class="selectBox">
             <form class="d-flex align-items-center">
               <label for="currency"><i class="fas fa-money-bill"></i></label>
-              <select name="currency" id="currencyLogo">
+              <select class="currencysel" name="currency" id="currencyLogo">
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="INR">INR</option>
@@ -48,7 +48,7 @@
             ></span>
             <form class="d-flex align-items-center">
               <label for="language"><i class="fas fa-globe"></i></label>
-              <select name="language" id="languageLogo">
+              <select class="languagesel" name="language" id="languageLogo">
                 <option value="ENG">ENG</option>
                 <option value="PT">PT</option>
                 <option value="NL">NL</option>
@@ -104,7 +104,7 @@
                   <label for="currency"
                     ><i class="fas fa-money-bill"></i
                   ></label>
-                  <select name="currency" id="currencyLogo">
+                  <select class="currencysel" name="currency" id="currencyLogo">
                     <option value="USD">USD</option>
                     <option value="EUR">EUR</option>
                     <option value="INR">INR</option>
@@ -116,7 +116,7 @@
                 ></span>
                 <form class="d-flex align-items-center">
                   <label for="language"><i class="fas fa-globe"></i></label>
-                  <select name="language" id="languageLogo">
+                  <select class="languagesel" name="language" id="languageLogo">
                     <option value="ENG">ENG</option>
                     <option value="PT">PT</option>
                     <option value="NL">NL</option>
@@ -132,7 +132,7 @@
                   <a class="nav-link" href="about.html">About us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="stores.html">Strores</a>
+                  <a class="nav-link" href="stores.html">Stores</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Procedure</a>
@@ -805,7 +805,7 @@
           scrolled ? "2px solid #a986b0" : ""
         );
         $(".selectBox").css("color", scrolled ? "#a986b9" : "");
-        $("#currencyLogo, #languageLogo, .divider-line i").css(
+        $(".currencysel, .languagesel, .divider-line i").css(
           "color",
           scrolled ? "#2b2b2b" : ""
         );
@@ -821,7 +821,7 @@
         $(".signup-btn button").css("border", "2px solid #a986b0");
         $(".login-btn button").css("border", "2px solid #a986b0");
         $(".selectBox").css("color", "#a986b9");
-        $("#currencyLogo, #languageLogo, .divider-line i").css(
+        $(".currencysel, .languagesel, .divider-line i").css(
           "color",
           "#2b2b2b"
         );
