@@ -17,7 +17,9 @@ body {
     margin: 0;
   }
 }
-.h-white {  background-color: #fff;
+
+.h-white {
+  background-color: #fff;
   -webkit-transition: background-color 800ms linear;
   -moz-transition: background-color 800ms linear;
   -o-transition: background-color 800ms linear;
@@ -25,11 +27,12 @@ body {
   transition: background-color 800ms linear;
 
 }
+
 .header {
   width: 100vw;
   z-index: 999;
   position: absolute;
-  transition:all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
   top: 0;
   padding: 10px 0;
 
@@ -42,8 +45,10 @@ body {
       height: 100%;
     }
   }
-  .topBar {position: relative;
-     z-index: 100;
+
+  .topBar {
+    position: relative;
+    z-index: 100;
     display: flex;
     align-items: center;
     width: 100%;
@@ -148,6 +153,7 @@ body {
         font-size: 0.6rem;
       }
     }
+
     .signup-btn {
       display: block;
       margin: 0 10px;
@@ -162,24 +168,28 @@ body {
       }
     }
   }
+
   .navbar-collapse {
     justify-content: end;
     margin-bottom: -35px;
   }
+
   .header-navbar {
-    position:relative;
+    position: relative;
     z-index: 50;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin: auto 0;
+
     .navbar {
       padding: 0;
       margin-top: -40px;
+
       .selectBox {
         display: none;
         align-items: center;
-      
+
         color: #fff;
         margin: 0 20px;
 
@@ -213,30 +223,37 @@ body {
           font-weight: 300;
         }
       }
+
       .navbar-toggler {
         padding: 0 !important;
         border: none;
+
         &:focus {
           box-shadow: none;
         }
       }
+
       ul.navbar-nav {
         justify-content: space-between;
- margin-left:15px;
+        margin-left: 15px;
+        gap: 15px;
+
         .nav-link {
           display: inline-block;
           transition: all 200ms linear;
           color: #fff;
           border-bottom: 2px solid transparent;
           text-transform: uppercase;
-         
+          font-size: 16px;
 
-          &:hover {transition: all 200ms linear;
+          &:hover {
+            transition: all 200ms linear;
             color: #b0bb1d !important;
             border-bottom: 2px solid #b0bb1d;
           }
         }
       }
+
       .signup-btn,
       .login-btn {
         display: none;
@@ -261,7 +278,7 @@ body {
   .bg-img {
     width: 100%;
 
-    padding-bottom: 110px;
+    padding-bottom: 120px;
     background: url(../images/jh.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -273,6 +290,7 @@ body {
     transform: rotate(180deg);
     width: 80%;
     margin: 0 auto;
+
     .logoName {
       display: flex;
       align-items: center;
@@ -333,14 +351,12 @@ body {
 
       .box-i {
         background: #d6249f;
-        background: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
+        background: radial-gradient(circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%);
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 
         i {
@@ -438,6 +454,7 @@ body {
 // HOMEPAGE
 .heroBanner {
   display: block;
+
   .container-fluid {
     padding: 0;
 
@@ -905,14 +922,18 @@ body {
     }
   }
 }
+
 .abstract-banner {
   position: relative;
   margin: 50px 0;
+
   .container-fluid {
     padding: 0;
+
     .abst-Img {
       width: 100%;
       height: 500px;
+
       .back-theme-img {
         width: 100%;
         height: 100%;
@@ -921,6 +942,7 @@ body {
         mask-repeat: no-repeat;
       }
     }
+
     .primary-textform {
       position: absolute;
       top: 50%;
@@ -929,6 +951,7 @@ body {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+
       .txt-big-l {
         font-weight: 600;
         color: #000;
@@ -937,6 +960,7 @@ body {
         font-size: 11vw;
         margin-bottom: -30px !important;
       }
+
       .txt-heading {
         text-transform: capitalize;
         margin-top: -25px;
@@ -945,16 +969,20 @@ body {
         color: #fff;
         margin-bottom: 0 !important;
       }
+
       .hori-line i {
         font-size: 2rem;
         font-weight: 200;
         color: #fff;
       }
+
       p {
         color: #fff;
       }
+
       .btn-wrap {
         margin: 0 auto;
+
         .custom-btn {
           border: 2px solid #fff;
           width: 225px;
@@ -965,21 +993,26 @@ body {
           justify-content: space-between;
           align-items: center;
           color: #fff;
+
           &:hover {
             background-color: #a986b0;
           }
+
           &:focus {
             color: #fff;
             background: #a986b0;
           }
+
           &:active {
             color: #fff;
             background: #a986b0;
           }
+
           .btnTxt {
             font-size: 17px;
             font-weight: 600;
           }
+
           .btnIcon {
             font-size: 30px;
             font-weight: 100;
@@ -1419,6 +1452,71 @@ body {
 
 // HOMEPAGE
 
+.productBanner {
+  display: block;
+  .bnrWrap { 
+    position: relative;
+    .bgImage {
+      width: 100%;
+      height: 400px;
+    }
+
+    .bnrText {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .primary-textform { width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 25px;
+      color: white;
+    }
+ 
+
+  .bgImage {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+      filter: brightness(110%);
+    }
+  }
+
+  .bnrText {
+    h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    
+ 
+  .page-path {  display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    a {
+      p {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    }
+
+    span {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+} } }
+
+
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .header {
     z-index: 999999;
@@ -1435,6 +1533,7 @@ body {
         height: 100%;
       }
     }
+
     .topBar {
       display: none;
       align-items: center;
@@ -1540,6 +1639,7 @@ body {
           font-size: 0.6rem;
         }
       }
+
       .signup-btn {
         display: block;
         margin: 0 10px;
@@ -1554,20 +1654,25 @@ body {
         }
       }
     }
-    .navbar-collapse { height: 100vh;
-   
-     
+
+    .navbar-collapse {
+      height: 100vh;
+
+
     }
+
     .header-navbar {
-       
+
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       margin: auto 0;
+
       .navbar {
-       
+
         padding: 0;
         margin-top: 0px;
+
         .selectBox {
           display: flex;
           justify-content: space-between;
@@ -1605,13 +1710,16 @@ body {
             font-weight: 300;
           }
         }
+
         .navbar-toggler {
           padding: 0 !important;
           border: none;
+
           &:focus {
             box-shadow: none;
           }
         }
+
         ul.navbar-nav {
           justify-content: space-between;
 
@@ -1626,14 +1734,15 @@ body {
             }
           }
         }
+
         .signup-btn,
         .login-btn {
           display: flex;
-          
+
           margin: 0 10px;
 
           button {
-            width:150px;
+            width: 150px;
             color: #764d6f;
             padding: 5px 25px;
             font-size: 0.8rem;
@@ -1644,6 +1753,7 @@ body {
       }
     }
   }
+
   .heroBanner {
     .container-fluid {
       .bnrWrap {
@@ -1679,6 +1789,7 @@ body {
 
             .left-space {
               margin-left: 0;
+
               .txt-heading {
                 font-size: 32px;
               }
@@ -1693,6 +1804,7 @@ body {
                 width: 200px;
                 border-radius: 28px;
                 padding: 5px 22px;
+
                 .btnTxt {
                   font-weight: 500;
                 }
@@ -1707,20 +1819,26 @@ body {
       }
     }
   }
+
   .subBanner {
     padding: 50px 0;
     position: relative;
+
     .img-plant {
       display: none;
     }
+
     .primary-textform {
       position: inherit;
+
       .txt-big-l {
         font-size: 18vw;
         margin-bottom: 0px !important;
       }
+
       .left-space {
         margin-left: 0px;
+
         .txt-heading {
           font-size: 42px;
           font-weight: 600;
@@ -1728,15 +1846,18 @@ body {
           line-height: 3rem;
           margin-bottom: 0 !important;
         }
+
         .discriptiontxt {
           color: #575757;
           font-weight: 300;
         }
+
         .btn-wrap {
           position: absolute;
           bottom: -50px;
           left: 10px;
           right: 10px;
+
           .custom-btn {
             width: 45%;
             padding: 10px 15px;
@@ -1773,10 +1894,12 @@ body {
             text-align: center;
             align-items: center;
             color: #a986b0;
+
             .btnTxt {
               font-size: 17px;
               font-weight: 600;
             }
+
             .btnIcon {
               display: none;
               width: 30px;
@@ -1814,6 +1937,7 @@ body {
       }
     }
   }
+
   .sweet-salty {
     padding: 100px 0;
 
@@ -1969,6 +2093,7 @@ body {
       }
     }
   }
+
   .abstract-banner {
     position: relative;
     margin-bottom: 50px;
@@ -2029,6 +2154,7 @@ body {
         .btn-wrap {
           margin: 0px auto;
           margin-top: 10px;
+
           .custom-btn {
             border: 2px solid #fff;
             width: 225px;
@@ -2068,6 +2194,7 @@ body {
       }
     }
   }
+
   .benefit {
     margin: 50px 0;
 
@@ -2192,6 +2319,7 @@ body {
       flex-direction: column;
       flex-wrap: wrap;
       text-align: center;
+      gap: 15px;
 
       .txt-big-c {
         font-size: 18vw;
@@ -2314,6 +2442,7 @@ body {
       }
     }
   }
+
   .footer {
     position: relative;
 
@@ -2386,14 +2515,12 @@ body {
 
         .box-i {
           background: #d6249f;
-          background: radial-gradient(
-            circle at 30% 107%,
-            #fdf497 0%,
-            #fdf497 5%,
-            #fd5949 45%,
-            #d6249f 60%,
-            #285aeb 90%
-          );
+          background: radial-gradient(circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 
           i {
@@ -2489,8 +2616,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 767px) {
-}
+@media only screen and (max-width: 767px) {}
 
-@media only screen and (max-width: 991px) {
-}
+@media only screen and (max-width: 991px) {}
