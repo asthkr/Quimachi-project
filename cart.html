@@ -16,71 +16,103 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/solid.min.css" />
     <link rel="stylesheet" href="css/pro.min.css" />
-    <style>
-      .productBanner {
-        display: block;
-      }
 
-      .productBanner .bnrWrap {
-        position: relative;
-      }
-
-      .bnrWrap .bgImage {
-        width: 100%;
-        height: 400px;
-      }
-
-      .bgImage img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: bottom;
-        filter: brightness(110%);
-      }
-
-      .bnrWrap .bnrText {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .bnrWrap .primary-textform {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 25px;
-        color: white;
-      }
-
-      .bnrText h1 {
-        text-transform: none;
-        font-weight: 700;
-      }
-
-      .bnrText .page-path {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .page-path a p {
-        text-transform: capitalize;
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
-
-      .page-path span {
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: #fff;
-      }
-    </style>
     <style>
       .cart-product {
         margin: 70px 0;
+      }
+      .cart-product .bobottom::after {
+        margin: 15px 0;
+        content: "";
+        height: 2px;
+        display: block;
+        border-bottom: 2px dashed #9b9b9b49;
+      }
+      .bobottom .qty-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #dadada;
+      }
+      .bobottom .qty-container .qty-btn-minus {
+        border-right: 1px solid #dadada;
+        margin-right: -38px;
+        z-index: 100;
+      }
+      .bobottom .qty-container .qty-btn-plus {
+        margin-left: -38px;
+        border-left: 1px solid #dadada;
+        z-index: 100;
+      }
+      .bobottom .qty-container .input-qty {
+        text-align: center;
+        padding: 6px 10px;
+        border: none;
+        max-width: 150px;
+        color: #505050;
+        font-size: 14px;
+      }
+      .qty-container .qty-btn-minus,
+      .qty-container .qty-btn-plus {
+        border: none;
+        font-size: 10px;
+        height: 22px;
+        width: 38px;
+        transition: 0.3s;
+        color: #9e9e9e;
+        background-color: transparent;
+      }
+      .bobottom .thumb-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .bobottom .productName h5,
+      .item-price,
+      .total-price,
+      .removebtn {
+        color: #a986b0;
+      }
+      .removebtn {
+        font-size: 18px;
+      }
+      .bobottom .productName p {
+        color: #7e7e7e;
+        line-height: 18px;
+      }
+      .bobottom .p-quantity {
+        color: #5e5e5e;
+      }
+      .form-wrapper {
+        position: relative;
+
+        border-radius: 30px;
+        border: 2px solid #afafaf;
+        display: flex;
+      }
+      .form-wrapper input {
+        padding-left: 20px;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+      }
+      .form-wrapper .btn-wrap {
+        margin: 2px;
+      }
+      .form-wrapper .btn-wrap .custom-btn {
+        width: 175px;
+        background: #674e3f;
+        border-radius: 30px;
+        padding: 10px 20px;
+
+        color: #fff;
+        text-align: center;
+      }
+      .form-wrapper .btn-wrap .custom-btn .btnTxt {
+        font-size: 17px;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -249,18 +281,185 @@
     <!-- topsection END -->
     <div class="cart-product">
       <div class="container-lg">
-        <div class="row align-items-center">
-          <div class="col-5">product</div>
-          <div class="col-7">
-            <div
-              class="row justify-content-between align-items-center text-center"
-            >
-              <div class="col-2">type</div>
-              <div class="col-3">quantity</div>
-              <div class="col-2">unit price</div>
-              <div class="col-2">total</div>
-              <div class="col-2">remove</div>
+        <div class="bobottom text-uppercase">
+          <div class="row align-items-center">
+            <div class="col-5">product</div>
+            <div class="col-7">
+              <div
+                class="row justify-content-between align-items-center text-center"
+              >
+                <div class="col-2">type</div>
+                <div class="col-3">quantity</div>
+                <div class="col-2">unit price</div>
+                <div class="col-2">total</div>
+                <div class="col-2">remove</div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="bobottom">
+          <div class="row align-items-center py-2">
+            <div class="col-md-5">
+              <div class="d-flex align-items-center">
+                <div class="thumb-img">
+                  <img src="images/banana.svg" alt="" />
+                </div>
+                <div class="productName ms-3">
+                  <h5>Banana Rolls</h5>
+                  <p>
+                    Curabitur mi viverra ultrices aliquam nec amet amet enim
+                    mattis nunc accumsan...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div
+                class="row justify-content-between align-items-center text-center"
+              >
+                <div class="col-2">
+                  <h6 class="p-quantity">30 Grams</h6>
+                </div>
+                <div class="col-3">
+                  <div class="qty-container">
+                    <button class="qty-btn-minus" type="button">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" name="qty" value="0" class="input-qty" />
+                    <button class="qty-btn-plus" type="button">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h5 class="item-price">$24.00</h5>
+                </div>
+                <div class="col-2">
+                  <h5 class="total-price">$24.00</h5>
+                </div>
+                <div class="col-2">
+                  <div class="removebtn">
+                    <i class="fal fa-times"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bobottom">
+          <div class="row align-items-center py-2">
+            <div class="col-md-5">
+              <div class="d-flex align-items-center">
+                <div class="thumb-img">
+                  <img src="images/brocolli.svg" alt="" />
+                </div>
+                <div class="productName ms-3">
+                  <h5>Broccoli Rolls</h5>
+                  <p>
+                    Curabitur mi viverra ultrices aliquam nec amet amet enim
+                    mattis nunc accumsan...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div
+                class="row justify-content-between align-items-center text-center"
+              >
+                <div class="col-2">
+                  <h6 class="p-quantity">15 Grams</h6>
+                </div>
+                <div class="col-3">
+                  <div class="qty-container">
+                    <button class="qty-btn-minus" type="button">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" name="qty" value="0" class="input-qty" />
+                    <button class="qty-btn-plus" type="button">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h5 class="item-price">$24.00</h5>
+                </div>
+                <div class="col-2">
+                  <h5 class="total-price">$48.00</h5>
+                </div>
+                <div class="col-2">
+                  <div class="removebtn">
+                    <i class="fal fa-times"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bobottom">
+          <div class="row align-items-center py-2">
+            <div class="col-md-5">
+              <div class="d-flex align-items-center">
+                <div class="thumb-img">
+                  <img src="images/chicha.png" alt="" />
+                </div>
+                <div class="productName ms-3">
+                  <h5>CHICHA Chips</h5>
+                  <p>
+                    Curabitur mi viverra ultrices aliquam nec amet amet enim
+                    mattis nunc accumsan...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div
+                class="row justify-content-between align-items-center text-center"
+              >
+                <div class="col-2">
+                  <h6 class="p-quantity">30 Grams</h6>
+                </div>
+                <div class="col-3">
+                  <div class="qty-container">
+                    <button class="qty-btn-minus" type="button">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="text" name="qty" value="0" class="input-qty" />
+                    <button class="qty-btn-plus" type="button">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <h5 class="item-price">$24.00</h5>
+                </div>
+                <div class="col-2">
+                  <h5 class="total-price">$24.00</h5>
+                </div>
+                <div class="col-2">
+                  <div class="removebtn">
+                    <i class="fal fa-times"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bobottom">
+          <div class="d-flex justify-content-between">
+            <form class="form-wrapper">
+              <input
+                type="text"
+                name="Coupon"
+                id="couponcode"
+                placeholder="Coupon code"
+              />
+              <div class="btn-wrap">
+                <button class="btn custom-btn">
+                  <a class="btnTxt">Apply coupon</a>
+                </button>
+              </div>
+            </form>
+            <button class="btn">update cart</button>
           </div>
         </div>
       </div>
@@ -269,96 +468,95 @@
     <section class="footer">
       <div class="container-fluid p-0">
         <div class="bg-img">
-
-        <div class="ftr-content">
-          <div class="row align-items-start justify-content-between">
-            <div class="col-md-3">
-              <div class="d-flex flex-column">
-                <div class="logoName">
-                  <div class="logoImg">
-                    <img src="images/logo.png" alt="#" />
+          <div class="ftr-content">
+            <div class="row align-items-start justify-content-between">
+              <div class="col-md-3">
+                <div class="d-flex flex-column">
+                  <div class="logoName">
+                    <div class="logoImg">
+                      <img src="images/logo.png" alt="#" />
+                    </div>
+                    <h4>Quimachi</h4>
                   </div>
-                  <h4>Quimachi</h4>
-                </div>
-                <p class="subtitle">
-                  Purus erat at massa ipsum tempor pellentesque ipsum massa
-                  ligula facilisi eget a vehicula amet. tortor ante nulla
-                </p>
-                <div class="social-icons">
-                  <div class="iconBox box-f">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="iconBox box-g">
-                    <i class="fab fa-google-plus-g"></i>
-                  </div>
-                  <div class="iconBox box-i">
-                    <i class="fab fa-instagram"></i>
+                  <p class="subtitle">
+                    Purus erat at massa ipsum tempor pellentesque ipsum massa
+                    ligula facilisi eget a vehicula amet. tortor ante nulla
+                  </p>
+                  <div class="social-icons">
+                    <div class="iconBox box-f">
+                      <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="iconBox box-g">
+                      <i class="fab fa-google-plus-g"></i>
+                    </div>
+                    <div class="iconBox box-i">
+                      <i class="fab fa-instagram"></i>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-4">
-                  <h5>Information</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">Delivery Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms And Conditions</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h5>My account</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">WE ACCEPT ALL CARDS</a></li>
-                    <li>
-                      <div class="card-logo">
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/visa.png" alt="visa" />
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/ic.svg" alt="mcard" />
-                            <p>MasterCard</p>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/paypal.svg" alt="paypal" />
-                          </div>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h5>Locate Us</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">Malecon Bernales 283</a></li>
-                    <li><a href="#">+511 264 0089</a></li>
-                    <li><a href="#">sales@quimachi.com</a></li>
-                  </ul>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h5>Information</h5>
+                    <span><i class="fal fa-horizontal-rule"></i></span>
+                    <ul>
+                      <li><a href="#">Delivery Information</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms And Conditions</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>My account</h5>
+                    <span><i class="fal fa-horizontal-rule"></i></span>
+                    <ul>
+                      <li><a href="#">My Account</a></li>
+                      <li><a href="#">WE ACCEPT ALL CARDS</a></li>
+                      <li>
+                        <div class="card-logo">
+                          <a href="#">
+                            <div class="card-img">
+                              <img src="images/visa.png" alt="visa" />
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="card-img">
+                              <img src="images/ic.svg" alt="mcard" />
+                              <p>MasterCard</p>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="card-img">
+                              <img src="images/paypal.svg" alt="paypal" />
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Locate Us</h5>
+                    <span><i class="fal fa-horizontal-rule"></i></span>
+                    <ul>
+                      <li><a href="#">Malecon Bernales 283</a></li>
+                      <li><a href="#">+511 264 0089</a></li>
+                      <li><a href="#">sales@quimachi.com</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 text-center">
-              <span class="div-line">
-                <h6>
-                  <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
-                  Reserved.
-                </h6>
-              </span>
+              <div class="col-12 text-center">
+                <span class="div-line">
+                  <h6>
+                    <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
+                    Reserved.
+                  </h6>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
     <!-- bottomsection END -->
     <script
@@ -378,10 +576,10 @@
     ></script>
     <script>
       $(window).scroll(function () {
-        var scrolled = $(this).scrollTop() > -1 + 1;
+        var scrolled = $(this).scrollTop() > 110;
         $(".header").css("background", scrolled ? "#fff" : "");
         $(".header").css("transition", scrolled ? "500ms all ease-in-out" : "");
-        $(".header").css("position", scrolled ? "sticky" : "absolute");
+        $(".header").css("position", scrolled ? "sticky" : "");
         $(".cartclr").css("fill", scrolled ? "#2b2b2b" : "");
         $(".searchBox form").css("color", scrolled ? "#2b2b2b" : "");
         $(".nav-link").css("color", scrolled ? "#333" : "");
@@ -415,6 +613,23 @@
           "color",
           "#2b2b2b"
         );
+      });
+    </script>
+    <script>
+      var buttonPlus = $(".qty-btn-plus");
+      var buttonMinus = $(".qty-btn-minus");
+
+      var incrementPlus = buttonPlus.click(function () {
+        var $n = $(this).parent(".qty-container").find(".input-qty");
+        $n.val(Number($n.val()) + 1);
+      });
+
+      var incrementMinus = buttonMinus.click(function () {
+        var $n = $(this).parent(".qty-container").find(".input-qty");
+        var amount = Number($n.val());
+        if (amount > 1) {
+          $n.val(amount - 1);
+        }
       });
     </script>
   </body>

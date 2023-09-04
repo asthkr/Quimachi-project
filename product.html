@@ -19,68 +19,6 @@
     <!-- CSS -->
     <!-- banner -->
     <style>
-      .productBanner {
-        display: block;
-      }
-
-      .productBanner .bnrWrap {
-        position: relative;
-      }
-
-      .bnrWrap .bgImage {
-        width: 100%;
-        height: 400px;
-      }
-
-      .bgImage img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: bottom;
-        filter: brightness(110%);
-      }
-
-      .bnrWrap .bnrText {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .bnrWrap .primary-textform {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 25px;
-        color: white;
-      }
-
-      .bnrText h1 {
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      .bnrText .page-path {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .page-path a p {
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
-
-      .page-path span {
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: #fff;
-      }
-
-      /* banner */
-
       .productInfo {
         padding: 50px 0;
       }
@@ -123,14 +61,14 @@
 
       .productInfo .product-images .slider-nav .s-image-m {
         width: 110px !important;
-        height: 110px;
+
         border-radius: 15px;
         overflow: hidden;
       }
 
       .productInfo .product-images .slider-nav .s-image-m img {
         width: 100%;
-        height: 100%;
+
         object-fit: contain;
         object-position: center;
       }
@@ -172,7 +110,7 @@
       }
       .detailBox::after {
         content: "";
-        width: 550px;
+
         height: 2px;
         display: block;
         border-bottom: 2px dashed #9b9b9b49;
@@ -250,6 +188,7 @@
       }
 
       .abstractDescription .primary-textform {
+        width: 60%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -367,7 +306,7 @@
 
       .checkbox-tools:checked + label,
       .checkbox-tools:not(:checked) + label {
-        width: 250px;
+        width: 100%;
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -404,12 +343,12 @@
       }
 
       /* input[type="radio" i] {
-        background-color: #a986b0;
-        appearance:none ;
-        border-radius: 50%;
-        border: 1px solid #a986b0;
-        padding: 2px;
-      } */
+            background-color: #a986b0;
+            appearance:none ;
+            border-radius: 50%;
+            border: 1px solid #a986b0;
+            padding: 2px;
+          } */
       .buy-sec .qty-container {
         display: flex;
         align-items: center;
@@ -686,6 +625,51 @@
       .show {
         display: block;
       }
+      @media only screen and (min-width: 360px) and (max-width: 640px) {
+        .productInfo .product-images {
+          gap: 0;
+        }
+        .productInfo .product-images .slider-product {
+          width: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .productInfo .product-images .slider-nav {
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .product-detail {
+          width: 100%;
+        }
+        .abstractDescription .primary-textform {
+          width: 90%;
+
+          bottom: 0;
+        }
+        .abstractDescription .primary-textform .tabcontent .txt-big-l {
+          font-size: 18vw;
+        }
+        .abstractDescription .abst-Img {
+          height: 100vh;
+        }
+        .detail-sec h4 {
+          padding-top: 20px;
+          font-size: 24px;
+        }
+        .detail-sec h2 {
+          font-size: 20px;
+        }
+        .columnBox:hover h4 {
+          opacity: 1;
+        }
+        .hov-opt {
+          opacity: 1;
+        }
+        .productInfo .product-images .slider-nav .s-image-m {
+          width: 80px !important;
+        }
+      }
     </style>
     <!-- CSS -->
   </head>
@@ -936,35 +920,38 @@
                 </div>
                 <div class="detailBox buy-sec">
                   <h5 class="m-0">Go healthy here</h5>
-                  <div class="pro-quantity">
-                    <input
-                      class="checkbox-tools"
-                      type="radio"
-                      name="tools"
-                      id="large"
-                    />
-                    <label for="large">
-                      <div class="label-name">
-                        <p>LARGE TYPE <br /><span>30 grams</span></p>
-                      </div>
-                      <h5 class="m-0">$34</h5>
-                    </label>
-
-                    <input
-                      class="checkbox-tools"
-                      type="radio"
-                      name="tools"
-                      id="original"
-                    />
-                    <label for="original">
-                      <div class="label-name">
-                        <p>ORIGINAL <br /><span>15 grams</span></p>
-                      </div>
-                      <h5 class="m-0">$24</h5>
-                    </label>
+                  <div class="row justify-content-between">
+                    <div class="col-md-6 pro-quantity my-2">
+                      <input
+                        class="checkbox-tools"
+                        type="radio"
+                        name="tools"
+                        id="large"
+                      />
+                      <label for="large">
+                        <div class="label-name">
+                          <p>LARGE TYPE <br /><span>30 grams</span></p>
+                        </div>
+                        <h5 class="m-0">$34</h5>
+                      </label>
+                    </div>
+                    <div class="col-md-6 pro-quantity my-2">
+                      <input
+                        class="checkbox-tools"
+                        type="radio"
+                        name="tools"
+                        id="original"
+                      />
+                      <label for="original">
+                        <div class="label-name">
+                          <p>ORIGINAL <br /><span>15 grams</span></p>
+                        </div>
+                        <h5 class="m-0">$24</h5>
+                      </label>
+                    </div>
                   </div>
                   <div
-                    class="d-flex justify-content-between align-items-center"
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3"
                   >
                     <div class="qty-container">
                       <button class="qty-btn-minus" type="button">
@@ -980,17 +967,22 @@
                         <i class="fa fa-plus"></i>
                       </button>
                     </div>
-                    <button class="btn custom-btn-outline">
-                      <div class="btnTxt">Add to cart</div>
-                      <div class="btnIcon">
-                        <div class="bagimg"></div>
+                    <div
+                      class="d-flex justify-content-between align-items-center gap-3"
+                    >
+                      <button class="btn custom-btn-outline">
+                        <div class="btnTxt">Add to cart</div>
+                        <div class="btnIcon">
+                          <div class="bagimg"></div>
+                        </div>
+                      </button>
+
+                      <div class="btn-box-rounded">
+                        <i class="fas fa-heart"></i>
                       </div>
-                    </button>
-                    <div class="btn-box-rounded">
-                      <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="btn-box-rounded">
-                      <i class="far fa-random"></i>
+                      <div class="btn-box-rounded">
+                        <i class="far fa-random"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1284,96 +1276,95 @@
     <section class="footer">
       <div class="container-fluid p-0">
         <div class="bg-img">
-
-        <div class="ftr-content">
-          <div class="row align-items-start justify-content-between">
-            <div class="col-md-3">
-              <div class="d-flex flex-column">
-                <div class="logoName">
-                  <div class="logoImg">
-                    <img src="images/logo.png" alt="#" />
+          <div class="ftr-content">
+            <div class="row align-items-start justify-content-between">
+              <div class="col-md-3">
+                <div class="d-flex flex-column">
+                  <div class="logoName">
+                    <div class="logoImg">
+                      <img src="images/logo.png" alt="#" />
+                    </div>
+                    <h4>Quimachi</h4>
                   </div>
-                  <h4>Quimachi</h4>
-                </div>
-                <p class="subtitle">
-                  Purus erat at massa ipsum tempor pellentesque ipsum massa
-                  ligula facilisi eget a vehicula amet. tortor ante nulla
-                </p>
-                <div class="social-icons">
-                  <div class="iconBox box-f">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="iconBox box-g">
-                    <i class="fab fa-google-plus-g"></i>
-                  </div>
-                  <div class="iconBox box-i">
-                    <i class="fab fa-instagram"></i>
+                  <p class="subtitle">
+                    Purus erat at massa ipsum tempor pellentesque ipsum massa
+                    ligula facilisi eget a vehicula amet. tortor ante nulla
+                  </p>
+                  <div class="social-icons">
+                    <div class="iconBox box-f">
+                      <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="iconBox box-g">
+                      <i class="fab fa-google-plus-g"></i>
+                    </div>
+                    <div class="iconBox box-i">
+                      <i class="fab fa-instagram"></i>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-9">
-              <div class="row">
-                <div class="col-md-4">
-                  <h5>Information</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">Delivery Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms And Conditions</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h5>My account</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">WE ACCEPT ALL CARDS</a></li>
-                    <li>
-                      <div class="card-logo">
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/visa.png" alt="visa" />
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/ic.svg" alt="mcard" />
-                            <p>MasterCard</p>
-                          </div>
-                        </a>
-                        <a href="#">
-                          <div class="card-img">
-                            <img src="images/paypal.svg" alt="paypal" />
-                          </div>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <h5>Locate Us</h5>
-                  <span><i class="fal fa-horizontal-rule"></i></span>
-                  <ul>
-                    <li><a href="#">Malecon Bernales 283</a></li>
-                    <li><a href="#">+511 264 0089</a></li>
-                    <li><a href="#">sales@quimachi.com</a></li>
-                  </ul>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h5>Information</h5>
+                    <span><i class="fal fa-horizontal-rule"></i></span>
+                    <ul>
+                      <li><a href="#">Delivery Information</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms And Conditions</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>My account</h5>
+                    <span><i class="fal fa-horizontal-rule"></i></span>
+                    <ul>
+                      <li><a href="#">My Account</a></li>
+                      <li><a href="#">WE ACCEPT ALL CARDS</a></li>
+                      <li>
+                        <div class="card-logo">
+                          <a href="#">
+                            <div class="card-img">
+                              <img src="images/visa.png" alt="visa" />
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="card-img">
+                              <img src="images/ic.svg" alt="mcard" />
+                              <p>MasterCard</p>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="card-img">
+                              <img src="images/paypal.svg" alt="paypal" />
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Locate Us</h5>
+                    <span><i class="fal fa-horizontal-rule"></i></span>
+                    <ul>
+                      <li><a href="#">Malecon Bernales 283</a></li>
+                      <li><a href="#">+511 264 0089</a></li>
+                      <li><a href="#">sales@quimachi.com</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 text-center">
-              <span class="div-line">
-                <h6>
-                  <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
-                  Reserved.
-                </h6>
-              </span>
+              <div class="col-12 text-center">
+                <span class="div-line">
+                  <h6>
+                    <i class="fal fa-copyright"></i> 2023 QUIMACHI. All Right
+                    Reserved.
+                  </h6>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
     <!-- bottomsection END -->
     <script
@@ -1393,10 +1384,10 @@
     ></script>
     <script>
       $(window).scroll(function () {
-        var scrolled = $(this).scrollTop() > -1 + 1;
+        var scrolled = $(this).scrollTop() > 110;
         $(".header").css("background", scrolled ? "#fff" : "");
         $(".header").css("transition", scrolled ? "500ms all ease-in-out" : "");
-        $(".header").css("position", scrolled ? "sticky" : "absolute");
+        $(".header").css("position", scrolled ? "sticky" : "");
         $(".cartclr").css("fill", scrolled ? "#2b2b2b" : "");
         $(".searchBox form").css("color", scrolled ? "#2b2b2b" : "");
         $(".nav-link").css("color", scrolled ? "#333" : "");
