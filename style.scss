@@ -25,7 +25,6 @@ body {
   -o-transition: background-color 800ms linear;
   -ms-transition: background-color 800ms linear;
   transition: background-color 800ms linear;
-
 }
 
 .header {
@@ -53,6 +52,7 @@ body {
     align-items: center;
     width: 100%;
     justify-content: flex-end;
+    gap: 30px;
 
     .searchBox {
       form {
@@ -235,8 +235,7 @@ body {
 
       ul.navbar-nav {
         justify-content: space-between;
-        margin-left: 15px;
-        gap: 15px;
+        gap: 30px;
 
         .nav-link {
           display: inline-block;
@@ -244,7 +243,7 @@ body {
           color: #fff;
           border-bottom: 2px solid transparent;
           text-transform: uppercase;
-          font-size: 16px;
+          font-size: 14px;
 
           &:hover {
             transition: all 200ms linear;
@@ -351,12 +350,14 @@ body {
 
       .box-i {
         background: #d6249f;
-        background: radial-gradient(circle at 30% 107%,
-            #fdf497 0%,
-            #fdf497 5%,
-            #fd5949 45%,
-            #d6249f 60%,
-            #285aeb 90%);
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 
         i {
@@ -477,8 +478,8 @@ body {
         position: absolute;
         z-index: 100;
         bottom: -75px;
-        left: 50px;
-        transform: translateX(0);
+        left: 200px;
+        transform: translateX(0%);
 
         img {
           width: 100%;
@@ -1454,7 +1455,7 @@ body {
 
 .productBanner {
   display: block;
-  .bnrWrap { 
+  .bnrWrap {
     position: relative;
     .bgImage {
       width: 100%;
@@ -1469,53 +1470,53 @@ body {
       text-align: center;
     }
 
-    .primary-textform { width: 100%;
+    .primary-textform {
+      width: 100%;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       gap: 25px;
       color: white;
     }
- 
 
-  .bgImage {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: bottom;
-      filter: brightness(110%);
-    }
-  }
-
-  .bnrText {
-    h1 {
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    
- 
-  .page-path {  display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    a {
-      p {
-        font-size: 16px;
-        margin-bottom: 5px;
+    .bgImage {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        filter: brightness(110%);
       }
     }
 
-    span {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: #fff;
+    .bnrText {
+      h1 {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .page-path {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        a {
+          p {
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+        }
+
+        span {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
     }
   }
-} } }
-
+}
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .header {
@@ -1657,19 +1658,15 @@ body {
 
     .navbar-collapse {
       height: 100vh;
-
-
     }
 
     .header-navbar {
-
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       margin: auto 0;
 
       .navbar {
-
         padding: 0;
         margin-top: 0px;
 
@@ -2515,12 +2512,14 @@ body {
 
         .box-i {
           background: #d6249f;
-          background: radial-gradient(circle at 30% 107%,
-              #fdf497 0%,
-              #fdf497 5%,
-              #fd5949 45%,
-              #d6249f 60%,
-              #285aeb 90%);
+          background: radial-gradient(
+            circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285aeb 90%
+          );
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 
           i {
@@ -2616,6 +2615,8 @@ body {
   }
 }
 
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+}
 
-@media only screen and (max-width: 991px) {}
+@media only screen and (max-width: 991px) {
+}

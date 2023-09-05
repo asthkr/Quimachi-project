@@ -16,229 +16,62 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/solid.min.css" />
     <link rel="stylesheet" href="css/pro.min.css" />
-
-    <style>
-      .cart-product {
-        margin: 70px 0;
-      }
-      .cart-product .bobottom::after {
-        margin: 15px 0;
-        content: "";
-        height: 2px;
-        display: block;
-        border-bottom: 2px dashed #9b9b9b49;
-      }
-      .bobottom .qty-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid #dadada;
-      }
-      .bobottom .qty-container .qty-btn-minus {
-        border-right: 1px solid #dadada;
-        margin-right: -38px;
-        z-index: 100;
-      }
-      .bobottom .qty-container .qty-btn-plus {
-        margin-left: -38px;
-        border-left: 1px solid #dadada;
-        z-index: 100;
-      }
-      .bobottom .qty-container .input-qty {
-        text-align: center;
-        padding: 6px 10px;
-        border: none;
-        max-width: 150px;
-        color: #505050;
-        font-size: 14px;
-      }
-      .qty-container .qty-btn-minus,
-      .qty-container .qty-btn-plus {
-        border: none;
-        font-size: 10px;
-        height: 22px;
-        width: 38px;
-        transition: 0.3s;
-        color: #9e9e9e;
-        background-color: transparent;
-      }
-      .bobottom .thumb-img img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-      }
-      .bobottom .productName h5,
-      .item-price,
-      .total-price,
-      .removebtn {
-        color: #a986b0;
-      }
-      .removebtn {
-        font-size: 18px;
-      }
-      .bobottom .productName p {
-        color: #7e7e7e;
-        line-height: 18px;
-      }
-      .bobottom .p-quantity {
-        color: #5e5e5e;
-      }
-      .form-wrapper {
-        position: relative;
-
-        border-radius: 30px;
-        border: 2px solid #afafaf;
-        display: flex;
-      }
-      .form-wrapper input {
-        padding-left: 20px;
-        width: 100%;
-        border: none;
-        background-color: transparent;
-      }
-      .form-wrapper .btn-wrap {
-        margin: 2px;
-      }
-      .form-wrapper .btn-wrap .custom-btn {
-        width: 175px;
-        background: #674e3f;
-        border-radius: 30px;
-        padding: 10px 20px;
-
-        color: #fff;
-        text-align: center;
-      }
-      .form-wrapper .btn-wrap .custom-btn .btnTxt {
-        font-size: 17px;
-        font-weight: 600;
-      }
-      .up-btn-wrap {
-        display: flex;
-        justify-content: start;
-        gap: 0;
-        margin: 0;
-      }
-      .up-btn-wrap .custom-btn {
-        border: 2px solid #a986b0;
-        width: 225px;
-
-        border-radius: 30px;
-        padding: 5px 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #a986b0;
-        background: #fff;
-      }
-      .up-btn-wrap .custom-btn:hover {
-        color: #fff;
-        background: #a986b0;
-      }
-      .up-btn-wrap .custom-btn:focus {
-        color: #a986b0;
-        background: #fff;
-      }
-      .up-btn-wrap .custom-btn a.btnTxt {
-        font-size: 17px;
-        font-weight: 500;
-      }
-      .up-btn-wrap .custom-btn .btnIcon {
-        font-size: 17px;
-        font-weight: 100;
-      }
-      .cart-total {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 50px 0;
-      }
-      .cart-total .primary-textform {
-        text-align: center;
-      }
-      .cart-total .primary-textform .txt-big-l {
-        font-weight: 600;
-        color: #eaeaea;
-        text-transform: capitalize;
-        font-size: 11vw;
-        padding-bottom: 100px;
-      }
-      .cart-total .total-sec {
-        position: absolute;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        width: 350px;
-      }
-      .cart-total .total-sec .sub-total,
-      .totalamount {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0;
-      }
-      .cart-total .total-sec h2 {
-        color: #a986b0;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 24px;
-      }
-      .cart-total .total-sec p {
-        font-weight: 500;
-        text-transform: capitalize;
-      }
-      .cart-total .total-sec .bobottom {
-        width: 100%;
-      }
-      .cart-total .total-sec .bobottom::after {
-        margin: 15px 0;
-
-        content: "";
-        height: 1px;
-        display: block;
-        border-bottom: 1px solid #c5c5c5;
-      }
-      .cart-total .total-sec h5 {
-        color: #a986b0;
-      }
-      .checkout-btn-wrap {
-        display: flex;
-        justify-content: start;
-        gap: 0;
-        margin: 20px 0;
-      }
-      .checkout-btn-wrap .custom-btn {
-        border: 2px solid #a986b0;
-        width: 300px;
-
-        border-radius: 30px;
-        padding: 10px 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #fff;
-        background: #a986b0;
-      }
-      .checkout-btn-wrap .custom-btn:hover {
-        color: #a986b0;
-        background: #fff;
-      }
-      .checkout-btn-wrap .custom-btn:focus {
-        color: #a986b0;
-        background: #fff;
-      }
-      .checkout-btn-wrap .custom-btn a.btnTxt {
-        font-size: 17px;
-        font-weight: 500;
-      }
-      .checkout-btn-wrap .custom-btn .btnIcon i {
-        font-size: 30px;
-      }
-    </style>
   </head>
+  <style>
+    .procedure-steps {
+      margin: 50px 0;
+    }
+    .procedure-steps .stepBox {
+      margin: 100px 0;
+    }
+    .stepBox .primary-textform {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
 
+    .stepBox .primary-textform .txt-big-c {
+      color: #eaeaea;
+      text-transform: capitalize;
+      font-size: 11vw;
+      font-weight: 600;
+      margin-bottom: -30px !important;
+    }
+    .stepBox .primary-textform .leftspace {
+      margin-left: 70px;
+    }
+    .stepBox .primary-textform .txt-heading {
+      font-size: 38px;
+      font-weight: 600;
+      color: #a986b0;
+      line-height: 3rem;
+      margin-bottom: 0 !important;
+    }
+
+    .stepBox .primary-textform .hori-line i {
+      font-size: 2rem;
+      font-weight: 200;
+      color: #a986b0;
+    }
+
+    .stepBox .primary-textform .discriptiontxt {
+      color: #575757;
+      margin-right: 30px;
+      font-weight: 300;
+    }
+    .stepBox .blog-img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .stepBox .blog-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
   <body>
     <!-- topsection START -->
     <section class="header">
@@ -386,14 +219,14 @@
             <img src="images/jh.png" alt="" />
           </div>
           <div class="bnrText primary-textform">
-            <h1>SHOPPING CART</h1>
+            <h1 class="text-capitalize">How is the product done</h1>
             <div class="page-path">
               <a href="index.html">
                 <p>Home</p>
               </a>
               <span></span>
               <a href="stores.html">
-                <p>shopping cart</p>
+                <p>Procedure</p>
               </a>
             </div>
           </div>
@@ -401,225 +234,215 @@
       </div>
     </section>
     <!-- topsection END -->
-    <div class="cart-product">
+    <section class="procedure-steps">
       <div class="container-lg">
-        <div class="bobottom text-uppercase">
-          <div class="row align-items-center">
-            <div class="col-5">product</div>
-            <div class="col-7">
-              <div
-                class="row justify-content-between align-items-center text-center"
-              >
-                <div class="col-2">type</div>
-                <div class="col-3">quantity</div>
-                <div class="col-2">unit price</div>
-                <div class="col-2">total</div>
-                <div class="col-2">remove</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bobottom">
-          <div class="row align-items-center py-2">
-            <div class="col-md-5">
-              <div class="d-flex align-items-center">
-                <div class="thumb-img">
-                  <img src="images/banana.svg" alt="" />
-                </div>
-                <div class="productName ms-3">
-                  <h5>Banana Rolls</h5>
-                  <p>
-                    Curabitur mi viverra ultrices aliquam nec amet amet enim
-                    mattis nunc accumsan...
+        <div class="stepBox">
+          <div class="row justify-content-between">
+            <div class="col-md-6">
+              <div class="bnrText primary-textform">
+                <h1 class="txt-big-c">Step 1</h1>
+                <div class="leftspace">
+                  <div class="txt-heading">
+                    <p>Import clean ingredients</p>
+                  </div>
+                  <span class="hori-line">
+                    <i class="fas fa-horizontal-rule"></i>
+                  </span>
+                  <p class="discriptiontxt">
+                    Quisque mollis mi pellentesque vehicula sed eu arcu nisi,
+                    senectus erat vitae ac duis non non. diam dictum leo sit
+                    egestas mi odio id
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div
-                class="row justify-content-between align-items-center text-center"
-              >
-                <div class="col-2">
-                  <h6 class="p-quantity">30 Grams</h6>
-                </div>
-                <div class="col-3">
-                  <div class="qty-container">
-                    <button class="qty-btn-minus" type="button">
-                      <i class="fa fa-minus"></i>
-                    </button>
-                    <input type="text" name="qty" value="1" class="input-qty" />
-                    <button class="qty-btn-plus" type="button">
-                      <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <h5 class="item-price">$24.00</h5>
-                </div>
-                <div class="col-2">
-                  <h5 class="total-price">$24.00</h5>
-                </div>
-                <div class="col-2">
-                  <div class="removebtn">
-                    <i class="fal fa-times"></i>
-                  </div>
-                </div>
+            <div class="col-md-6">
+              <div class="blog-img">
+                <img
+                  src="images/top-view-oatmeal-porridge-with-sliced-strawberries-blueberry-ceramic-bowl-ripe-bananas-table.jpg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
         </div>
-        <div class="bobottom">
-          <div class="row align-items-center py-2">
-            <div class="col-md-5">
-              <div class="d-flex align-items-center">
-                <div class="thumb-img">
-                  <img src="images/brocolli.svg" alt="" />
-                </div>
-                <div class="productName ms-3">
-                  <h5>Broccoli Rolls</h5>
-                  <p>
-                    Curabitur mi viverra ultrices aliquam nec amet amet enim
-                    mattis nunc accumsan...
+        <div class="stepBox">
+          <div class="row flex-row-reverse justify-content-between">
+            <div class="col-md-6">
+              <div class="bnrText primary-textform">
+                <h1 class="txt-big-c">Step 2</h1>
+                <div class="leftspace">
+                  <div class="txt-heading">
+                    <p>Transported carefully to the warehouse</p>
+                  </div>
+                  <span class="hori-line">
+                    <i class="fas fa-horizontal-rule"></i>
+                  </span>
+                  <p class="discriptiontxt">
+                    Consequat, proin sit tincidunt in feugiat viverra sagittis,
+                    eu, nisi, aliquam at egestas congue odio eget dictum arcu
+                    diam lobortis accumsan ametr mi aliquam
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div
-                class="row justify-content-between align-items-center text-center"
-              >
-                <div class="col-2">
-                  <h6 class="p-quantity">15 Grams</h6>
-                </div>
-                <div class="col-3">
-                  <div class="qty-container">
-                    <button class="qty-btn-minus" type="button">
-                      <i class="fa fa-minus"></i>
-                    </button>
-                    <input type="text" name="qty" value="2" class="input-qty" />
-                    <button class="qty-btn-plus" type="button">
-                      <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <h5 class="item-price">$24.00</h5>
-                </div>
-                <div class="col-2">
-                  <h5 class="total-price">$48.00</h5>
-                </div>
-                <div class="col-2">
-                  <div class="removebtn">
-                    <i class="fal fa-times"></i>
-                  </div>
-                </div>
+            <div class="col-md-6">
+              <div class="blog-img">
+                <img src="images/rodrigo.jpg" alt="" />
               </div>
             </div>
           </div>
         </div>
-        <div class="bobottom">
-          <div class="row align-items-center py-2">
-            <div class="col-md-5">
-              <div class="d-flex align-items-center">
-                <div class="thumb-img">
-                  <img src="images/chicha.png" alt="" />
-                </div>
-                <div class="productName ms-3">
-                  <h5>CHICHA Chips</h5>
-                  <p>
-                    Curabitur mi viverra ultrices aliquam nec amet amet enim
-                    mattis nunc accumsan...
+        <div class="stepBox">
+          <div class="row justify-content-between">
+            <div class="col-md-6">
+              <div class="bnrText primary-textform">
+                <h1 class="txt-big-c">Step 3</h1>
+                <div class="leftspace">
+                  <div class="txt-heading">
+                    <p>Factory according to professional lines</p>
+                  </div>
+                  <span class="hori-line">
+                    <i class="fas fa-horizontal-rule"></i>
+                  </span>
+                  <p class="discriptiontxt">
+                    Amet a nisl, in fusce facilisi id eu habitant nibh sagittis,
+                    porta dignissim consequat tristique pulvinar luctus proin
+                    lectus pretium commodo velit id egestas
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div
-                class="row justify-content-between align-items-center text-center"
-              >
-                <div class="col-2">
-                  <h6 class="p-quantity">30 Grams</h6>
-                </div>
-                <div class="col-3">
-                  <div class="qty-container">
-                    <button class="qty-btn-minus" type="button">
-                      <i class="fa fa-minus"></i>
-                    </button>
-                    <input type="text" name="qty" value="1" class="input-qty" />
-                    <button class="qty-btn-plus" type="button">
-                      <i class="fa fa-plus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <h5 class="item-price">$24.00</h5>
-                </div>
-                <div class="col-2">
-                  <h5 class="total-price">$24.00</h5>
-                </div>
-                <div class="col-2">
-                  <div class="removebtn">
-                    <i class="fal fa-times"></i>
-                  </div>
-                </div>
+            <div class="col-md-6">
+              <div class="blog-img">
+                <img src="images/Industria-980x529.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-        <div class="bobottom">
-          <div class="d-flex justify-content-between">
-            <form class="form-wrapper">
-              <input
-                type="text"
-                name="Coupon"
-                id="couponcode"
-                placeholder="Coupon code"
-              />
-              <div class="btn-wrap">
-                <button class="btn custom-btn">
-                  <a href="#" class="btnTxt">Apply coupon</a>
-                </button>
+        <div class="stepBox">
+          <div class="row flex-row-reverse justify-content-between">
+            <div class="col-md-6">
+              <div class="bnrText primary-textform">
+                <h1 class="txt-big-c">Step 4</h1>
+                <div class="leftspace">
+                  <div class="txt-heading">
+                    <p>Processing and packing guarantee</p>
+                  </div>
+                  <span class="hori-line">
+                    <i class="fas fa-horizontal-rule"></i>
+                  </span>
+                  <p class="discriptiontxt">
+                    Netus orci amet eget lobortis mauris morbi adipiscing ut
+                    nunc enim, lorem ut urna adipiscing nunc risus porttitor sed
+                    semper neque. bibendum tellus nunc
+                  </p>
+                </div>
               </div>
-            </form>
-            <div class="up-btn-wrap">
-              <button class="btn custom-btn">
-                <a href="#" class="btnTxt">Update cart</a>
-                <div class="btnIcon"><i class="far fa-sync"></i></div>
-              </button>
+            </div>
+            <div class="col-md-6">
+              <div class="blog-img">
+                <img src="images/brocolli.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="cart-total">
-          <div class="bnrText primary-textform">
-            <h1 class="txt-big-l">Shopping</h1>
-          </div>
-          <div class="total-sec">
-            <h2>cart totals</h2>
-            <div class="bobottom">
-              <div class="sub-total">
-                <p>Subtotal</p>
-                <p>$96.00</p>
-              </div>
-            </div>
-            <div class="bobottom">
-              <div class="totalamount">
-                <p>total</p>
-                <h5>$96.00</h5>
-              </div>
-            </div>
-            <div class="checkout-btn-wrap">
-              <button class="btn custom-btn">
-                <a href="#" class="btnTxt">Process to Checkout</a>
-                <div class="btnIcon">
-                  <i class="fal fa-long-arrow-right"></i>
+        <div class="stepBox">
+          <div class="row justify-content-between">
+            <div class="col-md-6">
+              <div class="bnrText primary-textform">
+                <h1 class="txt-big-c">Step 5</h1>
+                <div class="leftspace">
+                  <div class="txt-heading">
+                    <p>Distribution to stores</p>
+                  </div>
+                  <span class="hori-line">
+                    <i class="fas fa-horizontal-rule"></i>
+                  </span>
+                  <p class="discriptiontxt">
+                    laculis turpis consectetur lacus enim faucibus quisque
+                    ornare viverra interdum libero risus, convallis euismod amet
+                    lobortis libero varius lorem eu semper in sapien praesent
+                  </p>
                 </div>
-              </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="blog-img">
+                <img src="images/chicha.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stepBox">
+          <div class="row flex-row-reverse justify-content-between">
+            <div class="col-md-6">
+              <div class="bnrText primary-textform">
+                <h1 class="txt-big-c">Step 6</h1>
+                <div class="leftspace">
+                  <div class="txt-heading">
+                    <p>To your hands</p>
+                  </div>
+                  <span class="hori-line">
+                    <i class="fas fa-horizontal-rule"></i>
+                  </span>
+                  <p class="discriptiontxt">
+                    Vivamus arcu tellus urna, viverra congue urna, at iaculis
+                    tortor vulputate vel dui sit faucibus tincidunt vitae nulla
+                    sagittis, aliquam aliquet arcu erat a
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="blog-img">
+                <img src="images/banana.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- bottomsection START -->
+    <section class="contactPage">
+      <div class="container-lg">
+        <div class="bnrText primary-textform">
+          <h1 class="txt-big-c">Contact</h1>
+          <div class="mailBox">
+            <p>Receive Our Offers And Promotions</p>
+            <form class="mail-wrapper">
+              <input
+                type="email"
+                name="E-mail"
+                id="email"
+                placeholder="E-mail"
+              />
+              <div class="btn-wrap">
+                <button class="btn custom-btn">
+                  <a class="btnTxt">Subscribe</a>
+                  <div class="btnIcon">
+                    <i class="fal fa-long-arrow-right"></i>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="socialmedia">
+            <p>Or join us in social media</p>
+            <div class="btn__container">
+              <a href="#" class="btn custom-btn-f">
+                <i class="fab fa-facebook"></i>
+                <span>Join us on Facebook</span>
+              </a>
+              <a href="#" class="btn custom-btn-i">
+                <i class="fab fa-instagram"></i>
+                <span>Join us on Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="footer">
       <div class="container-fluid p-0">
         <div class="bg-img">
@@ -768,23 +591,6 @@
           "color",
           "#2b2b2b"
         );
-      });
-    </script>
-    <script>
-      var buttonPlus = $(".qty-btn-plus");
-      var buttonMinus = $(".qty-btn-minus");
-
-      var incrementPlus = buttonPlus.click(function () {
-        var $n = $(this).parent(".qty-container").find(".input-qty");
-        $n.val(Number($n.val()) + 1);
-      });
-
-      var incrementMinus = buttonMinus.click(function () {
-        var $n = $(this).parent(".qty-container").find(".input-qty");
-        var amount = Number($n.val());
-        if (amount > 1) {
-          $n.val(amount - 1);
-        }
       });
     </script>
   </body>
